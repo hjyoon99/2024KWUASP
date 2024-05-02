@@ -38,6 +38,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.totallabel = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -59,8 +61,9 @@
             this.menu8 = new System.Windows.Forms.PictureBox();
             this.menulabel7 = new System.Windows.Forms.Label();
             this.menu7 = new System.Windows.Forms.PictureBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.total = new System.Windows.Forms.Label();
+            this.plus1 = new System.Windows.Forms.Button();
+            this.minus1 = new System.Windows.Forms.Button();
+            this.count1 = new System.Windows.Forms.Label();
             this.toppanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.leftpanel.SuspendLayout();
@@ -205,7 +208,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.total);
+            this.panel1.Controls.Add(this.totallabel);
             this.panel1.Controls.Add(this.listView1);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
@@ -215,6 +218,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(635, 362);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // totallabel
+            // 
+            this.totallabel.AutoSize = true;
+            this.totallabel.Location = new System.Drawing.Point(474, 165);
+            this.totallabel.Name = "totallabel";
+            this.totallabel.Size = new System.Drawing.Size(57, 12);
+            this.totallabel.TabIndex = 7;
+            this.totallabel.Text = "총 금액 : ";
+            // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(28, 59);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(428, 223);
+            this.listView1.TabIndex = 5;
+            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // button7
             // 
@@ -421,29 +443,43 @@
             this.menu7.TabStop = false;
             this.menu7.Click += new System.EventHandler(this.menu7_Click);
             // 
-            // listView1
+            // plus1
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(28, 59);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(387, 223);
-            this.listView1.TabIndex = 5;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.plus1.Location = new System.Drawing.Point(335, 113);
+            this.plus1.Name = "plus1";
+            this.plus1.Size = new System.Drawing.Size(50, 52);
+            this.plus1.TabIndex = 22;
+            this.plus1.Text = "+";
+            this.plus1.UseVisualStyleBackColor = true;
+            this.plus1.Click += new System.EventHandler(this.plus1_Click);
             // 
-            // total
+            // minus1
             // 
-            this.total.AutoSize = true;
-            this.total.Location = new System.Drawing.Point(462, 137);
-            this.total.Name = "total";
-            this.total.Size = new System.Drawing.Size(38, 12);
-            this.total.TabIndex = 7;
-            this.total.Text = "label2";
+            this.minus1.Location = new System.Drawing.Point(335, 201);
+            this.minus1.Name = "minus1";
+            this.minus1.Size = new System.Drawing.Size(50, 52);
+            this.minus1.TabIndex = 23;
+            this.minus1.Text = "-";
+            this.minus1.UseVisualStyleBackColor = true;
+            this.minus1.Click += new System.EventHandler(this.minus1_Click);
+            // 
+            // count1
+            // 
+            this.count1.AutoSize = true;
+            this.count1.Location = new System.Drawing.Point(354, 177);
+            this.count1.Name = "count1";
+            this.count1.Size = new System.Drawing.Size(11, 12);
+            this.count1.TabIndex = 24;
+            this.count1.Text = "0";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(798, 1053);
+            this.Controls.Add(this.count1);
+            this.Controls.Add(this.minus1);
+            this.Controls.Add(this.plus1);
             this.Controls.Add(this.menulabel9);
             this.Controls.Add(this.menu9);
             this.Controls.Add(this.menulabel8);
@@ -524,6 +560,9 @@
         private System.Windows.Forms.Label menulabel7;
         private System.Windows.Forms.PictureBox menu7;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Label total;
+        private System.Windows.Forms.Label totallabel;
+        private System.Windows.Forms.Button plus1;
+        private System.Windows.Forms.Button minus1;
+        private System.Windows.Forms.Label count1;
     }
 }
