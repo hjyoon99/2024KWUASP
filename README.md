@@ -8,11 +8,13 @@
 
 ### 목표
 -----
-![alt text](계획2.jpg)
+![계획2](https://github.com/game-addicted-man/2024KWUASP/assets/107955161/c2f32758-2b51-4fc6-8eb6-607a189e821e)
+
 
 ### 계획
 -----
-![alt text](계획1.jpg)
+![계획1](https://github.com/game-addicted-man/2024KWUASP/assets/107955161/e91e6aeb-8486-460e-bfca-bec0070cc8e6)
+
 
 ### 소프트웨어 소개
 -----
