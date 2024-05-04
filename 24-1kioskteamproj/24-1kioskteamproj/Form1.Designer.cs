@@ -40,9 +40,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Info;
             this.label1.Font = new System.Drawing.Font("맑은 고딕", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(119, 57);
+            this.label1.Location = new System.Drawing.Point(106, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(568, 128);
+            this.label1.Size = new System.Drawing.Size(709, 159);
             this.label1.TabIndex = 0;
             this.label1.Text = "응소실 분식";
             // 
@@ -50,9 +50,10 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Info;
             this.button1.Font = new System.Drawing.Font("맑은 고딕", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.Location = new System.Drawing.Point(78, 635);
+            this.button1.Location = new System.Drawing.Point(89, 794);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(267, 155);
+            this.button1.Size = new System.Drawing.Size(305, 194);
             this.button1.TabIndex = 1;
             this.button1.Text = "매장 식사";
             this.button1.UseVisualStyleBackColor = false;
@@ -62,9 +63,10 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Info;
             this.button2.Font = new System.Drawing.Font("맑은 고딕", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button2.Location = new System.Drawing.Point(446, 635);
+            this.button2.Location = new System.Drawing.Point(510, 794);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(267, 155);
+            this.button2.Size = new System.Drawing.Size(305, 194);
             this.button2.TabIndex = 2;
             this.button2.Text = "포장 주문";
             this.button2.UseVisualStyleBackColor = false;
@@ -72,23 +74,26 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(78, 214);
+            this.pictureBox1.Location = new System.Drawing.Point(89, 268);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(662, 406);
+            this.pictureBox1.Size = new System.Drawing.Size(757, 508);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 859);
+            this.ClientSize = new System.Drawing.Size(914, 1074);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "키오스크 메인화면";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

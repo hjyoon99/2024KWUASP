@@ -30,7 +30,7 @@ namespace _24_1kioskteamproj
         private void button1_Click(object sender, EventArgs e)
         {
             packing = false;
-            form2 = new Form2();
+            form2 = new Form2(false);
             form2.Owner = this;
             form2.Show();
             this.Hide();
@@ -39,10 +39,15 @@ namespace _24_1kioskteamproj
         private void button2_Click(object sender, EventArgs e)
         {
             packing = true;
-            form2 = new Form2();
+            form2 = new Form2(true);
             form2.Owner = this;
             form2.Show();
             this.Hide();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
