@@ -20,7 +20,7 @@ namespace _24_1kioskteamproj
             this.BackColor = Color.White;
             try
             {
-                pictureBox1.Load(@"C:\Users\natha\gimbab.jpg");
+                pictureBox1.Image = Properties.Resources.gimbab;
                 pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             } catch (Exception e){
                 Console.WriteLine(e.Message);
