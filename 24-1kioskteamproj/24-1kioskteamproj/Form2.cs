@@ -124,15 +124,15 @@ namespace _24_1kioskteamproj
             minus9.Hide();
 
             //사진 정리
-            menu1.Load(@"C:\Users\natha\g1.jpg");
+            menu1.Image = Properties.Resources.g1;
             menu1.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu2.Load(@"C:\Users\natha\g2.jpg");
+            menu2.Image = Properties.Resources.g2;
             menu2.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu3.Load(@"C:\Users\natha\g3.jpg");
+            menu3.Image = Properties.Resources.g3;
             menu3.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu4.Load(@"C:\Users\natha\g4.jpg");
+            menu4.Image = Properties.Resources.g4;
             menu4.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu5.Load(@"C:\Users\natha\g5.jpg");
+            menu5.Image = Properties.Resources.g5;
             menu5.SizeMode = PictureBoxSizeMode.StretchImage;
             //메뉴정리
             menulabel1.Text = "일반 김밥 : 3000원";
@@ -148,7 +148,7 @@ namespace _24_1kioskteamproj
             menuValue[4] = 5000;
             try
             {
-                pictureBox1.Load(@"C:\Users\natha\gimbab.jpg");
+                pictureBox1.Image = Properties.Resources.gimbab;
                 pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             }
             catch (Exception e)
@@ -241,15 +241,15 @@ namespace _24_1kioskteamproj
             minus9.Hide();
 
             //사진 정리
-            menu1.Load(@"C:\Users\natha\g1.jpg");
+            menu1.Image = Properties.Resources.g1;
             menu1.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu2.Load(@"C:\Users\natha\g2.jpg");
+            menu2.Image = Properties.Resources.g2;
             menu2.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu3.Load(@"C:\Users\natha\g3.jpg");
+            menu3.Image = Properties.Resources.g3;
             menu3.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu4.Load(@"C:\Users\natha\g4.jpg");
+            menu4.Image = Properties.Resources.g4;
             menu4.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu5.Load(@"C:\Users\natha\g5.jpg");
+            menu5.Image = Properties.Resources.g5;
             menu5.SizeMode = PictureBoxSizeMode.StretchImage;
             //메뉴정리
             menulabel1.Text = "일반 김밥 : 3000원";
@@ -330,19 +330,19 @@ namespace _24_1kioskteamproj
             minus9.Hide();
 
             //사진 정리
-            menu1.Load(@"C:\Users\natha\h1.jpg");
+            menu1.Image = Properties.Resources.h1;
             menu1.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu2.Load(@"C:\Users\natha\h2.jpg");
+            menu2.Image = Properties.Resources.h2;
             menu2.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu3.Load(@"C:\Users\natha\h3.jpg");
+            menu3.Image = Properties.Resources.h3;
             menu3.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu4.Load(@"C:\Users\natha\h4.jpg");
+            menu4.Image = Properties.Resources.h4;
             menu4.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu5.Load(@"C:\Users\natha\h5.jpg");
+            menu5.Image = Properties.Resources.h5;
             menu5.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu6.Load(@"C:\Users\natha\h6.jpg");
+            menu6.Image = Properties.Resources.h6;
             menu6.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu7.Load(@"C:\Users\natha\h7.jpg");
+            menu7.Image = Properties.Resources.h7;
             menu7.SizeMode = PictureBoxSizeMode.StretchImage;
             //메뉴 정리
             menulabel1.Text = "제육 덮밥 : 8000원";
@@ -427,13 +427,13 @@ namespace _24_1kioskteamproj
             minus9.Hide();
 
             //사진 정리
-            menu1.Load(@"C:\Users\natha\y1.jpg");
+            menu1.Image = Properties.Resources.y1;
             menu1.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu2.Load(@"C:\Users\natha\y2.jpg");
+            menu2.Image = Properties.Resources.y2;
             menu2.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu3.Load(@"C:\Users\natha\y3.jpg");
+            menu3.Image = Properties.Resources.y3;
             menu3.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu4.Load(@"C:\Users\natha\y4.jpg");
+            menu4.Image = Properties.Resources.y4;
             menu4.SizeMode = PictureBoxSizeMode.StretchImage;
             //메뉴 정리
             menulabel1.Text = "오므라이스 : 8000원";
@@ -512,23 +512,23 @@ namespace _24_1kioskteamproj
             minus9.Show();
 
             //사진 정리
-            menu1.Load(@"C:\Users\natha\b1.jpg");
+            menu1.Image = Properties.Resources.b1;
             menu1.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu2.Load(@"C:\Users\natha\b2.jpg");
+            menu2.Image = Properties.Resources.b2;
             menu2.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu3.Load(@"C:\Users\natha\b3.jpg");
+            menu3.Image = Properties.Resources.b3;
             menu3.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu4.Load(@"C:\Users\natha\b4.jpg");
+            menu4.Image = Properties.Resources.b4;
             menu4.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu5.Load(@"C:\Users\natha\b5.jpg");
+            menu5.Image = Properties.Resources.b5;
             menu5.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu6.Load(@"C:\Users\natha\b6.jpg");
+            menu6.Image = Properties.Resources.b6;
             menu6.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu7.Load(@"C:\Users\natha\b7.jpg");
+            menu7.Image = Properties.Resources.b7;
             menu7.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu8.Load(@"C:\Users\natha\b8.jpg");
+            menu8.Image = Properties.Resources.b8;
             menu8.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu9.Load(@"C:\Users\natha\b9.jpg");
+            menu9.Image = Properties.Resources.b9;
             menu9.SizeMode = PictureBoxSizeMode.StretchImage;
             //메뉴 정리
             menulabel1.Text = "떡볶이 : 5000원";
@@ -617,19 +617,19 @@ namespace _24_1kioskteamproj
             minus9.Hide();
 
             //사진 정리
-            menu1.Load(@"C:\Users\natha\s1.jpg");
+            menu1.Image = Properties.Resources.s1;
             menu1.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu2.Load(@"C:\Users\natha\s2.jpg");
+            menu2.Image = Properties.Resources.s2;
             menu2.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu3.Load(@"C:\Users\natha\s3.jpg");
+            menu3.Image = Properties.Resources.s3;
             menu3.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu4.Load(@"C:\Users\natha\s4.jpg");
+            menu4.Image = Properties.Resources.s4;
             menu4.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu5.Load(@"C:\Users\natha\s5.jpg");
+            menu5.Image = Properties.Resources.s5;
             menu5.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu6.Load(@"C:\Users\natha\s6.jpg");
+            menu6.Image = Properties.Resources.s6;
             menu6.SizeMode = PictureBoxSizeMode.StretchImage;
-            menu7.Load(@"C:\Users\natha\s7.jpg");
+            menu7.Image = Properties.Resources.s7;
             menu7.SizeMode = PictureBoxSizeMode.StretchImage;
 
             //메뉴 정리
