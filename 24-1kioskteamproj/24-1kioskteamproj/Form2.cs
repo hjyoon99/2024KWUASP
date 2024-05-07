@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace _24_1kioskteamproj
 {
@@ -28,6 +29,10 @@ namespace _24_1kioskteamproj
         //+값에 사용할 불값
         bool[] booleanplus = new bool[9];
         bool[] booleanminus = new bool[9];
+        //각 메뉴별 옵션
+        private Dictionary<string, List<string>> menuOptions;
+        // 토핑 가격 정보를 저장하는 Dictionary
+        private Dictionary<string, double> toppingPrices;
         public Form2(bool val)
         {
             packing = val;  
@@ -35,6 +40,8 @@ namespace _24_1kioskteamproj
             InitializeComponent();
             InitializeMenu();
             InitializeListView();
+            SetUpMenuOptions();
+            SetUpToppingPrices();
             form3.InformationSent += ChildForm_InformationSent;
             for (int i = 0; i < 9; i++)
             {
@@ -48,6 +55,44 @@ namespace _24_1kioskteamproj
         {
             whereTable = information;
         }
+
+        private void SetUpMenuOptions()
+        {
+            menuOptions = new Dictionary<string, List<string>>
+            {
+                {"menu1", new List<string> {"토핑1", "토핑2", "토핑3", "토핑4", "토핑5"} },
+                {"menu2", new List<string> {"토핑3", "토핑4", "토핑5", "토핑6", "토핑5"} },
+                {"menu3", new List<string> {"토핑5", "토핑6", "토핑7", "토핑8", "토핑5" } },
+                {"menu4", new List<string> { "토핑7", "토핑8", "토핑8", "토핑10", "토핑5" } },
+                {"menu5", new List<string> { "토핑9", "토핑10", "토핑9", "토핑12", "토핑5" } },
+                {"menu6", new List<string> { "토핑7", "토핑8", "토핑8", "토핑10", "토핑5" } },
+                {"menu7", new List<string> { "토핑7", "토핑8", "토핑8", "토핑10", "토핑5" } },
+                {"menu8", new List<string> { "토핑7", "토핑8", "토핑8", "토핑10", "토핑5" } },
+                {"menu9", new List<string> { "토핑7", "토핑8", "토핑8", "토핑10", "토핑5" } }
+            };
+        }
+
+        private void SetUpToppingPrices()
+        {
+            toppingPrices = new Dictionary<string, double>
+    {
+        {"토핑1", 1000},
+        {"토핑2", 1000},
+        {"토핑3", 500},
+        {"토핑4", 1000},
+        {"토핑5", 2000},
+        {"토핑6", 1500},
+        {"토핑7", 1000},
+        {"토핑8", 1500},
+        {"토핑9", 1000},
+        {"토핑10", 500},
+        {"토핑11", 1000},
+        {"토핑12", 1000}
+    };
+        }
+
+
+
 
         private void InitializeListView()
         {
@@ -654,47 +699,53 @@ namespace _24_1kioskteamproj
 
         private void menu1_Click(object sender, EventArgs e)
         {
-
+            if(sender is PictureBox pictureBox)
+            {
+                if (menuOptions.ContainsKey(pictureBox.Name))
+                {
+                    checkedListBox1.Items.Clear();
+                    var options = menuOptions[pictureBox.Name];
+                    foreach(var option in options)
+                    {
+                        checkedListBox1.Items.Add(option);
+                    }
+                }
+            }
         }
+
+
 
         private void menu2_Click(object sender, EventArgs e)
         {
-
+            if (sender is PictureBox pictureBox)
+            {
+                if (menuOptions.ContainsKey(pictureBox.Name))
+                {
+                    checkedListBox1.Items.Clear();
+                    var options = menuOptions[pictureBox.Name];
+                    foreach (var option in options)
+                    {
+                        checkedListBox1.Items.Add(option);
+                    }
+                }
+            }
         }
 
         private void menu3_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void menu4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menu5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menu6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menu7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menu8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menu9_Click(object sender, EventArgs e)
-        {
-
+            if (sender is PictureBox pictureBox)
+            {
+                if (menuOptions.ContainsKey(pictureBox.Name))
+                {
+                    checkedListBox1.Items.Clear();
+                    var options = menuOptions[pictureBox.Name];
+                    foreach (var option in options)
+                    {
+                        checkedListBox1.Items.Add(option);
+                    }
+                }
+            }
+        
         }
 
         private void plus1_Click(object sender, EventArgs e)
@@ -759,6 +810,8 @@ namespace _24_1kioskteamproj
                 
             }
             booleanplus[0] = true;*/
+
+
         }
 
         private void minus1_Click(object sender, EventArgs e)
@@ -767,27 +820,35 @@ namespace _24_1kioskteamproj
             {
                 return;
             }
+
             count[0]--;
 
-            ListViewItem item = new ListViewItem();
-
-
-            foreach (ListViewItem itemss in listView1.Items)
+            foreach (ListViewItem item in listView1.Items)
             {
-                if (itemss.SubItems[1].Text == menulabel1.Text)
+                if (item.SubItems[1].Text == menulabel1.Text)  // 메뉴 이름이 같은지 확인
                 {
-                    // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
-                    int quantity = int.Parse(itemss.SubItems[2].Text) - 1;
-                    itemss.SubItems[2].Text = quantity.ToString();
-                    itemss.SubItems[3].Text = (quantity * menuValue[0]).ToString();
-                    break;
+                    int quantity = int.Parse(item.SubItems[2].Text) - 1;  // 수량을 1 감소
+
+                    if (quantity <= 0)
+                    {
+                        // 수량이 0 이하이면 해당 항목을 ListView에서 제거
+                        listView1.Items.Remove(item);
+                    }
+                    else
+                    {
+                        // 수량이 0이 아니면 업데이트
+                        item.SubItems[2].Text = quantity.ToString();  // 수량 업데이트
+                        item.SubItems[3].Text = (quantity * menuValue[0]).ToString();  // 가격 업데이트
+                    }
+
+                    break;  // 항목을 찾았으므로 루프를 중단
                 }
             }
-            tot -= menuValue[0];
 
-
-            totallabel.Text = "총 금액 : " + tot + "원";
+            tot -= menuValue[0];  // 총 가격을 업데이트
+            totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
         }
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -865,26 +926,33 @@ namespace _24_1kioskteamproj
             {
                 return;
             }
+
             count[1]--;
 
-            ListViewItem item = new ListViewItem();
-
-
-            foreach (ListViewItem itemss in listView1.Items)
+            foreach (ListViewItem item in listView1.Items)
             {
-                if (itemss.SubItems[1].Text == menulabel2.Text)
+                if (item.SubItems[1].Text == menulabel2.Text)  // 메뉴 이름이 같은지 확인
                 {
-                    // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
-                    int quantity = int.Parse(itemss.SubItems[2].Text) - 1;
-                    itemss.SubItems[2].Text = quantity.ToString();
-                    itemss.SubItems[3].Text = (quantity * menuValue[1]).ToString();
-                    break;
+                    int quantity = int.Parse(item.SubItems[2].Text) - 1;  // 수량을 1 감소
+
+                    if (quantity <= 0)
+                    {
+                        // 수량이 0 이하이면 해당 항목을 ListView에서 제거
+                        listView1.Items.Remove(item);
+                    }
+                    else
+                    {
+                        // 수량이 0이 아니면 업데이트
+                        item.SubItems[2].Text = quantity.ToString();  // 수량 업데이트
+                        item.SubItems[3].Text = (quantity * menuValue[1]).ToString();  // 가격 업데이트
+                    }
+
+                    break;  // 항목을 찾았으므로 루프를 중단
                 }
             }
-            tot -= menuValue[1];
 
-
-            totallabel.Text = "총 금액 : " + tot + "원";
+            tot -= menuValue[1];  // 총 가격을 업데이트
+            totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
         }
 
         private void plus3_Click(object sender, EventArgs e)
@@ -925,26 +993,33 @@ namespace _24_1kioskteamproj
             {
                 return;
             }
+
             count[2]--;
 
-            ListViewItem item = new ListViewItem();
-
-
-            foreach (ListViewItem itemss in listView1.Items)
+            foreach (ListViewItem item in listView1.Items)
             {
-                if (itemss.SubItems[1].Text == menulabel3.Text)
+                if (item.SubItems[1].Text == menulabel3.Text)  // 메뉴 이름이 같은지 확인
                 {
-                    // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
-                    int quantity = int.Parse(itemss.SubItems[2].Text) - 1;
-                    itemss.SubItems[2].Text = quantity.ToString();
-                    itemss.SubItems[3].Text = (quantity * menuValue[2]).ToString();
-                    break;
+                    int quantity = int.Parse(item.SubItems[2].Text) - 1;  // 수량을 1 감소
+
+                    if (quantity <= 0)
+                    {
+                        // 수량이 0 이하이면 해당 항목을 ListView에서 제거
+                        listView1.Items.Remove(item);
+                    }
+                    else
+                    {
+                        // 수량이 0이 아니면 업데이트
+                        item.SubItems[2].Text = quantity.ToString();  // 수량 업데이트
+                        item.SubItems[3].Text = (quantity * menuValue[2]).ToString();  // 가격 업데이트
+                    }
+
+                    break;  // 항목을 찾았으므로 루프를 중단
                 }
             }
-            tot -= menuValue[2];
 
-
-            totallabel.Text = "총 금액 : " + tot + "원";
+            tot -= menuValue[2];  // 총 가격을 업데이트
+            totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
         }
 
         private void plus4_Click(object sender, EventArgs e)
@@ -986,26 +1061,33 @@ namespace _24_1kioskteamproj
             {
                 return;
             }
+
             count[3]--;
 
-            ListViewItem item = new ListViewItem();
-
-
-            foreach (ListViewItem itemss in listView1.Items)
+            foreach (ListViewItem item in listView1.Items)
             {
-                if (itemss.SubItems[1].Text == menulabel4.Text)
+                if (item.SubItems[1].Text == menulabel4.Text)  // 메뉴 이름이 같은지 확인
                 {
-                    // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
-                    int quantity = int.Parse(itemss.SubItems[2].Text) - 1;
-                    itemss.SubItems[2].Text = quantity.ToString();
-                    itemss.SubItems[3].Text = (quantity * menuValue[3]).ToString();
-                    break;
+                    int quantity = int.Parse(item.SubItems[2].Text) - 1;  // 수량을 1 감소
+
+                    if (quantity <= 0)
+                    {
+                        // 수량이 0 이하이면 해당 항목을 ListView에서 제거
+                        listView1.Items.Remove(item);
+                    }
+                    else
+                    {
+                        // 수량이 0이 아니면 업데이트
+                        item.SubItems[2].Text = quantity.ToString();  // 수량 업데이트
+                        item.SubItems[3].Text = (quantity * menuValue[3]).ToString();  // 가격 업데이트
+                    }
+
+                    break;  // 항목을 찾았으므로 루프를 중단
                 }
             }
-            tot -= menuValue[3];
 
-
-            totallabel.Text = "총 금액 : " + tot + "원";
+            tot -= menuValue[3];  // 총 가격을 업데이트
+            totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
         }
 
         private void plus5_Click(object sender, EventArgs e)
@@ -1046,26 +1128,33 @@ namespace _24_1kioskteamproj
             {
                 return;
             }
+
             count[4]--;
 
-            ListViewItem item = new ListViewItem();
-
-
-            foreach (ListViewItem itemss in listView1.Items)
+            foreach (ListViewItem item in listView1.Items)
             {
-                if (itemss.SubItems[1].Text == menulabel5.Text)
+                if (item.SubItems[1].Text == menulabel5.Text)  // 메뉴 이름이 같은지 확인
                 {
-                    // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
-                    int quantity = int.Parse(itemss.SubItems[2].Text) - 1;
-                    itemss.SubItems[2].Text = quantity.ToString();
-                    itemss.SubItems[3].Text = (quantity * menuValue[4]).ToString();
-                    break;
+                    int quantity = int.Parse(item.SubItems[2].Text) - 1;  // 수량을 1 감소
+
+                    if (quantity <= 0)
+                    {
+                        // 수량이 0 이하이면 해당 항목을 ListView에서 제거
+                        listView1.Items.Remove(item);
+                    }
+                    else
+                    {
+                        // 수량이 0이 아니면 업데이트
+                        item.SubItems[2].Text = quantity.ToString();  // 수량 업데이트
+                        item.SubItems[3].Text = (quantity * menuValue[4]).ToString();  // 가격 업데이트
+                    }
+
+                    break;  // 항목을 찾았으므로 루프를 중단
                 }
             }
-            tot -= menuValue[4];
 
-
-            totallabel.Text = "총 금액 : " + tot + "원";
+            tot -= menuValue[4];  // 총 가격을 업데이트
+            totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
         }
 
         private void plus6_Click(object sender, EventArgs e)
@@ -1106,26 +1195,33 @@ namespace _24_1kioskteamproj
             {
                 return;
             }
+
             count[5]--;
 
-            ListViewItem item = new ListViewItem();
-
-
-            foreach (ListViewItem itemss in listView1.Items)
+            foreach (ListViewItem item in listView1.Items)
             {
-                if (itemss.SubItems[1].Text == menulabel6.Text)
+                if (item.SubItems[1].Text == menulabel6.Text)  // 메뉴 이름이 같은지 확인
                 {
-                    // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
-                    int quantity = int.Parse(itemss.SubItems[2].Text) - 1;
-                    itemss.SubItems[2].Text = quantity.ToString();
-                    itemss.SubItems[3].Text = (quantity * menuValue[5]).ToString();
-                    break;
+                    int quantity = int.Parse(item.SubItems[2].Text) - 1;  // 수량을 1 감소
+
+                    if (quantity <= 0)
+                    {
+                        // 수량이 0 이하이면 해당 항목을 ListView에서 제거
+                        listView1.Items.Remove(item);
+                    }
+                    else
+                    {
+                        // 수량이 0이 아니면 업데이트
+                        item.SubItems[2].Text = quantity.ToString();  // 수량 업데이트
+                        item.SubItems[3].Text = (quantity * menuValue[5]).ToString();  // 가격 업데이트
+                    }
+
+                    break;  // 항목을 찾았으므로 루프를 중단
                 }
             }
-            tot -= menuValue[5];
 
-
-            totallabel.Text = "총 금액 : " + tot + "원";
+            tot -= menuValue[5];  // 총 가격을 업데이트
+            totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
         }
 
         private void plus7_Click(object sender, EventArgs e)
@@ -1166,26 +1262,33 @@ namespace _24_1kioskteamproj
             {
                 return;
             }
+
             count[6]--;
 
-            ListViewItem item = new ListViewItem();
-
-
-            foreach (ListViewItem itemss in listView1.Items)
+            foreach (ListViewItem item in listView1.Items)
             {
-                if (itemss.SubItems[1].Text == menulabel7.Text)
+                if (item.SubItems[1].Text == menulabel7.Text)  // 메뉴 이름이 같은지 확인
                 {
-                    // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
-                    int quantity = int.Parse(itemss.SubItems[2].Text) - 1;
-                    itemss.SubItems[2].Text = quantity.ToString();
-                    itemss.SubItems[3].Text = (quantity * menuValue[6]).ToString();
-                    break;
+                    int quantity = int.Parse(item.SubItems[2].Text) - 1;  // 수량을 1 감소
+
+                    if (quantity <= 0)
+                    {
+                        // 수량이 0 이하이면 해당 항목을 ListView에서 제거
+                        listView1.Items.Remove(item);
+                    }
+                    else
+                    {
+                        // 수량이 0이 아니면 업데이트
+                        item.SubItems[2].Text = quantity.ToString();  // 수량 업데이트
+                        item.SubItems[3].Text = (quantity * menuValue[6]).ToString();  // 가격 업데이트
+                    }
+
+                    break;  // 항목을 찾았으므로 루프를 중단
                 }
             }
-            tot -= menuValue[6];
 
-
-            totallabel.Text = "총 금액 : " + tot + "원";
+            tot -= menuValue[6];  // 총 가격을 업데이트
+            totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
         }
 
         private void plus8_Click(object sender, EventArgs e)
@@ -1226,26 +1329,33 @@ namespace _24_1kioskteamproj
             {
                 return;
             }
+
             count[7]--;
 
-            ListViewItem item = new ListViewItem();
-
-
-            foreach (ListViewItem itemss in listView1.Items)
+            foreach (ListViewItem item in listView1.Items)
             {
-                if (itemss.SubItems[1].Text == menulabel8.Text)
+                if (item.SubItems[1].Text == menulabel8.Text)  // 메뉴 이름이 같은지 확인
                 {
-                    // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
-                    int quantity = int.Parse(itemss.SubItems[2].Text) - 1;
-                    itemss.SubItems[2].Text = quantity.ToString();
-                    itemss.SubItems[3].Text = (quantity * menuValue[7]).ToString();
-                    break;
+                    int quantity = int.Parse(item.SubItems[2].Text) - 1;  // 수량을 1 감소
+
+                    if (quantity <= 0)
+                    {
+                        // 수량이 0 이하이면 해당 항목을 ListView에서 제거
+                        listView1.Items.Remove(item);
+                    }
+                    else
+                    {
+                        // 수량이 0이 아니면 업데이트
+                        item.SubItems[2].Text = quantity.ToString();  // 수량 업데이트
+                        item.SubItems[3].Text = (quantity * menuValue[7]).ToString();  // 가격 업데이트
+                    }
+
+                    break;  // 항목을 찾았으므로 루프를 중단
                 }
             }
-            tot -= menuValue[7];
 
-
-            totallabel.Text = "총 금액 : " + tot + "원";
+            tot -= menuValue[7];  // 총 가격을 업데이트
+            totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
         }
 
         private void plus9_Click(object sender, EventArgs e)
@@ -1286,33 +1396,40 @@ namespace _24_1kioskteamproj
             {
                 return;
             }
+
             count[8]--;
 
-            ListViewItem item = new ListViewItem();
-
-
-            foreach (ListViewItem itemss in listView1.Items)
+            foreach (ListViewItem item in listView1.Items)
             {
-                if (itemss.SubItems[1].Text == menulabel9.Text)
+                if (item.SubItems[1].Text == menulabel9.Text)  // 메뉴 이름이 같은지 확인
                 {
-                    // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
-                    int quantity = int.Parse(itemss.SubItems[2].Text) - 1;
-                    itemss.SubItems[2].Text = quantity.ToString();
-                    itemss.SubItems[3].Text = (quantity * menuValue[8]).ToString();
-                    break;
+                    int quantity = int.Parse(item.SubItems[2].Text) - 1;  // 수량을 1 감소
+
+                    if (quantity <= 0)
+                    {
+                        // 수량이 0 이하이면 해당 항목을 ListView에서 제거
+                        listView1.Items.Remove(item);
+                    }
+                    else
+                    {
+                        // 수량이 0이 아니면 업데이트
+                        item.SubItems[2].Text = quantity.ToString();  // 수량 업데이트
+                        item.SubItems[3].Text = (quantity * menuValue[8]).ToString();  // 가격 업데이트
+                    }
+
+                    break;  // 항목을 찾았으므로 루프를 중단
                 }
             }
-            tot -= menuValue[8];
 
-
-            totallabel.Text = "총 금액 : " + tot + "원";
+            tot -= menuValue[8];  // 총 가격을 업데이트
+            totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        private string[] ConvertListViewToStringArray(ListView listView)
+        private string[] ConvertListViewToStringArray(System.Windows.Forms.ListView listView)
         {
             List<string> items = new List<string>();
 
@@ -1349,6 +1466,149 @@ namespace _24_1kioskteamproj
             }
         }
 
-       
+        private void button8_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (checkedListBox1.CheckedItems.Count == 0)
+            {
+                MessageBox.Show("No items checked in CheckedListBox.");
+                return;
+            }
+
+            foreach (var checkedItem in checkedListBox1.CheckedItems)
+            {
+                string toppingName = checkedItem.ToString();
+                int quantityToAdd = 1;  // 추가할 수량
+                double pricePerUnit = toppingPrices[toppingName];   // 토핑의 단위당 가격
+
+                // `ListView`에 같은 이름의 항목이 있는지 확인
+                var existingItem = listView1.Items.Cast<ListViewItem>()
+                            .FirstOrDefault(item => item.SubItems[1].Text == toppingName);
+
+                if (existingItem != null)
+                {
+                    // 이미 같은 토핑이 있으면 수량과 가격을 업데이트
+                    int currentQuantity = Convert.ToInt32(existingItem.SubItems[2].Text);  // 현재 수량
+                    existingItem.SubItems[2].Text = (currentQuantity + quantityToAdd).ToString();
+
+                    double currentPrice = Convert.ToDouble(existingItem.SubItems[3].Text);  // 현재 가격
+                    existingItem.SubItems[3].Text = (currentPrice + (pricePerUnit * quantityToAdd)).ToString();
+                }
+                else
+                {
+                    // 동일한 토핑이 없으면 새로운 항목을 추가
+                    var newItem = new ListViewItem();
+                    newItem.SubItems.Add(toppingName);  // 토핑 이름
+                    newItem.SubItems.Add(quantityToAdd.ToString());  // 수량
+                    newItem.SubItems.Add((pricePerUnit * quantityToAdd).ToString());  // 가격
+                    listView1.Items.Add(newItem);
+                }
+            }
+        }
+
+        private void menu4_Click(object sender, EventArgs e)
+        {
+            if (sender is PictureBox pictureBox)
+            {
+                if (menuOptions.ContainsKey(pictureBox.Name))
+                {
+                    checkedListBox1.Items.Clear();
+                    var options = menuOptions[pictureBox.Name];
+                    foreach (var option in options)
+                    {
+                        checkedListBox1.Items.Add(option);
+                    }
+                }
+            }
+        }
+
+        private void menu5_Click(object sender, EventArgs e)
+        {
+            if (sender is PictureBox pictureBox)
+            {
+                if (menuOptions.ContainsKey(pictureBox.Name))
+                {
+                    checkedListBox1.Items.Clear();
+                    var options = menuOptions[pictureBox.Name];
+                    foreach (var option in options)
+                    {
+                        checkedListBox1.Items.Add(option);
+                    }
+                }
+            }
+        }
+
+        private void menu6_Click(object sender, EventArgs e)
+        {
+            if (sender is PictureBox pictureBox)
+            {
+                if (menuOptions.ContainsKey(pictureBox.Name))
+                {
+                    checkedListBox1.Items.Clear();
+                    var options = menuOptions[pictureBox.Name];
+                    foreach (var option in options)
+                    {
+                        checkedListBox1.Items.Add(option);
+                    }
+                }
+            }
+        }
+
+        private void menu7_Click(object sender, EventArgs e)
+        {
+            if (sender is PictureBox pictureBox)
+            {
+                if (menuOptions.ContainsKey(pictureBox.Name))
+                {
+                    checkedListBox1.Items.Clear();
+                    var options = menuOptions[pictureBox.Name];
+                    foreach (var option in options)
+                    {
+                        checkedListBox1.Items.Add(option);
+                    }
+                }
+            }
+        }
+
+        private void menu8_Click(object sender, EventArgs e)
+        {
+            if (sender is PictureBox pictureBox)
+            {
+                if (menuOptions.ContainsKey(pictureBox.Name))
+                {
+                    checkedListBox1.Items.Clear();
+                    var options = menuOptions[pictureBox.Name];
+                    foreach (var option in options)
+                    {
+                        checkedListBox1.Items.Add(option);
+                    }
+                }
+            }
+        }
+
+        private void menu9_Click(object sender, EventArgs e)
+        {
+            if (sender is PictureBox pictureBox)
+            {
+                if (menuOptions.ContainsKey(pictureBox.Name))
+                {
+                    checkedListBox1.Items.Clear();
+                    var options = menuOptions[pictureBox.Name];
+                    foreach (var option in options)
+                    {
+                        checkedListBox1.Items.Add(option);
+                    }
+                }
+            }
+        }
     }
 }
