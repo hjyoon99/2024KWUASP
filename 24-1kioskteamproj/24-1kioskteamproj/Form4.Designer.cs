@@ -35,9 +35,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(78, 41);
+            this.button1.Location = new System.Drawing.Point(127, 66);
+            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(240, 69);
+            this.button1.Size = new System.Drawing.Size(390, 110);
             this.button1.TabIndex = 0;
             this.button1.Text = "결제하기";
             this.button1.UseVisualStyleBackColor = true;
@@ -45,20 +46,22 @@
             // 
             // purbox
             // 
-            this.purbox.Location = new System.Drawing.Point(12, 153);
+            this.purbox.Location = new System.Drawing.Point(20, 245);
+            this.purbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.purbox.Multiline = true;
             this.purbox.Name = "purbox";
             this.purbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.purbox.Size = new System.Drawing.Size(550, 601);
+            this.purbox.Size = new System.Drawing.Size(891, 959);
             this.purbox.TabIndex = 1;
             this.purbox.WordWrap = false;
             this.purbox.TextChanged += new System.EventHandler(this.purbox_TextChanged);
             // 
             // home
             // 
-            this.home.Location = new System.Drawing.Point(395, 41);
+            this.home.Location = new System.Drawing.Point(619, 66);
+            this.home.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.home.Name = "home";
-            this.home.Size = new System.Drawing.Size(79, 69);
+            this.home.Size = new System.Drawing.Size(187, 110);
             this.home.TabIndex = 2;
             this.home.Text = "HOME\r\n";
             this.home.UseVisualStyleBackColor = true;
@@ -66,12 +69,13 @@
             // 
             // Form4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 785);
+            this.ClientSize = new System.Drawing.Size(933, 1256);
             this.Controls.Add(this.home);
             this.Controls.Add(this.purbox);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "Form4";
             this.Text = "결제칸";
             this.ResumeLayout(false);
