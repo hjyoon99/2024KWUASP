@@ -37,7 +37,8 @@ namespace _24_1kioskteamproj
             StringBuilder receipt = new StringBuilder();
 
             // 영수증 헤더
-            receipt.AppendLine("===== 영수증 =====");
+            receipt.AppendLine("============ 응소실 분식 영수증 ============");
+            receipt.AppendLine();
 
             // ListView의 각 항목을 반복하며 정보를 가져와서 영수증에 추가
             foreach (ListViewItem item in listview1.Items)
@@ -48,9 +49,12 @@ namespace _24_1kioskteamproj
                 string price = item.SubItems[3].Text; // "가격" 열의 값
 
                 // 한 줄씩 영수증에 추가
-                receipt.AppendLine($"{start} | {menu} | {quantity} | {price}");
+                receipt.AppendLine($"{start} | 메뉴 : {menu} | 수량 : {quantity} | 가격: {price} 원");
             }
+            receipt.AppendLine();
+            receipt.AppendLine("=============================================");
             receipt.AppendLine("총 금액은 " + tot + "원 입니다.");
+            receipt.AppendLine();
             if (table !=0) 
             {
                 receipt.AppendLine(table + "번 테이블에서 주문하였습니다.");
@@ -59,9 +63,16 @@ namespace _24_1kioskteamproj
             {
                 receipt.AppendLine("포장 주문입니다.");
             }
-
+            receipt.AppendLine();
             // 영수증 하단
-            receipt.AppendLine("==================");
+            receipt.AppendLine("=============================================");
+            receipt.AppendLine();
+            receipt.AppendLine("와이파이 비밀번호: 123123123");
+            receipt.AppendLine("화장실 비밀번호: 1357*");
+            receipt.AppendLine();
+            receipt.AppendLine("=============================================");
+            receipt.AppendLine();
+            receipt.AppendLine("이용해주셔서 감사합니다.");
 
             // TextBox에 영수증 표시
             purbox.Text = receipt.ToString();

@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtTime = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.txtTime2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,12 +88,39 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // txtTime
+            // 
+            this.txtTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTime.Font = new System.Drawing.Font("한컴 말랑말랑 Bold", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtTime.Location = new System.Drawing.Point(1469, 147);
+            this.txtTime.Name = "txtTime";
+            this.txtTime.Size = new System.Drawing.Size(578, 48);
+            this.txtTime.TabIndex = 4;
+            this.txtTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // txtTime2
+            // 
+            this.txtTime2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTime2.Font = new System.Drawing.Font("한컴 말랑말랑 Bold", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtTime2.Location = new System.Drawing.Point(1469, 266);
+            this.txtTime2.Name = "txtTime2";
+            this.txtTime2.Size = new System.Drawing.Size(578, 48);
+            this.txtTime2.TabIndex = 5;
+            this.txtTime2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2124, 1284);
+            this.Controls.Add(this.txtTime2);
+            this.Controls.Add(this.txtTime);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -110,6 +141,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtTime;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox txtTime2;
     }
 }
 
