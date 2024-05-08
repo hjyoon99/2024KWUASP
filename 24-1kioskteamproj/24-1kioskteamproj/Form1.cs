@@ -20,7 +20,7 @@ namespace _24_1kioskteamproj
             this.BackColor = Color.White;
             try
             {
-                pictureBox1.Image = Properties.Resources.gimbab;
+                pictureBox1.Image = Properties.Resources.b1;
                 pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             } catch (Exception e){
                 Console.WriteLine(e.Message);
@@ -47,6 +47,13 @@ namespace _24_1kioskteamproj
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            txtTime.Text = DateTime.Now.ToLongDateString();
+            txtTime2.Text = DateTime.Now.ToLongTimeString();
 
         }
     }

@@ -42,6 +42,14 @@ namespace _24_1kioskteamproj
             InitializeListView();
             SetUpMenuOptions();
             SetUpToppingPrices();
+
+            //BEST 라벨의 부모컨트롤 변경 (메뉴사진 클릭 시 토핑 텍스트에 해당 메뉴 이름이 표시되기 위함)
+
+            best1.Parent = this;
+            best2.Parent = this;
+            best3.Parent = this;
+            best4.Parent = this;
+
             form3.InformationSent += ChildForm_InformationSent;
             for (int i = 0; i < 9; i++)
             {
@@ -60,35 +68,30 @@ namespace _24_1kioskteamproj
         {
             menuOptions = new Dictionary<string, List<string>>
             {
-                {"menu1", new List<string> {"토핑1", "토핑2", "토핑3", "토핑4", "토핑5"} },
-                {"menu2", new List<string> {"토핑3", "토핑4", "토핑5", "토핑6", "토핑5"} },
-                {"menu3", new List<string> {"토핑5", "토핑6", "토핑7", "토핑8", "토핑5" } },
-                {"menu4", new List<string> { "토핑7", "토핑8", "토핑8", "토핑10", "토핑5" } },
-                {"menu5", new List<string> { "토핑9", "토핑10", "토핑9", "토핑12", "토핑5" } },
-                {"menu6", new List<string> { "토핑7", "토핑8", "토핑8", "토핑10", "토핑5" } },
-                {"menu7", new List<string> { "토핑7", "토핑8", "토핑8", "토핑10", "토핑5" } },
-                {"menu8", new List<string> { "토핑7", "토핑8", "토핑8", "토핑10", "토핑5" } },
-                {"menu9", new List<string> { "토핑7", "토핑8", "토핑8", "토핑10", "토핑5" } }
+                {"menu1", new List<string> {"현미밥 변경", "당근 빼주세요", "오이 빼주세요", "단무지 빼주세요"} },
+                {"menu2", new List<string> {"현미밥 변경","치즈 추가", "당근 빼주세요", "오이 빼주세요", "단무지 빼주세요" } },
+                {"menu3", new List<string> {"현미밥 변경","참치 추가", "당근 빼주세요", "오이 빼주세요", "단무지 빼주세요" } },
+                {"menu4", new List<string> {"현미밥 변경","날치알 추가", "당근 빼주세요", "오이 빼주세요", "단무지 빼주세요" } },
+                {"menu5", new List<string> {"현미밥 변경","돈가스 추가", "당근 빼주세요", "오이 빼주세요", "단무지 빼주세요" } }
             };
+
+            
         }
 
         private void SetUpToppingPrices()
         {
+            // 토핑 가격 정리
             toppingPrices = new Dictionary<string, double>
-    {
-        {"토핑1", 1000},
-        {"토핑2", 1000},
-        {"토핑3", 500},
-        {"토핑4", 1000},
-        {"토핑5", 2000},
-        {"토핑6", 1500},
-        {"토핑7", 1000},
-        {"토핑8", 1500},
-        {"토핑9", 1000},
-        {"토핑10", 500},
-        {"토핑11", 1000},
-        {"토핑12", 1000}
-    };
+            {
+                {"현미밥 변경", 1000},
+                {"당근 빼주세요", 0},
+                {"오이 빼주세요", 0},
+                {"단무지 빼주세요", 0},
+                {"참치 추가", 1000},
+                {"날치알 추가", 1500},
+                {"돈가스 추가", 1500}
+
+            };
         }
 
 
@@ -191,6 +194,8 @@ namespace _24_1kioskteamproj
             menuValue[2] = 4000;
             menuValue[3] = 4500;
             menuValue[4] = 5000;
+
+           
             try
             {
                 pictureBox1.Image = Properties.Resources.gimbab;
@@ -309,6 +314,28 @@ namespace _24_1kioskteamproj
             menuValue[3] = 4500;
             menuValue[4] = 5000;
 
+            menuOptions = new Dictionary<string, List<string>>
+            {
+                {"menu1", new List<string> {"현미밥 변경", "당근 빼주세요", "오이 빼주세요", "단무지 빼주세요"} },
+                {"menu2", new List<string> {"현미밥 변경","치즈 추가", "당근 빼주세요", "오이 빼주세요", "단무지 빼주세요" } },
+                {"menu3", new List<string> {"현미밥 변경","참치 추가", "당근 빼주세요", "오이 빼주세요", "단무지 빼주세요" } },
+                {"menu4", new List<string> {"현미밥 변경","날치알 추가", "당근 빼주세요", "오이 빼주세요", "단무지 빼주세요" } },
+                {"menu5", new List<string> {"현미밥 변경","돈가스 추가", "당근 빼주세요", "오이 빼주세요", "단무지 빼주세요" } }              
+            };
+
+            // 토핑 가격 정리
+            toppingPrices = new Dictionary<string, double>
+            {
+                {"현미밥 변경", 1000},
+                {"당근 빼주세요", 0},
+                {"오이 빼주세요", 0},
+                {"단무지 빼주세요", 0},
+                {"참치 추가", 1000},
+                {"날치알 추가", 1500},
+                {"돈가스 추가", 1500}            
+
+            };
+
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -405,6 +432,34 @@ namespace _24_1kioskteamproj
             menuValue[4] = 7000;
             menuValue[5] = 8500;
             menuValue[6] = 9000;
+
+            //토핑 정리
+            menuOptions = new Dictionary<string, List<string>>
+            {
+                {"menu1", new List<string> {"고기 추가", "밥 추가", "대파 추가", "고추 추가"} },
+                {"menu2", new List<string> {"김치 추가", "밥 추가", "고기 추가", "고추 추가"} },
+                {"menu3", new List<string> {"고기 추가", "밥 추가", "당면 추가" } },
+                {"menu4", new List<string> {"고기 추가", "김치 추가", "밥 추가", "떡사리 추가", "두부 추가", "계란후라이 추가" } },
+                {"menu5", new List<string> {"두부 추가", "밥 추가", "계란후라이 추가" } },
+                {"menu6", new List<string> {"고기 추가", "밥 추가", "당면 추가", "계란후라이 추가" } },
+                {"menu7", new List<string> {"낙지 추가", "밥 추가", "계란후라이 추가" } }
+            };
+
+            // 토핑 가격 정리
+            toppingPrices = new Dictionary<string, double>
+            {
+                {"고기 추가", 4000},
+                {"밥 추가", 2000},
+                {"대파 추가", 1000},
+                {"고추 추가", 1000},
+                {"김치 추가", 1000},
+                {"당면 추가", 1500},
+                {"떡사리 추가", 1000},
+                {"두부 추가", 1500},
+                {"계란후라이 추가", 1000},
+                {"낙지 추가", 5000}
+                
+            };
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -490,6 +545,33 @@ namespace _24_1kioskteamproj
             menuValue[1] = 8000;
             menuValue[2] = 7000;
             menuValue[3] = 9000;
+
+            menuOptions = new Dictionary<string, List<string>>
+            {
+                {"menu1", new List<string> {"밥 추가", "계란 추가", "당근 빼주세요", "소스 추가"} },
+                {"menu2", new List<string> {"돈까스 추가", "밥 추가", "소스 추가"} },
+                {"menu3", new List<string> {"생선까스 추가", "밥 추가", "타르타르소스 추가" } },
+                {"menu4", new List<string> {"고구마 치즈 돈까스 추가", "밥 추가", "소스 추가", "고구마토핑 추가" } }
+                
+            };
+
+            // 토핑 가격 정리
+            toppingPrices = new Dictionary<string, double>
+            {
+                {"계란 추가", 1000},
+                {"밥 추가", 2000},
+                {"당근 빼주세요", 0},
+                {"소스 추가", 500},
+                {"돈까스 추가", 4000},
+                {"생선까스 추가", 4000},
+                {"고구마 치즈 돈까스 추가", 5000},
+                {"타르타르소스 추가", 500},
+                {"고구마토핑 추가", 1000}
+
+            };
+
+
+
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -595,6 +677,41 @@ namespace _24_1kioskteamproj
             menuValue[6] = 7500;
             menuValue[7] = 7000;
             menuValue[8] = 5000;
+
+            menuOptions = new Dictionary<string, List<string>>
+            {
+                {"menu1", new List<string> {"떡 추가", "라면사리 추가", "소세지 추가", "당면 추가"} },
+                {"menu2", new List<string> {"떡 추가", "만두 추가", "고추 추가", "콩나물 추가", "계란 추가"} },
+                {"menu3", new List<string> {"야채 추가", "면 추가", "삶은계란 추가" } },
+                {"menu4", new List<string> {"단무지 추가" } },
+                {"menu5", new List<string> {"떡 추가", "만두 추가" } },
+                {"menu6", new List<string> {"면 추가", "삶은계란 추가", "오이 추가"} },
+                {"menu7", new List<string> {"면 추가", "김치 추가", "삶은계란 추가" } },
+                {"menu8", new List<string> {"면 추가", "떡 추가", "삶은계란 추가" } },
+                {"menu9", new List<string> {"오뎅 추가", "곤약 추가", "유부주머니 추가" } }
+            };
+
+            // 토핑 가격 정리
+            toppingPrices = new Dictionary<string, double>
+            {
+                {"떡 추가", 1000},
+                {"라면사리 추가", 1000},
+                {"소세지 추가", 1000},
+                {"당면 추가", 1500},
+                {"만두 추가", 1500},
+                {"고추 추가", 500},
+                {"콩나물 추가", 500},
+                {"계란 추가", 500},
+                {"야채 추가", 500},
+                {"면 추가", 1000},
+                {"삶은계란 추가", 500},
+                {"오이 추가", 500},
+                {"김치 추가", 500},
+                {"오뎅 추가", 2000},
+                {"곤약 추가", 2000},
+                {"유부주머니 추가", 3000}
+
+            };
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -701,13 +818,40 @@ namespace _24_1kioskteamproj
         {
             if(sender is PictureBox pictureBox)
             {
-                if (menuOptions.ContainsKey(pictureBox.Name))
+
+                Panel parentPanel = pictureBox.Parent as Panel; // parent가 Panel가 아니면 null 반환
+
+                Label relatedLabel = null;
+
+                if (parentPanel != null)
                 {
-                    checkedListBox1.Items.Clear();
-                    var options = menuOptions[pictureBox.Name];
-                    foreach(var option in options)
+                    foreach (Control control in parentPanel.Controls)
                     {
-                        checkedListBox1.Items.Add(option);
+                        if (control is Label label)
+                        {
+                            relatedLabel = label;
+                            break; // 찾았으면 종료
+                        }
+                    }
+                }
+
+                if (relatedLabel != null)
+                {
+                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기 (라벨이 두개 이상이어서 찾을 라벨 제외 타 라벨의 부모를 폼으로 변경해줌)
+
+
+                    if (menuOptions.ContainsKey(pictureBox.Name))
+                    {
+                        checkedListBox1.Items.Clear();
+                        var options = menuOptions[pictureBox.Name];
+                        string[] labelParts = labelText.Split(':'); 
+                        string labelMenu = labelParts[0].Trim();
+                        string menuName = $"{labelMenu} -> ";
+                        foreach (var option in options)
+                        {
+                            string topOp = menuName + option;
+                            checkedListBox1.Items.Add(topOp);
+                        }
                     }
                 }
             }
@@ -719,13 +863,40 @@ namespace _24_1kioskteamproj
         {
             if (sender is PictureBox pictureBox)
             {
-                if (menuOptions.ContainsKey(pictureBox.Name))
+
+                Panel parentPanel = pictureBox.Parent as Panel; // parent가 Panel가 아니면 null 반환
+
+                Label relatedLabel = null;
+
+                if (parentPanel != null)
                 {
-                    checkedListBox1.Items.Clear();
-                    var options = menuOptions[pictureBox.Name];
-                    foreach (var option in options)
+                    foreach (Control control in parentPanel.Controls)
                     {
-                        checkedListBox1.Items.Add(option);
+                        if (control is Label label)
+                        {
+                            relatedLabel = label;
+                            break; // 찾았으면 종료
+                        }
+                    }
+                }
+
+                if (relatedLabel != null)
+                {
+                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기
+
+
+                    if (menuOptions.ContainsKey(pictureBox.Name))
+                    {
+                        checkedListBox1.Items.Clear();
+                        var options = menuOptions[pictureBox.Name];
+                        string[] labelParts = labelText.Split(':');
+                        string labelMenu = labelParts[0].Trim();
+                        string menuName = $"{labelMenu} -> ";
+                        foreach (var option in options)
+                        {
+                            string topOp = menuName + option;
+                            checkedListBox1.Items.Add(topOp);
+                        }
                     }
                 }
             }
@@ -735,17 +906,44 @@ namespace _24_1kioskteamproj
         {
             if (sender is PictureBox pictureBox)
             {
-                if (menuOptions.ContainsKey(pictureBox.Name))
+
+                Panel parentPanel = pictureBox.Parent as Panel; // parent가 Panel가 아니면 null 반환
+
+                Label relatedLabel = null;
+
+                if (parentPanel != null)
                 {
-                    checkedListBox1.Items.Clear();
-                    var options = menuOptions[pictureBox.Name];
-                    foreach (var option in options)
+                    foreach (Control control in parentPanel.Controls)
                     {
-                        checkedListBox1.Items.Add(option);
+                        if (control is Label label)
+                        {
+                            relatedLabel = label;
+                            break; // 찾았으면 종료
+                        }
+                    }
+                }
+
+                if (relatedLabel != null)
+                {
+                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기
+
+
+                    if (menuOptions.ContainsKey(pictureBox.Name))
+                    {
+                        checkedListBox1.Items.Clear();
+                        var options = menuOptions[pictureBox.Name];
+                        string[] labelParts = labelText.Split(':');
+                        string labelMenu = labelParts[0].Trim();
+                        string menuName = $"{labelMenu} -> ";
+                        foreach (var option in options)
+                        {
+                            string topOp = menuName + option;
+                            checkedListBox1.Items.Add(topOp);
+                        }
                     }
                 }
             }
-        
+
         }
 
         private void plus1_Click(object sender, EventArgs e)
@@ -1480,19 +1678,24 @@ namespace _24_1kioskteamproj
         {
             if (checkedListBox1.CheckedItems.Count == 0)
             {
-                MessageBox.Show("No items checked in CheckedListBox.");
+                MessageBox.Show("선택된 항목이 없습니다.");
                 return;
             }
 
             foreach (var checkedItem in checkedListBox1.CheckedItems)
             {
                 string toppingName = checkedItem.ToString();
+                string[] parts = toppingName.Split('>');
+                string option = parts[1].Trim();
                 int quantityToAdd = 1;  // 추가할 수량
-                double pricePerUnit = toppingPrices[toppingName];   // 토핑의 단위당 가격
+                double pricePerUnit = toppingPrices[option];   // 토핑의 단위당 가격
 
-                // `ListView`에 같은 이름의 항목이 있는지 확인
+               
+
+                // 리스트뷰에서 같은 이름을 가진 항목 찾기
                 var existingItem = listView1.Items.Cast<ListViewItem>()
-                            .FirstOrDefault(item => item.SubItems[1].Text == toppingName);
+                    .FirstOrDefault(item => item.SubItems[1].Text.Trim().Equals(toppingName, StringComparison.OrdinalIgnoreCase));
+                
 
                 if (existingItem != null)
                 {
@@ -1519,13 +1722,40 @@ namespace _24_1kioskteamproj
         {
             if (sender is PictureBox pictureBox)
             {
-                if (menuOptions.ContainsKey(pictureBox.Name))
+
+                Panel parentPanel = pictureBox.Parent as Panel; // parent가 Panel가 아니면 null 반환
+
+                Label relatedLabel = null;
+
+                if (parentPanel != null)
                 {
-                    checkedListBox1.Items.Clear();
-                    var options = menuOptions[pictureBox.Name];
-                    foreach (var option in options)
+                    foreach (Control control in parentPanel.Controls)
                     {
-                        checkedListBox1.Items.Add(option);
+                        if (control is Label label)
+                        {
+                            relatedLabel = label;
+                            break; // 찾았으면 종료
+                        }
+                    }
+                }
+
+                if (relatedLabel != null)
+                {
+                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기
+
+
+                    if (menuOptions.ContainsKey(pictureBox.Name))
+                    {
+                        checkedListBox1.Items.Clear();
+                        var options = menuOptions[pictureBox.Name];
+                        string[] labelParts = labelText.Split(':');
+                        string labelMenu = labelParts[0].Trim();
+                        string menuName = $"{labelMenu} -> ";
+                        foreach (var option in options)
+                        {
+                            string topOp = menuName + option;
+                            checkedListBox1.Items.Add(topOp);
+                        }
                     }
                 }
             }
@@ -1535,13 +1765,40 @@ namespace _24_1kioskteamproj
         {
             if (sender is PictureBox pictureBox)
             {
-                if (menuOptions.ContainsKey(pictureBox.Name))
+
+                Panel parentPanel = pictureBox.Parent as Panel; // parent가 Panel가 아니면 null 반환
+
+                Label relatedLabel = null;
+
+                if (parentPanel != null)
                 {
-                    checkedListBox1.Items.Clear();
-                    var options = menuOptions[pictureBox.Name];
-                    foreach (var option in options)
+                    foreach (Control control in parentPanel.Controls)
                     {
-                        checkedListBox1.Items.Add(option);
+                        if (control is Label label)
+                        {
+                            relatedLabel = label;
+                            break; // 찾았으면 종료
+                        }
+                    }
+                }
+
+                if (relatedLabel != null)
+                {
+                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기
+
+
+                    if (menuOptions.ContainsKey(pictureBox.Name))
+                    {
+                        checkedListBox1.Items.Clear();
+                        var options = menuOptions[pictureBox.Name];
+                        string[] labelParts = labelText.Split(':');
+                        string labelMenu = labelParts[0].Trim();
+                        string menuName = $"{labelMenu} -> ";
+                        foreach (var option in options)
+                        {
+                            string topOp = menuName + option;
+                            checkedListBox1.Items.Add(topOp);
+                        }
                     }
                 }
             }
@@ -1551,13 +1808,40 @@ namespace _24_1kioskteamproj
         {
             if (sender is PictureBox pictureBox)
             {
-                if (menuOptions.ContainsKey(pictureBox.Name))
+
+                Panel parentPanel = pictureBox.Parent as Panel; // parent가 Panel가 아니면 null 반환
+
+                Label relatedLabel = null;
+
+                if (parentPanel != null)
                 {
-                    checkedListBox1.Items.Clear();
-                    var options = menuOptions[pictureBox.Name];
-                    foreach (var option in options)
+                    foreach (Control control in parentPanel.Controls)
                     {
-                        checkedListBox1.Items.Add(option);
+                        if (control is Label label)
+                        {
+                            relatedLabel = label;
+                            break; // 찾았으면 종료
+                        }
+                    }
+                }
+
+                if (relatedLabel != null)
+                {
+                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기
+
+
+                    if (menuOptions.ContainsKey(pictureBox.Name))
+                    {
+                        checkedListBox1.Items.Clear();
+                        var options = menuOptions[pictureBox.Name];
+                        string[] labelParts = labelText.Split(':');
+                        string labelMenu = labelParts[0].Trim();
+                        string menuName = $"{labelMenu} -> ";
+                        foreach (var option in options)
+                        {
+                            string topOp = menuName + option;
+                            checkedListBox1.Items.Add(topOp);
+                        }
                     }
                 }
             }
@@ -1567,13 +1851,40 @@ namespace _24_1kioskteamproj
         {
             if (sender is PictureBox pictureBox)
             {
-                if (menuOptions.ContainsKey(pictureBox.Name))
+
+                Panel parentPanel = pictureBox.Parent as Panel; // parent가 Panel가 아니면 null 반환
+
+                Label relatedLabel = null;
+
+                if (parentPanel != null)
                 {
-                    checkedListBox1.Items.Clear();
-                    var options = menuOptions[pictureBox.Name];
-                    foreach (var option in options)
+                    foreach (Control control in parentPanel.Controls)
                     {
-                        checkedListBox1.Items.Add(option);
+                        if (control is Label label)
+                        {
+                            relatedLabel = label;
+                            break; // 찾았으면 종료
+                        }
+                    }
+                }
+
+                if (relatedLabel != null)
+                {
+                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기
+
+
+                    if (menuOptions.ContainsKey(pictureBox.Name))
+                    {
+                        checkedListBox1.Items.Clear();
+                        var options = menuOptions[pictureBox.Name];
+                        string[] labelParts = labelText.Split(':');
+                        string labelMenu = labelParts[0].Trim();
+                        string menuName = $"{labelMenu} -> ";
+                        foreach (var option in options)
+                        {
+                            string topOp = menuName + option;
+                            checkedListBox1.Items.Add(topOp);
+                        }
                     }
                 }
             }
@@ -1583,13 +1894,40 @@ namespace _24_1kioskteamproj
         {
             if (sender is PictureBox pictureBox)
             {
-                if (menuOptions.ContainsKey(pictureBox.Name))
+
+                Panel parentPanel = pictureBox.Parent as Panel; // parent가 Panel가 아니면 null 반환
+
+                Label relatedLabel = null;
+
+                if (parentPanel != null)
                 {
-                    checkedListBox1.Items.Clear();
-                    var options = menuOptions[pictureBox.Name];
-                    foreach (var option in options)
+                    foreach (Control control in parentPanel.Controls)
                     {
-                        checkedListBox1.Items.Add(option);
+                        if (control is Label label)
+                        {
+                            relatedLabel = label;
+                            break; // 찾았으면 종료
+                        }
+                    }
+                }
+
+                if (relatedLabel != null)
+                {
+                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기
+
+
+                    if (menuOptions.ContainsKey(pictureBox.Name))
+                    {
+                        checkedListBox1.Items.Clear();
+                        var options = menuOptions[pictureBox.Name];
+                        string[] labelParts = labelText.Split(':');
+                        string labelMenu = labelParts[0].Trim();
+                        string menuName = $"{labelMenu} -> ";
+                        foreach (var option in options)
+                        {
+                            string topOp = menuName + option;
+                            checkedListBox1.Items.Add(topOp);
+                        }
                     }
                 }
             }
@@ -1599,13 +1937,40 @@ namespace _24_1kioskteamproj
         {
             if (sender is PictureBox pictureBox)
             {
-                if (menuOptions.ContainsKey(pictureBox.Name))
+
+                Panel parentPanel = pictureBox.Parent as Panel; // parent가 Panel가 아니면 null 반환
+
+                Label relatedLabel = null;
+
+                if (parentPanel != null)
                 {
-                    checkedListBox1.Items.Clear();
-                    var options = menuOptions[pictureBox.Name];
-                    foreach (var option in options)
+                    foreach (Control control in parentPanel.Controls)
                     {
-                        checkedListBox1.Items.Add(option);
+                        if (control is Label label)
+                        {
+                            relatedLabel = label;
+                            break; // 찾았으면 종료
+                        }
+                    }
+                }
+
+                if (relatedLabel != null)
+                {
+                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기
+
+
+                    if (menuOptions.ContainsKey(pictureBox.Name))
+                    {
+                        checkedListBox1.Items.Clear();
+                        var options = menuOptions[pictureBox.Name];
+                        string[] labelParts = labelText.Split(':');
+                        string labelMenu = labelParts[0].Trim();
+                        string menuName = $"{labelMenu} -> ";
+                        foreach (var option in options)
+                        {
+                            string topOp = menuName + option;
+                            checkedListBox1.Items.Add(topOp);
+                        }
                     }
                 }
             }
