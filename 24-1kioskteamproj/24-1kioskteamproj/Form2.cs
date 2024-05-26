@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -84,6 +85,7 @@ namespace _24_1kioskteamproj
             toppingPrices = new Dictionary<string, double>
             {
                 {"현미밥 변경", 1000},
+                {"치즈 추가", 1000},
                 {"당근 빼주세요", 0},
                 {"오이 빼주세요", 0},
                 {"단무지 빼주세요", 0},
@@ -316,7 +318,7 @@ namespace _24_1kioskteamproj
 
             menuOptions = new Dictionary<string, List<string>>
             {
-                {"menu1", new List<string> {"현미밥 변경", "당근 빼주세요", "오이 빼주세요", "단무지 빼주세요"} },
+                {"menu1", new List<string> {"현미밥 변경","당근 빼주세요", "오이 빼주세요", "단무지 빼주세요"} },
                 {"menu2", new List<string> {"현미밥 변경","치즈 추가", "당근 빼주세요", "오이 빼주세요", "단무지 빼주세요" } },
                 {"menu3", new List<string> {"현미밥 변경","참치 추가", "당근 빼주세요", "오이 빼주세요", "단무지 빼주세요" } },
                 {"menu4", new List<string> {"현미밥 변경","날치알 추가", "당근 빼주세요", "오이 빼주세요", "단무지 빼주세요" } },
@@ -327,6 +329,7 @@ namespace _24_1kioskteamproj
             toppingPrices = new Dictionary<string, double>
             {
                 {"현미밥 변경", 1000},
+                {"치즈 추가", 1000},
                 {"당근 빼주세요", 0},
                 {"오이 빼주세요", 0},
                 {"단무지 빼주세요", 0},
@@ -683,7 +686,7 @@ namespace _24_1kioskteamproj
                 {"menu1", new List<string> {"떡 추가", "라면사리 추가", "소세지 추가", "당면 추가"} },
                 {"menu2", new List<string> {"떡 추가", "만두 추가", "고추 추가", "콩나물 추가", "계란 추가"} },
                 {"menu3", new List<string> {"야채 추가", "면 추가", "삶은계란 추가" } },
-                {"menu4", new List<string> {"단무지 추가" } },
+                {"menu4", new List<string> {"단무지 추가"} },
                 {"menu5", new List<string> {"떡 추가", "만두 추가" } },
                 {"menu6", new List<string> {"면 추가", "삶은계란 추가", "오이 추가"} },
                 {"menu7", new List<string> {"면 추가", "김치 추가", "삶은계란 추가" } },
@@ -709,7 +712,8 @@ namespace _24_1kioskteamproj
                 {"김치 추가", 500},
                 {"오뎅 추가", 2000},
                 {"곤약 추가", 2000},
-                {"유부주머니 추가", 3000}
+                {"유부주머니 추가", 3000},
+                {"단무지 추가", 500}
 
             };
         }
@@ -812,137 +816,21 @@ namespace _24_1kioskteamproj
             menuValue[5] = 2000;
             menuValue[6] = 2000;
 
-        }
-
-        private void menu1_Click(object sender, EventArgs e)
-        {
-            if(sender is PictureBox pictureBox)
+            //토핑 메뉴 정리
+            menuOptions = new Dictionary<string, List<string>>
             {
+                {"menu1", new List<string> {} },
+                {"menu2", new List<string> {} },
+                {"menu3", new List<string> {} },
+                {"menu4", new List<string> {} },
+                {"menu5", new List<string> {} },
+                {"menu6", new List<string> {} },
+                {"menu7", new List<string> {} }
+            };
 
-                Panel parentPanel = pictureBox.Parent as Panel; // parent가 Panel가 아니면 null 반환
-
-                Label relatedLabel = null;
-
-                if (parentPanel != null)
-                {
-                    foreach (Control control in parentPanel.Controls)
-                    {
-                        if (control is Label label)
-                        {
-                            relatedLabel = label;
-                            break; // 찾았으면 종료
-                        }
-                    }
-                }
-
-                if (relatedLabel != null)
-                {
-                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기 (라벨이 두개 이상이어서 찾을 라벨 제외 타 라벨의 부모를 폼으로 변경해줌)
-
-
-                    if (menuOptions.ContainsKey(pictureBox.Name))
-                    {
-                        checkedListBox1.Items.Clear();
-                        var options = menuOptions[pictureBox.Name];
-                        string[] labelParts = labelText.Split(':'); 
-                        string labelMenu = labelParts[0].Trim();
-                        string menuName = $"{labelMenu} -> ";
-                        foreach (var option in options)
-                        {
-                            string topOp = menuName + option;
-                            checkedListBox1.Items.Add(topOp);
-                        }
-                    }
-                }
-            }
-        }
-
-
-
-        private void menu2_Click(object sender, EventArgs e)
-        {
-            if (sender is PictureBox pictureBox)
-            {
-
-                Panel parentPanel = pictureBox.Parent as Panel; // parent가 Panel가 아니면 null 반환
-
-                Label relatedLabel = null;
-
-                if (parentPanel != null)
-                {
-                    foreach (Control control in parentPanel.Controls)
-                    {
-                        if (control is Label label)
-                        {
-                            relatedLabel = label;
-                            break; // 찾았으면 종료
-                        }
-                    }
-                }
-
-                if (relatedLabel != null)
-                {
-                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기
-
-
-                    if (menuOptions.ContainsKey(pictureBox.Name))
-                    {
-                        checkedListBox1.Items.Clear();
-                        var options = menuOptions[pictureBox.Name];
-                        string[] labelParts = labelText.Split(':');
-                        string labelMenu = labelParts[0].Trim();
-                        string menuName = $"{labelMenu} -> ";
-                        foreach (var option in options)
-                        {
-                            string topOp = menuName + option;
-                            checkedListBox1.Items.Add(topOp);
-                        }
-                    }
-                }
-            }
-        }
-
-        private void menu3_Click(object sender, EventArgs e)
-        {
-            if (sender is PictureBox pictureBox)
-            {
-
-                Panel parentPanel = pictureBox.Parent as Panel; // parent가 Panel가 아니면 null 반환
-
-                Label relatedLabel = null;
-
-                if (parentPanel != null)
-                {
-                    foreach (Control control in parentPanel.Controls)
-                    {
-                        if (control is Label label)
-                        {
-                            relatedLabel = label;
-                            break; // 찾았으면 종료
-                        }
-                    }
-                }
-
-                if (relatedLabel != null)
-                {
-                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기
-
-
-                    if (menuOptions.ContainsKey(pictureBox.Name))
-                    {
-                        checkedListBox1.Items.Clear();
-                        var options = menuOptions[pictureBox.Name];
-                        string[] labelParts = labelText.Split(':');
-                        string labelMenu = labelParts[0].Trim();
-                        string menuName = $"{labelMenu} -> ";
-                        foreach (var option in options)
-                        {
-                            string topOp = menuName + option;
-                            checkedListBox1.Items.Add(topOp);
-                        }
-                    }
-                }
-            }
+            // 토핑 가격 정리
+            toppingPrices = new Dictionary<string, double>
+            { };
 
         }
 
@@ -976,9 +864,67 @@ namespace _24_1kioskteamproj
                 tot += menuValue[0];
             }
 
-            
 
-            totallabel.Text = "총 금액 : " + tot + "원";
+
+            totallabel.Text = "총 금액 : " + tot + "원"; ;
+
+            //토핑박스에 추가
+
+            if (sender is System.Windows.Forms.Button button)
+            {
+
+                Panel parentPanel = button.Parent as Panel; // parent가 Panel이 아니면 null 반환 (그룹박스는 테두리가 생겨서..패널로 바꿨어요..)
+
+                Label relatedLabel = null;
+                PictureBox realatedPictureBox = null;
+
+                if (parentPanel != null)
+                {
+                    foreach (Control control in parentPanel.Controls)
+                    {
+                        if (control is Label label)
+                        {
+                            relatedLabel = label;
+                            break; // 찾았으면 종료
+                        }
+                    }
+                }
+
+                if (relatedLabel != null)
+                {
+                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기 (라벨이 두개 이상이어서 찾을 라벨 제외 타 라벨의 부모를 폼으로 변경해줌)
+
+                    foreach(Control control in parentPanel.Controls)
+                    {
+                        if(control is PictureBox pictureBox)
+                        {
+                            realatedPictureBox = pictureBox;
+                            break;
+                        }
+                    }
+
+                    if(realatedPictureBox != null)
+                    {
+                        if (menuOptions.ContainsKey(realatedPictureBox.Name))
+                        {
+                            checkedListBox1.Items.Clear();
+                            var options = menuOptions[realatedPictureBox.Name];
+                            string[] labelParts = labelText.Split(':');
+                            string labelMenu = labelParts[0].Trim();
+                            string menuName = $"{labelMenu} -> ";
+                            foreach (var option in options)
+                            {
+                                string topOp = menuName + option ;
+                                checkedListBox1.Items.Add(topOp);
+                            }
+                        }
+                    }
+                   
+                }
+            }
+
+
+
             /* 실패작이긴 하지만 혹시 몰라 놔둔 것
             count1.Text = count[0].ToString();
             ListViewItem item = new ListViewItem();
@@ -1048,15 +994,10 @@ namespace _24_1kioskteamproj
         }
 
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void plus2_Click(object sender, EventArgs e)
         {
-            count[1]++;
-            booleanplus[1] = false;
+            count[0]++;
+            booleanplus[0] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
             {
@@ -1065,67 +1006,90 @@ namespace _24_1kioskteamproj
                     // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
                     int quantity = int.Parse(itemss.SubItems[2].Text) + 1;
                     itemss.SubItems[2].Text = quantity.ToString();
-                    itemss.SubItems[3].Text = (quantity * menuValue[1]).ToString();
-                    booleanplus[1] = true;
-                    tot += menuValue[1];
+                    itemss.SubItems[3].Text = (quantity * menuValue[0]).ToString();
+                    booleanplus[0] = true;
+                    tot += menuValue[0];
                     break;
                 }
 
             }
 
-            if (booleanplus[1] == false)
+            if (booleanplus[0] == false)
             {
-                count[1] = 1;
+                count[0] = 1;
                 item.SubItems.Add(menulabel2.Text);
-                item.SubItems.Add(count[1].ToString());
-                item.SubItems.Add((menuValue[1] * count[1]).ToString());
+                item.SubItems.Add(count[0].ToString());
+                item.SubItems.Add((menuValue[0] * count[0]).ToString());
                 listView1.Items.Add(item);
-                tot += menuValue[1];
+                tot += menuValue[0];
             }
 
-            if(menulabel2.Text == "라면 : 4500원")
-            {
-                DialogResult result = MessageBox.Show("슬라이스 치즈를 추가하시겠습니까?", "확인", MessageBoxButtons.OKCancel);
-                if (result == DialogResult.OK)
-                {
-                    bool boolcheck1 = false;
-                    foreach (ListViewItem itemss in listView1.Items)
-                    {
-                        if (itemss.SubItems[1].Text == "슬라이스 치즈 : 500원")
-                        {
-                            // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
-                            int quantity = int.Parse(itemss.SubItems[2].Text) + 1;
-                            itemss.SubItems[2].Text = quantity.ToString();
-                            itemss.SubItems[3].Text = (quantity * 500).ToString();
-                            boolcheck1 = true;
-                            tot += 500;
-                            break;
-                        }
 
-                    }
-                    if (boolcheck1 == false) 
-                    {
-                        ListViewItem newItem = new ListViewItem();
-                        newItem.SubItems.Add("슬라이스 치즈 : 500원");
-                        newItem.SubItems.Add(1.ToString());
-                        newItem.SubItems.Add((500).ToString());
-                        listView1.Items.Add(newItem);
-                        tot += 500;
-                    }
-                }
-            }
 
             totallabel.Text = "총 금액 : " + tot + "원";
+
+            if (sender is System.Windows.Forms.Button button)
+            {
+
+                Panel parentPanel = button.Parent as Panel; // parent가 Panel이 아니면 null 반환 (그룹박스는 테두리가 생겨서..패널로 바꿨어요..)
+
+                Label relatedLabel = null;
+                PictureBox realatedPictureBox = null;
+
+                if (parentPanel != null)
+                {
+                    foreach (Control control in parentPanel.Controls)
+                    {
+                        if (control is Label label)
+                        {
+                            relatedLabel = label;
+                            break; // 찾았으면 종료
+                        }
+                    }
+                }
+
+                if (relatedLabel != null)
+                {
+                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기 (라벨이 두개 이상이어서 찾을 라벨 제외 타 라벨의 부모를 폼으로 변경해줌)
+
+                    foreach (Control control in parentPanel.Controls)
+                    {
+                        if (control is PictureBox pictureBox)
+                        {
+                            realatedPictureBox = pictureBox;
+                            break;
+                        }
+                    }
+
+                    if (realatedPictureBox != null)
+                    {
+                        if (menuOptions.ContainsKey(realatedPictureBox.Name))
+                        {
+                            checkedListBox1.Items.Clear();
+                            var options = menuOptions[realatedPictureBox.Name];
+                            string[] labelParts = labelText.Split(':');
+                            string labelMenu = labelParts[0].Trim();
+                            string menuName = $"{labelMenu} -> ";
+                            foreach (var option in options)
+                            {
+                                string topOp = menuName + option;
+                                checkedListBox1.Items.Add(topOp);
+                            }
+                        }
+                    }
+
+                }
+            }
         }
 
         private void minus2_Click(object sender, EventArgs e)
         {
-            if (count[1] <= 0)
+            if (count[0] <= 0)
             {
                 return;
             }
 
-            count[1]--;
+            count[0]--;
 
             foreach (ListViewItem item in listView1.Items)
             {
@@ -1155,8 +1119,8 @@ namespace _24_1kioskteamproj
 
         private void plus3_Click(object sender, EventArgs e)
         {
-            count[2]++;
-            booleanplus[2] = false;
+            count[0]++;
+            booleanplus[0] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
             {
@@ -1165,34 +1129,90 @@ namespace _24_1kioskteamproj
                     // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
                     int quantity = int.Parse(itemss.SubItems[2].Text) + 1;
                     itemss.SubItems[2].Text = quantity.ToString();
-                    itemss.SubItems[3].Text = (quantity * menuValue[2]).ToString();
-                    booleanplus[2] = true;
-                    tot += menuValue[2];
+                    itemss.SubItems[3].Text = (quantity * menuValue[0]).ToString();
+                    booleanplus[0] = true;
+                    tot += menuValue[0];
                     break;
                 }
 
             }
 
-            if (booleanplus[2] == false)
+            if (booleanplus[0] == false)
             {
-                count[2] = 1;
+                count[0] = 1;
                 item.SubItems.Add(menulabel3.Text);
-                item.SubItems.Add(count[2].ToString());
-                item.SubItems.Add((menuValue[2] * count[2]).ToString());
+                item.SubItems.Add(count[0].ToString());
+                item.SubItems.Add((menuValue[0] * count[0]).ToString());
                 listView1.Items.Add(item);
-                tot += menuValue[2];
+                tot += menuValue[0];
             }
+
+
+
             totallabel.Text = "총 금액 : " + tot + "원";
+
+            if (sender is System.Windows.Forms.Button button)
+            {
+
+                Panel parentPanel = button.Parent as Panel; // parent가 Panel이 아니면 null 반환 (그룹박스는 테두리가 생겨서..패널로 바꿨어요..)
+
+                Label relatedLabel = null;
+                PictureBox realatedPictureBox = null;
+
+                if (parentPanel != null)
+                {
+                    foreach (Control control in parentPanel.Controls)
+                    {
+                        if (control is Label label)
+                        {
+                            relatedLabel = label;
+                            break; // 찾았으면 종료
+                        }
+                    }
+                }
+
+                if (relatedLabel != null)
+                {
+                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기 (라벨이 두개 이상이어서 찾을 라벨 제외 타 라벨의 부모를 폼으로 변경해줌)
+
+                    foreach (Control control in parentPanel.Controls)
+                    {
+                        if (control is PictureBox pictureBox)
+                        {
+                            realatedPictureBox = pictureBox;
+                            break;
+                        }
+                    }
+
+                    if (realatedPictureBox != null)
+                    {
+                        if (menuOptions.ContainsKey(realatedPictureBox.Name))
+                        {
+                            checkedListBox1.Items.Clear();
+                            var options = menuOptions[realatedPictureBox.Name];
+                            string[] labelParts = labelText.Split(':');
+                            string labelMenu = labelParts[0].Trim();
+                            string menuName = $"{labelMenu} -> ";
+                            foreach (var option in options)
+                            {
+                                string topOp = menuName + option;
+                                checkedListBox1.Items.Add(topOp);
+                            }
+                        }
+                    }
+
+                }
+            }
         }
 
         private void minus3_Click(object sender, EventArgs e)
         {
-            if (count[2] <= 0)
+            if (count[0] <= 0)
             {
                 return;
             }
 
-            count[2]--;
+            count[0]--;
 
             foreach (ListViewItem item in listView1.Items)
             {
@@ -1218,12 +1238,13 @@ namespace _24_1kioskteamproj
 
             tot -= menuValue[2];  // 총 가격을 업데이트
             totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+
         }
 
         private void plus4_Click(object sender, EventArgs e)
         {
-            count[3]++;
-            booleanplus[3] = false;
+            count[0]++;
+            booleanplus[0] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
             {
@@ -1232,35 +1253,90 @@ namespace _24_1kioskteamproj
                     // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
                     int quantity = int.Parse(itemss.SubItems[2].Text) + 1;
                     itemss.SubItems[2].Text = quantity.ToString();
-                    itemss.SubItems[3].Text = (quantity * menuValue[3]).ToString();
-                    booleanplus[3] = true;
-                    tot += menuValue[3];
+                    itemss.SubItems[3].Text = (quantity * menuValue[0]).ToString();
+                    booleanplus[0] = true;
+                    tot += menuValue[0];
                     break;
                 }
 
             }
 
-            if (booleanplus[3] == false)
+            if (booleanplus[0] == false)
             {
-                count[3] = 1;
+                count[0] = 1;
                 item.SubItems.Add(menulabel4.Text);
-                item.SubItems.Add(count[3].ToString());
-                item.SubItems.Add((menuValue[3] * count[3]).ToString());
+                item.SubItems.Add(count[0].ToString());
+                item.SubItems.Add((menuValue[0] * count[0]).ToString());
                 listView1.Items.Add(item);
-                tot += menuValue[3];
+                tot += menuValue[0];
             }
+
+
+
             totallabel.Text = "총 금액 : " + tot + "원";
 
+            if (sender is System.Windows.Forms.Button button)
+            {
+
+                Panel parentPanel = button.Parent as Panel; // parent가 Panel이 아니면 null 반환 (그룹박스는 테두리가 생겨서..패널로 바꿨어요..)
+
+                Label relatedLabel = null;
+                PictureBox realatedPictureBox = null;
+
+                if (parentPanel != null)
+                {
+                    foreach (Control control in parentPanel.Controls)
+                    {
+                        if (control is Label label)
+                        {
+                            relatedLabel = label;
+                            break; // 찾았으면 종료
+                        }
+                    }
+                }
+
+                if (relatedLabel != null)
+                {
+                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기 (라벨이 두개 이상이어서 찾을 라벨 제외 타 라벨의 부모를 폼으로 변경해줌)
+
+                    foreach (Control control in parentPanel.Controls)
+                    {
+                        if (control is PictureBox pictureBox)
+                        {
+                            realatedPictureBox = pictureBox;
+                            break;
+                        }
+                    }
+
+                    if (realatedPictureBox != null)
+                    {
+                        if (menuOptions.ContainsKey(realatedPictureBox.Name))
+                        {
+                            checkedListBox1.Items.Clear();
+                            var options = menuOptions[realatedPictureBox.Name];
+                            string[] labelParts = labelText.Split(':');
+                            string labelMenu = labelParts[0].Trim();
+                            string menuName = $"{labelMenu} -> ";
+                            foreach (var option in options)
+                            {
+                                string topOp = menuName + option;
+                                checkedListBox1.Items.Add(topOp);
+                            }
+                        }
+                    }
+
+                }
+            }
         }
 
         private void minus4_Click(object sender, EventArgs e)
         {
-            if (count[3] <= 0)
+            if (count[0] <= 0)
             {
                 return;
             }
 
-            count[3]--;
+            count[0]--;
 
             foreach (ListViewItem item in listView1.Items)
             {
@@ -1290,8 +1366,8 @@ namespace _24_1kioskteamproj
 
         private void plus5_Click(object sender, EventArgs e)
         {
-            count[4]++;
-            booleanplus[4] = false;
+            count[0]++;
+            booleanplus[0] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
             {
@@ -1301,33 +1377,89 @@ namespace _24_1kioskteamproj
                     int quantity = int.Parse(itemss.SubItems[2].Text) + 1;
                     itemss.SubItems[2].Text = quantity.ToString();
                     itemss.SubItems[3].Text = (quantity * menuValue[4]).ToString();
-                    booleanplus[4] = true;
+                    booleanplus[0] = true;
                     tot += menuValue[4];
                     break;
                 }
 
             }
 
-            if (booleanplus[4] == false)
+            if (booleanplus[0] == false)
             {
-                count[4] = 1;
+                count[0] = 1;
                 item.SubItems.Add(menulabel5.Text);
-                item.SubItems.Add(count[4].ToString());
-                item.SubItems.Add((menuValue[4] * count[4]).ToString());
+                item.SubItems.Add(count[0].ToString());
+                item.SubItems.Add((menuValue[4] * count[0]).ToString());
                 listView1.Items.Add(item);
                 tot += menuValue[4];
             }
+
+
+
             totallabel.Text = "총 금액 : " + tot + "원";
+
+            if (sender is System.Windows.Forms.Button button)
+            {
+
+                Panel parentPanel = button.Parent as Panel; // parent가 Panel이 아니면 null 반환 (그룹박스는 테두리가 생겨서..패널로 바꿨어요..)
+
+                Label relatedLabel = null;
+                PictureBox realatedPictureBox = null;
+
+                if (parentPanel != null)
+                {
+                    foreach (Control control in parentPanel.Controls)
+                    {
+                        if (control is Label label)
+                        {
+                            relatedLabel = label;
+                            break; // 찾았으면 종료
+                        }
+                    }
+                }
+
+                if (relatedLabel != null)
+                {
+                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기 (라벨이 두개 이상이어서 찾을 라벨 제외 타 라벨의 부모를 폼으로 변경해줌)
+
+                    foreach (Control control in parentPanel.Controls)
+                    {
+                        if (control is PictureBox pictureBox)
+                        {
+                            realatedPictureBox = pictureBox;
+                            break;
+                        }
+                    }
+
+                    if (realatedPictureBox != null)
+                    {
+                        if (menuOptions.ContainsKey(realatedPictureBox.Name))
+                        {
+                            checkedListBox1.Items.Clear();
+                            var options = menuOptions[realatedPictureBox.Name];
+                            string[] labelParts = labelText.Split(':');
+                            string labelMenu = labelParts[0].Trim();
+                            string menuName = $"{labelMenu} -> ";
+                            foreach (var option in options)
+                            {
+                                string topOp = menuName + option;
+                                checkedListBox1.Items.Add(topOp);
+                            }
+                        }
+                    }
+
+                }
+            }
         }
 
         private void minus5_Click(object sender, EventArgs e)
         {
-            if (count[4] <= 0)
+            if (count[0] <= 0)
             {
                 return;
             }
 
-            count[4]--;
+            count[0]--;
 
             foreach (ListViewItem item in listView1.Items)
             {
@@ -1357,8 +1489,8 @@ namespace _24_1kioskteamproj
 
         private void plus6_Click(object sender, EventArgs e)
         {
-            count[5]++;
-            booleanplus[5] = false;
+            count[0]++;
+            booleanplus[0] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
             {
@@ -1367,34 +1499,90 @@ namespace _24_1kioskteamproj
                     // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
                     int quantity = int.Parse(itemss.SubItems[2].Text) + 1;
                     itemss.SubItems[2].Text = quantity.ToString();
-                    itemss.SubItems[3].Text = (quantity * menuValue[5]).ToString();
-                    booleanplus[5] = true;
-                    tot += menuValue[5];
+                    itemss.SubItems[3].Text = (quantity * menuValue[0]).ToString();
+                    booleanplus[0] = true;
+                    tot += menuValue[0];
                     break;
                 }
 
             }
 
-            if (booleanplus[5] == false)
+            if (booleanplus[0] == false)
             {
-                count[5] = 1;
+                count[0] = 1;
                 item.SubItems.Add(menulabel6.Text);
-                item.SubItems.Add(count[5].ToString());
-                item.SubItems.Add((menuValue[5] * count[5]).ToString());
+                item.SubItems.Add(count[0].ToString());
+                item.SubItems.Add((menuValue[0] * count[0]).ToString());
                 listView1.Items.Add(item);
-                tot += menuValue[5];
+                tot += menuValue[0];
             }
+
+
+
             totallabel.Text = "총 금액 : " + tot + "원";
+
+            if (sender is System.Windows.Forms.Button button)
+            {
+
+                Panel parentPanel = button.Parent as Panel; // parent가 Panel이 아니면 null 반환 (그룹박스는 테두리가 생겨서..패널로 바꿨어요..)
+
+                Label relatedLabel = null;
+                PictureBox realatedPictureBox = null;
+
+                if (parentPanel != null)
+                {
+                    foreach (Control control in parentPanel.Controls)
+                    {
+                        if (control is Label label)
+                        {
+                            relatedLabel = label;
+                            break; // 찾았으면 종료
+                        }
+                    }
+                }
+
+                if (relatedLabel != null)
+                {
+                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기 (라벨이 두개 이상이어서 찾을 라벨 제외 타 라벨의 부모를 폼으로 변경해줌)
+
+                    foreach (Control control in parentPanel.Controls)
+                    {
+                        if (control is PictureBox pictureBox)
+                        {
+                            realatedPictureBox = pictureBox;
+                            break;
+                        }
+                    }
+
+                    if (realatedPictureBox != null)
+                    {
+                        if (menuOptions.ContainsKey(realatedPictureBox.Name))
+                        {
+                            checkedListBox1.Items.Clear();
+                            var options = menuOptions[realatedPictureBox.Name];
+                            string[] labelParts = labelText.Split(':');
+                            string labelMenu = labelParts[0].Trim();
+                            string menuName = $"{labelMenu} -> ";
+                            foreach (var option in options)
+                            {
+                                string topOp = menuName + option;
+                                checkedListBox1.Items.Add(topOp);
+                            }
+                        }
+                    }
+
+                }
+            }
         }
 
         private void minus6_Click(object sender, EventArgs e)
         {
-            if (count[5] <= 0)
+            if (count[0] <= 0)
             {
                 return;
             }
 
-            count[5]--;
+            count[0]--;
 
             foreach (ListViewItem item in listView1.Items)
             {
@@ -1424,8 +1612,8 @@ namespace _24_1kioskteamproj
 
         private void plus7_Click(object sender, EventArgs e)
         {
-            count[6]++;
-            booleanplus[6] = false;
+            count[0]++;
+            booleanplus[0] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
             {
@@ -1434,34 +1622,90 @@ namespace _24_1kioskteamproj
                     // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
                     int quantity = int.Parse(itemss.SubItems[2].Text) + 1;
                     itemss.SubItems[2].Text = quantity.ToString();
-                    itemss.SubItems[3].Text = (quantity * menuValue[6]).ToString();
-                    booleanplus[6] = true;
-                    tot += menuValue[6];
+                    itemss.SubItems[3].Text = (quantity * menuValue[0]).ToString();
+                    booleanplus[0] = true;
+                    tot += menuValue[0];
                     break;
                 }
 
             }
 
-            if (booleanplus[6] == false)
+            if (booleanplus[0] == false)
             {
-                count[6] = 1;
+                count[0] = 1;
                 item.SubItems.Add(menulabel7.Text);
-                item.SubItems.Add(count[6].ToString());
-                item.SubItems.Add((menuValue[6] * count[6]).ToString());
+                item.SubItems.Add(count[0].ToString());
+                item.SubItems.Add((menuValue[0] * count[0]).ToString());
                 listView1.Items.Add(item);
-                tot += menuValue[6];
+                tot += menuValue[0];
             }
+
+
+
             totallabel.Text = "총 금액 : " + tot + "원";
+
+            if (sender is System.Windows.Forms.Button button)
+            {
+
+                Panel parentPanel = button.Parent as Panel; // parent가 Panel이 아니면 null 반환 (그룹박스는 테두리가 생겨서..패널로 바꿨어요..)
+
+                Label relatedLabel = null;
+                PictureBox realatedPictureBox = null;
+
+                if (parentPanel != null)
+                {
+                    foreach (Control control in parentPanel.Controls)
+                    {
+                        if (control is Label label)
+                        {
+                            relatedLabel = label;
+                            break; // 찾았으면 종료
+                        }
+                    }
+                }
+
+                if (relatedLabel != null)
+                {
+                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기 (라벨이 두개 이상이어서 찾을 라벨 제외 타 라벨의 부모를 폼으로 변경해줌)
+
+                    foreach (Control control in parentPanel.Controls)
+                    {
+                        if (control is PictureBox pictureBox)
+                        {
+                            realatedPictureBox = pictureBox;
+                            break;
+                        }
+                    }
+
+                    if (realatedPictureBox != null)
+                    {
+                        if (menuOptions.ContainsKey(realatedPictureBox.Name))
+                        {
+                            checkedListBox1.Items.Clear();
+                            var options = menuOptions[realatedPictureBox.Name];
+                            string[] labelParts = labelText.Split(':');
+                            string labelMenu = labelParts[0].Trim();
+                            string menuName = $"{labelMenu} -> ";
+                            foreach (var option in options)
+                            {
+                                string topOp = menuName + option;
+                                checkedListBox1.Items.Add(topOp);
+                            }
+                        }
+                    }
+
+                }
+            }
         }
 
         private void minus7_Click(object sender, EventArgs e)
         {
-            if (count[6] <= 0)
+            if (count[0] <= 0)
             {
                 return;
             }
 
-            count[6]--;
+            count[0]--;
 
             foreach (ListViewItem item in listView1.Items)
             {
@@ -1491,8 +1735,8 @@ namespace _24_1kioskteamproj
 
         private void plus8_Click(object sender, EventArgs e)
         {
-            count[7]++;
-            booleanplus[7] = false;
+            count[0]++;
+            booleanplus[0] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
             {
@@ -1501,34 +1745,90 @@ namespace _24_1kioskteamproj
                     // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
                     int quantity = int.Parse(itemss.SubItems[2].Text) + 1;
                     itemss.SubItems[2].Text = quantity.ToString();
-                    itemss.SubItems[3].Text = (quantity * menuValue[7]).ToString();
-                    booleanplus[7] = true;
-                    tot += menuValue[7];
+                    itemss.SubItems[3].Text = (quantity * menuValue[0]).ToString();
+                    booleanplus[0] = true;
+                    tot += menuValue[0];
                     break;
                 }
 
             }
 
-            if (booleanplus[7] == false)
+            if (booleanplus[0] == false)
             {
-                count[7] = 1;
+                count[0] = 1;
                 item.SubItems.Add(menulabel8.Text);
-                item.SubItems.Add(count[7].ToString());
-                item.SubItems.Add((menuValue[7] * count[7]).ToString());
+                item.SubItems.Add(count[0].ToString());
+                item.SubItems.Add((menuValue[0] * count[0]).ToString());
                 listView1.Items.Add(item);
-                tot += menuValue[7];
+                tot += menuValue[0];
             }
+
+
+
             totallabel.Text = "총 금액 : " + tot + "원";
+
+            if (sender is System.Windows.Forms.Button button)
+            {
+
+                Panel parentPanel = button.Parent as Panel; // parent가 Panel이 아니면 null 반환 (그룹박스는 테두리가 생겨서..패널로 바꿨어요..)
+
+                Label relatedLabel = null;
+                PictureBox realatedPictureBox = null;
+
+                if (parentPanel != null)
+                {
+                    foreach (Control control in parentPanel.Controls)
+                    {
+                        if (control is Label label)
+                        {
+                            relatedLabel = label;
+                            break; // 찾았으면 종료
+                        }
+                    }
+                }
+
+                if (relatedLabel != null)
+                {
+                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기 (라벨이 두개 이상이어서 찾을 라벨 제외 타 라벨의 부모를 폼으로 변경해줌)
+
+                    foreach (Control control in parentPanel.Controls)
+                    {
+                        if (control is PictureBox pictureBox)
+                        {
+                            realatedPictureBox = pictureBox;
+                            break;
+                        }
+                    }
+
+                    if (realatedPictureBox != null)
+                    {
+                        if (menuOptions.ContainsKey(realatedPictureBox.Name))
+                        {
+                            checkedListBox1.Items.Clear();
+                            var options = menuOptions[realatedPictureBox.Name];
+                            string[] labelParts = labelText.Split(':');
+                            string labelMenu = labelParts[0].Trim();
+                            string menuName = $"{labelMenu} -> ";
+                            foreach (var option in options)
+                            {
+                                string topOp = menuName + option;
+                                checkedListBox1.Items.Add(topOp);
+                            }
+                        }
+                    }
+
+                }
+            }
         }
 
         private void minus8_Click(object sender, EventArgs e)
         {
-            if (count[7] <= 0)
+            if (count[0] <= 0)
             {
                 return;
             }
 
-            count[7]--;
+            count[0]--;
 
             foreach (ListViewItem item in listView1.Items)
             {
@@ -1558,8 +1858,8 @@ namespace _24_1kioskteamproj
 
         private void plus9_Click(object sender, EventArgs e)
         {
-            count[8]++;
-            booleanplus[8] = false;
+            count[0]++;
+            booleanplus[0] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
             {
@@ -1568,34 +1868,90 @@ namespace _24_1kioskteamproj
                     // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
                     int quantity = int.Parse(itemss.SubItems[2].Text) + 1;
                     itemss.SubItems[2].Text = quantity.ToString();
-                    itemss.SubItems[3].Text = (quantity * menuValue[8]).ToString();
-                    booleanplus[8] = true;
-                    tot += menuValue[8];
+                    itemss.SubItems[3].Text = (quantity * menuValue[0]).ToString();
+                    booleanplus[0] = true;
+                    tot += menuValue[0];
                     break;
                 }
 
             }
 
-            if (booleanplus[8] == false)
+            if (booleanplus[0] == false)
             {
-                count[8] = 1;
+                count[0] = 1;
                 item.SubItems.Add(menulabel9.Text);
-                item.SubItems.Add(count[8].ToString());
-                item.SubItems.Add((menuValue[8] * count[8]).ToString());
+                item.SubItems.Add(count[0].ToString());
+                item.SubItems.Add((menuValue[0] * count[0]).ToString());
                 listView1.Items.Add(item);
-                tot += menuValue[8];
+                tot += menuValue[0];
             }
+
+
+
             totallabel.Text = "총 금액 : " + tot + "원";
+
+            if (sender is System.Windows.Forms.Button button)
+            {
+
+                Panel parentPanel = button.Parent as Panel; // parent가 Panel이 아니면 null 반환 (그룹박스는 테두리가 생겨서..패널로 바꿨어요..)
+
+                Label relatedLabel = null;
+                PictureBox realatedPictureBox = null;
+
+                if (parentPanel != null)
+                {
+                    foreach (Control control in parentPanel.Controls)
+                    {
+                        if (control is Label label)
+                        {
+                            relatedLabel = label;
+                            break; // 찾았으면 종료
+                        }
+                    }
+                }
+
+                if (relatedLabel != null)
+                {
+                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기 (라벨이 두개 이상이어서 찾을 라벨 제외 타 라벨의 부모를 폼으로 변경해줌)
+
+                    foreach (Control control in parentPanel.Controls)
+                    {
+                        if (control is PictureBox pictureBox)
+                        {
+                            realatedPictureBox = pictureBox;
+                            break;
+                        }
+                    }
+
+                    if (realatedPictureBox != null)
+                    {
+                        if (menuOptions.ContainsKey(realatedPictureBox.Name))
+                        {
+                            checkedListBox1.Items.Clear();
+                            var options = menuOptions[realatedPictureBox.Name];
+                            string[] labelParts = labelText.Split(':');
+                            string labelMenu = labelParts[0].Trim();
+                            string menuName = $"{labelMenu} -> ";
+                            foreach (var option in options)
+                            {
+                                string topOp = menuName + option;
+                                checkedListBox1.Items.Add(topOp);
+                            }
+                        }
+                    }
+
+                }
+            }
         }
 
         private void minus9_Click(object sender, EventArgs e)
         {
-            if (count[8] <= 0)
+            if (count[0] <= 0)
             {
                 return;
             }
 
-            count[8]--;
+            count[0]--;
 
             foreach (ListViewItem item in listView1.Items)
             {
@@ -1668,13 +2024,9 @@ namespace _24_1kioskteamproj
         {
             listView1.Items.Clear();
         }
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button9_Click(object sender, EventArgs e)
+        
+        //토핑 추가 버튼
+        private void button9_Click(object sender, EventArgs e) 
         {
             if (checkedListBox1.CheckedItems.Count == 0)
             {
@@ -1701,10 +2053,12 @@ namespace _24_1kioskteamproj
                 {
                     // 이미 같은 토핑이 있으면 수량과 가격을 업데이트
                     int currentQuantity = Convert.ToInt32(existingItem.SubItems[2].Text);  // 현재 수량
-                    existingItem.SubItems[2].Text = (currentQuantity + quantityToAdd).ToString();
-
                     double currentPrice = Convert.ToDouble(existingItem.SubItems[3].Text);  // 현재 가격
+                    existingItem.SubItems[2].Text = (currentQuantity + quantityToAdd).ToString();
                     existingItem.SubItems[3].Text = (currentPrice + (pricePerUnit * quantityToAdd)).ToString();
+                    tot +=(int) pricePerUnit;
+                    totallabel.Text = "총 금액 : " + tot + "원";
+
                 }
                 else
                 {
@@ -1714,13 +2068,118 @@ namespace _24_1kioskteamproj
                     newItem.SubItems.Add(quantityToAdd.ToString());  // 수량
                     newItem.SubItems.Add((pricePerUnit * quantityToAdd).ToString());  // 가격
                     listView1.Items.Add(newItem);
+                    tot += (int)pricePerUnit;
+                    totallabel.Text = "총 금액 : " + tot + "원";
                 }
+
+                totallabel.Text = "총 금액 : " + tot + "원";
+
+
             }
         }
 
-        private void menu4_Click(object sender, EventArgs e)
+        //토핑 삭제 버튼
+        private void button10_Click(object sender, EventArgs e)
         {
-            if (sender is PictureBox pictureBox)
+            if (checkedListBox1.CheckedItems.Count == 0)
+            {
+                MessageBox.Show("선택된 항목이 없습니다.");
+                return;
+            }
+
+            foreach (var checkedItem in checkedListBox1.CheckedItems)
+            {
+                string toppingName = checkedItem.ToString();
+                string[] parts = toppingName.Split('>');
+                string option = parts[1].Trim();
+                int quantityToAdd = 1;  // 삭제할 수량
+                double pricePerUnit = toppingPrices[option];   // 토핑의 단위당 가격
+
+
+
+                // 리스트뷰에서 같은 이름을 가진 항목 찾기
+                var existingItem = listView1.Items.Cast<ListViewItem>()
+                    .FirstOrDefault(item => item.SubItems[1].Text.Trim().Equals(toppingName, StringComparison.OrdinalIgnoreCase));
+
+
+                if (existingItem != null)
+                {
+                    
+                    // 이미 같은 토핑이 있으면 수량과 가격을 업데이트
+                    int currentQuantity = Convert.ToInt32(existingItem.SubItems[2].Text);  // 현재 수량
+                    existingItem.SubItems[2].Text= (currentQuantity - quantityToAdd).ToString();
+
+                    double currentPrice = Convert.ToDouble(existingItem.SubItems[3].Text);  // 현재 가격
+                    existingItem.SubItems[3].Text = (currentPrice - (pricePerUnit * quantityToAdd)).ToString();
+
+                    tot -= (int)pricePerUnit;
+                    totallabel.Text = "총 금액 : " + tot + "원";
+
+                    if (currentQuantity <= 1) //현재 수량이 1보다 작으면 리스트에서 삭제. 
+                    {
+                        listView1.Items.Remove(existingItem);
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("체크된 토핑은 장바구니에 없습니다.");
+                }
+
+                
+                totallabel.Text = "총 금액 : " + tot + "원";
+            }
+
+        }
+
+        private void menu1_Click(object sender, EventArgs e)
+        {
+            /*if(sender is PictureBox pictureBox)
+            {
+
+                Panel parentPanel = pictureBox.Parent as Panel; // parent가 Panel이 아니면 null 반환 (그룹박스는 테두리가 생겨서..패널로 바꿨어요..)
+
+                Label relatedLabel = null;
+
+                if (parentPanel != null)
+                {
+                    foreach (Control control in parentPanel.Controls)
+                    {
+                        if (control is Label label)
+                        {
+                            relatedLabel = label;
+                            break; // 찾았으면 종료
+                        }
+                    }
+                }
+
+                if (relatedLabel != null)
+                {
+                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기 (라벨이 두개 이상이어서 찾을 라벨 제외 타 라벨의 부모를 폼으로 변경해줌)
+
+
+                    if (menuOptions.ContainsKey(pictureBox.Name))
+                    {
+                        checkedListBox1.Items.Clear();
+                        var options = menuOptions[pictureBox.Name];
+                        string[] labelParts = labelText.Split(':'); 
+                        string labelMenu = labelParts[0].Trim();
+                        string menuName = $"{labelMenu} -> ";
+                        foreach (var option in options)
+                        {
+                            string topOp = menuName + option;
+                            checkedListBox1.Items.Add(topOp);
+                        }
+                    }
+                }
+            }*/
+        }
+
+
+
+        private void menu2_Click(object sender, EventArgs e) // picturebox누르면 토핑옵션
+        {
+            /*if (sender is PictureBox pictureBox)
             {
 
                 Panel parentPanel = pictureBox.Parent as Panel; // parent가 Panel가 아니면 null 반환
@@ -1758,12 +2217,56 @@ namespace _24_1kioskteamproj
                         }
                     }
                 }
-            }
+            }*/
         }
 
-        private void menu5_Click(object sender, EventArgs e)
+        private void menu3_Click(object sender, EventArgs e) // picturebox누르면 토핑옵션
         {
-            if (sender is PictureBox pictureBox)
+            /*if (sender is PictureBox pictureBox)
+            {
+
+                Panel parentPanel = pictureBox.Parent as Panel; // parent가 Panel이 아니면 null 반환 
+
+                Label relatedLabel = null;
+
+                if (parentPanel != null)
+                {
+                    foreach (Control control in parentPanel.Controls)
+                    {
+                        if (control is Label label)
+                        {
+                            relatedLabel = label;
+                            break; // 찾았으면 종료
+                        }
+                    }
+                }
+
+                if (relatedLabel != null)
+                {
+                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기
+
+
+                    if (menuOptions.ContainsKey(pictureBox.Name))
+                    {
+                        checkedListBox1.Items.Clear();
+                        var options = menuOptions[pictureBox.Name];
+                        string[] labelParts = labelText.Split(':');
+                        string labelMenu = labelParts[0].Trim();
+                        string menuName = $"{labelMenu} -> ";
+                        foreach (var option in options)
+                        {
+                            string topOp = menuName + option;
+                            checkedListBox1.Items.Add(topOp);
+                        }
+                    }
+                }
+            }*/
+
+        }
+
+        private void menu4_Click(object sender, EventArgs e) // picturebox누르면 토핑옵션
+        {
+           /* if (sender is PictureBox pictureBox)
             {
 
                 Panel parentPanel = pictureBox.Parent as Panel; // parent가 Panel가 아니면 null 반환
@@ -1801,12 +2304,12 @@ namespace _24_1kioskteamproj
                         }
                     }
                 }
-            }
+            }*/
         }
 
-        private void menu6_Click(object sender, EventArgs e)
+        private void menu5_Click(object sender, EventArgs e) // picturebox누르면 토핑옵션
         {
-            if (sender is PictureBox pictureBox)
+            /*if (sender is PictureBox pictureBox)
             {
 
                 Panel parentPanel = pictureBox.Parent as Panel; // parent가 Panel가 아니면 null 반환
@@ -1844,12 +2347,12 @@ namespace _24_1kioskteamproj
                         }
                     }
                 }
-            }
+            }*/
         }
 
-        private void menu7_Click(object sender, EventArgs e)
+        private void menu6_Click(object sender, EventArgs e) // picturebox누르면 토핑옵션
         {
-            if (sender is PictureBox pictureBox)
+            /*if (sender is PictureBox pictureBox)
             {
 
                 Panel parentPanel = pictureBox.Parent as Panel; // parent가 Panel가 아니면 null 반환
@@ -1887,12 +2390,12 @@ namespace _24_1kioskteamproj
                         }
                     }
                 }
-            }
+            }*/
         }
 
-        private void menu8_Click(object sender, EventArgs e)
+        private void menu7_Click(object sender, EventArgs e) // picturebox누르면 토핑옵션
         {
-            if (sender is PictureBox pictureBox)
+            /*if (sender is PictureBox pictureBox)
             {
 
                 Panel parentPanel = pictureBox.Parent as Panel; // parent가 Panel가 아니면 null 반환
@@ -1930,12 +2433,12 @@ namespace _24_1kioskteamproj
                         }
                     }
                 }
-            }
+            }*/
         }
 
-        private void menu9_Click(object sender, EventArgs e)
+        private void menu8_Click(object sender, EventArgs e) // picturebox누르면 토핑옵션
         {
-            if (sender is PictureBox pictureBox)
+            /*if (sender is PictureBox pictureBox)
             {
 
                 Panel parentPanel = pictureBox.Parent as Panel; // parent가 Panel가 아니면 null 반환
@@ -1973,6 +2476,65 @@ namespace _24_1kioskteamproj
                         }
                     }
                 }
+            }*/
+        }
+
+        private void menu9_Click(object sender, EventArgs e) // picturebox누르면 토핑옵션
+        {
+            /*if (sender is PictureBox pictureBox)
+            {
+
+                Panel parentPanel = pictureBox.Parent as Panel; // parent가 Panel가 아니면 null 반환
+
+                Label relatedLabel = null;
+
+                if (parentPanel != null)
+                {
+                    foreach (Control control in parentPanel.Controls)
+                    {
+                        if (control is Label label)
+                        {
+                            relatedLabel = label;
+                            break; // 찾았으면 종료
+                        }
+                    }
+                }
+
+                if (relatedLabel != null)
+                {
+                    string labelText = relatedLabel.Text; // Label의 텍스트 가져오기
+
+
+                    if (menuOptions.ContainsKey(pictureBox.Name))
+                    {
+                        checkedListBox1.Items.Clear();
+                        var options = menuOptions[pictureBox.Name];
+                        string[] labelParts = labelText.Split(':');
+                        string labelMenu = labelParts[0].Trim();
+                        string menuName = $"{labelMenu} -> ";
+                        foreach (var option in options)
+                        {
+                            string topOp = menuName + option;
+                            checkedListBox1.Items.Add(topOp);
+                        }
+                    }
+                }
+            }*/
+        }
+
+        private void btnSelectAll_Click(object sender, EventArgs e)
+        {
+            for(int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                checkedListBox1.SetItemChecked(i, true);
+            }
+        }
+
+        private void btnDeselectAll_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                checkedListBox1.SetItemChecked(i, false);
             }
         }
     }

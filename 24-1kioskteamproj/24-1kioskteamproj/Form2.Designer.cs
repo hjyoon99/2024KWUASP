@@ -37,7 +37,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDeselectAll = new System.Windows.Forms.Button();
+            this.btnSelectAll = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.button8 = new System.Windows.Forms.Button();
@@ -97,7 +99,6 @@
             this.toppanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.leftpanel.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menu2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menu3)).BeginInit();
@@ -140,7 +141,7 @@
             this.toppanel.Location = new System.Drawing.Point(0, 0);
             this.toppanel.Margin = new System.Windows.Forms.Padding(6);
             this.toppanel.Name = "toppanel";
-            this.toppanel.Size = new System.Drawing.Size(2719, 188);
+            this.toppanel.Size = new System.Drawing.Size(2884, 188);
             this.toppanel.TabIndex = 1;
             // 
             // pictureBox1
@@ -165,7 +166,7 @@
             this.leftpanel.Location = new System.Drawing.Point(0, 188);
             this.leftpanel.Margin = new System.Windows.Forms.Padding(6);
             this.leftpanel.Name = "leftpanel";
-            this.leftpanel.Size = new System.Drawing.Size(303, 1571);
+            this.leftpanel.Size = new System.Drawing.Size(303, 1446);
             this.leftpanel.TabIndex = 2;
             // 
             // button5
@@ -178,10 +179,10 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("맑은 고딕", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(0, 990);
+            this.button5.Location = new System.Drawing.Point(0, 844);
             this.button5.Margin = new System.Windows.Forms.Padding(6);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(303, 342);
+            this.button5.Size = new System.Drawing.Size(303, 281);
             this.button5.TabIndex = 4;
             this.button5.Text = "분식";
             this.button5.UseVisualStyleBackColor = true;
@@ -197,10 +198,10 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("맑은 고딕", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(20, 1272);
+            this.button4.Location = new System.Drawing.Point(0, 1084);
             this.button4.Margin = new System.Windows.Forms.Padding(6);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(271, 300);
+            this.button4.Size = new System.Drawing.Size(303, 347);
             this.button4.TabIndex = 3;
             this.button4.Text = "사이드 및 음료";
             this.button4.UseVisualStyleBackColor = true;
@@ -216,10 +217,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("맑은 고딕", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(0, 668);
+            this.button3.Location = new System.Drawing.Point(0, 603);
             this.button3.Margin = new System.Windows.Forms.Padding(6);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(301, 328);
+            this.button3.Size = new System.Drawing.Size(301, 265);
             this.button3.TabIndex = 2;
             this.button3.Text = "양식";
             this.button3.UseVisualStyleBackColor = true;
@@ -264,35 +265,72 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // panel1
+            // btnDeselectAll
             // 
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.checkedListBox1);
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(303, 1100);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2416, 659);
-            this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.btnDeselectAll.BackColor = System.Drawing.Color.MistyRose;
+            this.btnDeselectAll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDeselectAll.FlatAppearance.BorderSize = 0;
+            this.btnDeselectAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeselectAll.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnDeselectAll.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnDeselectAll.Location = new System.Drawing.Point(508, 1342);
+            this.btnDeselectAll.Name = "btnDeselectAll";
+            this.btnDeselectAll.Size = new System.Drawing.Size(135, 58);
+            this.btnDeselectAll.TabIndex = 12;
+            this.btnDeselectAll.Text = "선택 해제";
+            this.btnDeselectAll.UseVisualStyleBackColor = false;
+            this.btnDeselectAll.Click += new System.EventHandler(this.btnDeselectAll_Click);
+            // 
+            // btnSelectAll
+            // 
+            this.btnSelectAll.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnSelectAll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSelectAll.FlatAppearance.BorderSize = 0;
+            this.btnSelectAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelectAll.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSelectAll.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSelectAll.Location = new System.Drawing.Point(367, 1342);
+            this.btnSelectAll.Name = "btnSelectAll";
+            this.btnSelectAll.Size = new System.Drawing.Size(135, 58);
+            this.btnSelectAll.TabIndex = 11;
+            this.btnSelectAll.Text = "전체 선택";
+            this.btnSelectAll.UseVisualStyleBackColor = false;
+            this.btnSelectAll.Click += new System.EventHandler(this.btnSelectAll_Click);
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.MistyRose;
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("맑은 고딕", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button10.Location = new System.Drawing.Point(899, 1499);
+            this.button10.Margin = new System.Windows.Forms.Padding(6);
+            this.button10.Name = "button10";
+            this.button10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button10.Size = new System.Drawing.Size(159, 65);
+            this.button10.TabIndex = 10;
+            this.button10.Text = "옵션 삭제";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
-            this.button9.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button9.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("맑은 고딕", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button9.Location = new System.Drawing.Point(615, 388);
+            this.button9.Font = new System.Drawing.Font("맑은 고딕", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button9.Location = new System.Drawing.Point(899, 1422);
             this.button9.Margin = new System.Windows.Forms.Padding(6);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(121, 211);
+            this.button9.Size = new System.Drawing.Size(159, 65);
             this.button9.TabIndex = 9;
             this.button9.Text = "옵션 추가";
             this.button9.UseVisualStyleBackColor = false;
@@ -301,14 +339,14 @@
             // checkedListBox1
             // 
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(53, 360);
+            this.checkedListBox1.Location = new System.Drawing.Point(367, 1411);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(698, 260);
+            this.checkedListBox1.Size = new System.Drawing.Size(698, 164);
             this.checkedListBox1.TabIndex = 5;
-            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // button8
             // 
+            this.button8.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.button8.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -317,7 +355,7 @@
             this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("맑은 고딕", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button8.Location = new System.Drawing.Point(1712, 324);
+            this.button8.Location = new System.Drawing.Point(1999, 1342);
             this.button8.Margin = new System.Windows.Forms.Padding(6);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(386, 106);
@@ -336,7 +374,7 @@
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("맑은 고딕", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button7.Location = new System.Drawing.Point(1712, 479);
+            this.button7.Location = new System.Drawing.Point(1999, 1493);
             this.button7.Margin = new System.Windows.Forms.Padding(6);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(386, 106);
@@ -355,7 +393,7 @@
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("맑은 고딕", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button6.Location = new System.Drawing.Point(1712, 166);
+            this.button6.Location = new System.Drawing.Point(1999, 1196);
             this.button6.Margin = new System.Windows.Forms.Padding(6);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(386, 106);
@@ -922,9 +960,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2719, 1759);
+            this.ClientSize = new System.Drawing.Size(2884, 1634);
+            this.Controls.Add(this.btnDeselectAll);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btnSelectAll);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel9);
+            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel6);
@@ -934,12 +980,12 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.totallabel);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.leftpanel);
             this.Controls.Add(this.toppanel);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form2";
             this.Text = "키오스크 메뉴 선택";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -947,7 +993,6 @@
             this.toppanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.leftpanel.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.menu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.menu2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.menu3)).EndInit();
@@ -991,7 +1036,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.PictureBox menu1;
@@ -1048,5 +1092,8 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnDeselectAll;
+        private System.Windows.Forms.Button btnSelectAll;
     }
 }
