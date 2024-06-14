@@ -16,5 +16,20 @@ namespace _24_1posteamproj
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            timer_curTime.Start();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void timer_curTime_Tick(object sender, EventArgs e)
+        {
+            txtDate.Text = DateTime.Now.ToLongDateString();
+            txtTime.Text = DateTime.Now.ToLongTimeString();
+        }
     }
 }
