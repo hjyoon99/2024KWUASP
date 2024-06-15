@@ -37,7 +37,7 @@ namespace _24_1posteamproj
         private void btnMenu_Click(object sender, EventArgs e)
         {
             mf.Show();
-            this.Hide();
+            this.Visible=false;
         }
     }
 }
