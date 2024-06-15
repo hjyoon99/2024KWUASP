@@ -10,9 +10,11 @@ using System.Windows.Forms;
 
 namespace _24_1posteamproj
 {
-    public partial class Form1 : Form
+    public partial class mainForm : Form
     {
-        public Form1()
+        MenuForm mf=new MenuForm();
+        
+        public mainForm()
         {
             InitializeComponent();
         }
@@ -30,6 +32,12 @@ namespace _24_1posteamproj
         {
             txtDate.Text = DateTime.Now.ToLongDateString();
             txtTime.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            mf.Show();
+            this.Hide();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace _24_1posteamproj
 {
-    partial class Form1
+    partial class mainForm
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -62,6 +62,7 @@
             this.btnMenu.TabIndex = 1;
             this.btnMenu.Text = "메뉴 관리";
             this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // btnInventory
             // 
@@ -168,7 +169,7 @@
             this.txtDate.TabIndex = 16;
             this.txtDate.Text = "2024년 6월 12일 수요일";
             // 
-            // Form1
+            // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -186,8 +187,8 @@
             this.Controls.Add(this.btnInventory);
             this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.orderLog);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "mainForm";
+            this.Text = "메인";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
