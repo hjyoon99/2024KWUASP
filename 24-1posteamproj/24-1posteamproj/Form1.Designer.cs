@@ -72,6 +72,7 @@
             this.btnInventory.TabIndex = 2;
             this.btnInventory.Text = "재고 관리";
             this.btnInventory.UseVisualStyleBackColor = true;
+            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
             // 
             // btnSales
             // 

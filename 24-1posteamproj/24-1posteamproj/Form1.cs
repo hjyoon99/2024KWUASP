@@ -13,6 +13,7 @@ namespace _24_1posteamproj
     public partial class mainForm : Form
     {
         MenuForm mf=new MenuForm();
+        StokForm stk=new StokForm();
         
         public mainForm()
         {
@@ -38,6 +39,12 @@ namespace _24_1posteamproj
         {
             mf.Show();
             this.Visible=false;
+        }
+
+        private void btnInventory_Click(object sender, EventArgs e)
+        {
+            stk.Show();
+            this.Visible = false;
         }
     }
 }

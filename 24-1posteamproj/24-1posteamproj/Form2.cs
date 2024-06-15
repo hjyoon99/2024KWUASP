@@ -12,7 +12,6 @@ namespace _24_1posteamproj
 {
     public partial class MenuForm : Form
     {
-        List<string> menuItems = new List<string>();
         
         public MenuForm()
         {
@@ -23,14 +22,6 @@ namespace _24_1posteamproj
         {
             TimerDate.Text = DateTime.Now.ToLongDateString();
             TimerTime.Text = DateTime.Now.ToLongTimeString();
-        }
-
-        private void EndBtn_Click(object sender, EventArgs e)
-        { 
-            this.Close();
-            mainForm mainForm = new mainForm();
-
-            mainForm.ShowDialog();
         }
 
         private void Gimbab1_Click(object sender, EventArgs e)
@@ -57,51 +48,6 @@ namespace _24_1posteamproj
         private void Gimbab5_Click(object sender, EventArgs e)
         {
             MenuName.Text=Gimbab5.Text;
-        }
-
-        private void DelBtn_Click(object sender, EventArgs e)
-        {
-            string name = MenuName.Text;
-            if (name != null)
-            {
-                if (name == Gimbab1.Text){Gimbab1.Enabled = false;}
-                if (name == Gimbab2.Text){Gimbab2.Enabled = false;}
-                if (name == Gimbab3.Text){Gimbab3.Enabled = false;}
-                if (name == Gimbab4.Text){Gimbab4.Enabled = false;}
-                if (name == Gimbab5.Text){Gimbab5.Enabled = false;}
-
-                if (name == Hansik1.Text){Hansik1.Enabled = false;}
-                if (name == Hansik2.Text){Hansik2.Enabled = false;}
-                if (name == Hansik3.Text){Hansik3.Enabled = false;}
-                if (name == Hansik4.Text){Hansik4.Enabled = false;}
-                if (name == Hansik5.Text){Hansik5.Enabled = false;}
-                if (name == Hansik6.Text){Hansik6.Enabled = false;}
-                if (name == Hansik7.Text) {Hansik7.Enabled = false;}
-
-                if (name == Wf1.Text) {Wf1.Enabled = false;}
-                if(name == Wf2.Text) {Wf2.Enabled = false;}
-                if (name == Wf3.Text) {Wf3.Enabled = false;}
-                if(name== Wf4.Text) {Wf4.Enabled = false;}
-
-                if (name == Bunsik1.Text) { Bunsik1.Enabled = false; }
-                if(name == Bunsik2.Text) { Bunsik2.Enabled = false; }  
-                if(name== Bunsik3.Text) { Bunsik3.Enabled = false; }   
-                if(name== Bunsik4.Text) { Bunsik4.Enabled = false; }
-                if(name==Bunsik5.Text) { Bunsik5.Enabled = false; }
-                if(name==Bunsik6.Text) { Bunsik6.Enabled = false; }
-                if(name==Bunsik7.Text) { Bunsik7.Enabled = false; }
-                if(name==Bunsik8.Text) { Bunsik8.Enabled = false; }
-                if(name==Bunsik9.Text) { Bunsik9.Enabled = false; }
-
-                if(name==Side1.Text) { Side1.Enabled = false; }
-                if(name==Side2.Text) { Side2.Enabled = false; }
-                if(name== Side3.Text) { Side3.Enabled = false; }
-                if(name==Side4.Text) { Side4.Enabled = false; }
-
-                if(name==Drink1.Text) { Drink1.Enabled = false; }
-                if(name==Drink2.Text) { Drink2.Enabled = false; }
-                if(name==Drink3.Text) { Drink3.Enabled = false; }
-            }
         }
 
         private void Hansik1_Click(object sender, EventArgs e)
@@ -239,6 +185,51 @@ namespace _24_1posteamproj
             MenuName.Text = Drink3.Text;
         }
 
+        private void DelBtn_Click(object sender, EventArgs e)
+        {
+            string name = MenuName.Text;
+            if (name != null)
+            {
+                if (name == Gimbab1.Text) { Gimbab1.Enabled = false; }
+                if (name == Gimbab2.Text) { Gimbab2.Enabled = false; }
+                if (name == Gimbab3.Text) { Gimbab3.Enabled = false; }
+                if (name == Gimbab4.Text) { Gimbab4.Enabled = false; }
+                if (name == Gimbab5.Text) { Gimbab5.Enabled = false; }
+
+                if (name == Hansik1.Text) { Hansik1.Enabled = false; }
+                if (name == Hansik2.Text) { Hansik2.Enabled = false; }
+                if (name == Hansik3.Text) { Hansik3.Enabled = false; }
+                if (name == Hansik4.Text) { Hansik4.Enabled = false; }
+                if (name == Hansik5.Text) { Hansik5.Enabled = false; }
+                if (name == Hansik6.Text) { Hansik6.Enabled = false; }
+                if (name == Hansik7.Text) { Hansik7.Enabled = false; }
+
+                if (name == Wf1.Text) { Wf1.Enabled = false; }
+                if (name == Wf2.Text) { Wf2.Enabled = false; }
+                if (name == Wf3.Text) { Wf3.Enabled = false; }
+                if (name == Wf4.Text) { Wf4.Enabled = false; }
+
+                if (name == Bunsik1.Text) { Bunsik1.Enabled = false; }
+                if (name == Bunsik2.Text) { Bunsik2.Enabled = false; }
+                if (name == Bunsik3.Text) { Bunsik3.Enabled = false; }
+                if (name == Bunsik4.Text) { Bunsik4.Enabled = false; }
+                if (name == Bunsik5.Text) { Bunsik5.Enabled = false; }
+                if (name == Bunsik6.Text) { Bunsik6.Enabled = false; }
+                if (name == Bunsik7.Text) { Bunsik7.Enabled = false; }
+                if (name == Bunsik8.Text) { Bunsik8.Enabled = false; }
+                if (name == Bunsik9.Text) { Bunsik9.Enabled = false; }
+
+                if (name == Side1.Text) { Side1.Enabled = false; }
+                if (name == Side2.Text) { Side2.Enabled = false; }
+                if (name == Side3.Text) { Side3.Enabled = false; }
+                if (name == Side4.Text) { Side4.Enabled = false; }
+
+                if (name == Drink1.Text) { Drink1.Enabled = false; }
+                if (name == Drink2.Text) { Drink2.Enabled = false; }
+                if (name == Drink3.Text) { Drink3.Enabled = false; }
+            }
+        }
+
         private void AddBtn_Click(object sender, EventArgs e)
         {
             string name = MenuName.Text;
@@ -281,6 +272,13 @@ namespace _24_1posteamproj
             if(name==Drink2.Text) { Drink2.Enabled = true; }
             if (name == Drink3.Text) { Drink3.Enabled = true; }
 
+        }
+
+        private void EndBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            mainForm mainForm = new mainForm();
+            mainForm.ShowDialog();
         }
     }
 }

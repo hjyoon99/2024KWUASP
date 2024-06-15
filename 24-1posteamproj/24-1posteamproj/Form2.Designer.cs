@@ -104,7 +104,7 @@
             this.groupBox1.Controls.Add(this.DelBtn);
             this.groupBox1.Location = new System.Drawing.Point(20, 78);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(734, 309);
+            this.groupBox1.Size = new System.Drawing.Size(753, 320);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "메뉴";
@@ -583,9 +583,9 @@
             // 
             // EndBtn
             // 
-            this.EndBtn.Location = new System.Drawing.Point(679, 410);
+            this.EndBtn.Location = new System.Drawing.Point(673, 404);
             this.EndBtn.Name = "EndBtn";
-            this.EndBtn.Size = new System.Drawing.Size(75, 23);
+            this.EndBtn.Size = new System.Drawing.Size(108, 29);
             this.EndBtn.TabIndex = 0;
             this.EndBtn.Text = "수정완료";
             this.EndBtn.UseVisualStyleBackColor = true;
