@@ -49,3 +49,4 @@ C:\Users\hyeju\Desktop\test2\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\24-1k
 C:\Users\hyeju\Desktop\test2\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\24-1kioskteamproj.csproj.CoreCompileInputs.cache
 C:\Users\hyeju\Desktop\test2\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\24-1kioskteamproj.exe
 C:\Users\hyeju\Desktop\test2\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\24-1kioskteamproj.pdb
+C:\Users\hyeju\Desktop\test2\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\_24_1kioskteamproj.Form5.resources

@@ -17,6 +17,7 @@ namespace _24_1kioskteamproj
         //자식폼(자리선택)
         Form3 form3 = new Form3();
         Form4 form4;
+        Form5 form5;
         //좌석에 앉아 먹는가?
         public bool packing = false;
         //좌석은 어디인가?
@@ -2014,6 +2015,10 @@ namespace _24_1kioskteamproj
                 form3.Owner = this;
                 DialogResult dREsult = form3.ShowDialog();
 
+                int totalAmount = tot;
+                form5 = new Form5(totalAmount);
+                form5.ShowDialog();
+
                 form4 = new Form4(listView1,whereTable,tot);
                 form4.Owner = this;
                 DialogResult dResult = form4.ShowDialog();
@@ -2022,11 +2027,17 @@ namespace _24_1kioskteamproj
             }
             else
             {
+                int totalAmount = tot;
+                form5 = new Form5(totalAmount);
+                form5.ShowDialog();
                 form4 = new Form4(listView1,whereTable,tot);
                 form4.Owner = this;
                 DialogResult dResult = form4.ShowDialog();
                 this.Close();
             }
+
+            
+
         }
 
         private void button8_Click(object sender, EventArgs e)
