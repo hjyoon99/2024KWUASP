@@ -836,7 +836,7 @@ namespace _24_1kioskteamproj
 
         private void plus1_Click(object sender, EventArgs e)
         {
-            count[0]++;
+            
             booleanplus[0] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
@@ -849,6 +849,7 @@ namespace _24_1kioskteamproj
                     itemss.SubItems[3].Text = (quantity * menuValue[0]).ToString();
                     booleanplus[0] = true;
                     tot += menuValue[0];
+                    count[0] = quantity;
                     break;
                 }
 
@@ -996,7 +997,7 @@ namespace _24_1kioskteamproj
 
         private void plus2_Click(object sender, EventArgs e)
         {
-            count[0]++;
+            
             booleanplus[0] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
@@ -1009,6 +1010,7 @@ namespace _24_1kioskteamproj
                     itemss.SubItems[3].Text = (quantity * menuValue[0]).ToString();
                     booleanplus[0] = true;
                     tot += menuValue[0];
+                    count[1] = quantity;
                     break;
                 }
 
@@ -1016,10 +1018,10 @@ namespace _24_1kioskteamproj
 
             if (booleanplus[0] == false)
             {
-                count[0] = 1;
+                count[1] = 1;
                 item.SubItems.Add(menulabel2.Text);
-                item.SubItems.Add(count[0].ToString());
-                item.SubItems.Add((menuValue[0] * count[0]).ToString());
+                item.SubItems.Add(count[1].ToString());
+                item.SubItems.Add((menuValue[0] * count[1]).ToString());
                 listView1.Items.Add(item);
                 tot += menuValue[0];
             }
@@ -1084,12 +1086,12 @@ namespace _24_1kioskteamproj
 
         private void minus2_Click(object sender, EventArgs e)
         {
-            if (count[0] <= 0)
+            if (count[1] <= 0)
             {
                 return;
             }
 
-            count[0]--;
+            count[1]--;
 
             foreach (ListViewItem item in listView1.Items)
             {
@@ -1119,7 +1121,7 @@ namespace _24_1kioskteamproj
 
         private void plus3_Click(object sender, EventArgs e)
         {
-            count[0]++;
+            
             booleanplus[0] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
@@ -1132,6 +1134,7 @@ namespace _24_1kioskteamproj
                     itemss.SubItems[3].Text = (quantity * menuValue[0]).ToString();
                     booleanplus[0] = true;
                     tot += menuValue[0];
+                    count[2] = quantity;
                     break;
                 }
 
@@ -1139,10 +1142,10 @@ namespace _24_1kioskteamproj
 
             if (booleanplus[0] == false)
             {
-                count[0] = 1;
+                count[2] = 1;
                 item.SubItems.Add(menulabel3.Text);
-                item.SubItems.Add(count[0].ToString());
-                item.SubItems.Add((menuValue[0] * count[0]).ToString());
+                item.SubItems.Add(count[2].ToString());
+                item.SubItems.Add((menuValue[0] * count[2]).ToString());
                 listView1.Items.Add(item);
                 tot += menuValue[0];
             }
@@ -1207,12 +1210,12 @@ namespace _24_1kioskteamproj
 
         private void minus3_Click(object sender, EventArgs e)
         {
-            if (count[0] <= 0)
+            if (count[2] <= 0)
             {
                 return;
             }
 
-            count[0]--;
+            count[2]--;
 
             foreach (ListViewItem item in listView1.Items)
             {
@@ -1243,7 +1246,7 @@ namespace _24_1kioskteamproj
 
         private void plus4_Click(object sender, EventArgs e)
         {
-            count[0]++;
+            
             booleanplus[0] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
@@ -1256,6 +1259,7 @@ namespace _24_1kioskteamproj
                     itemss.SubItems[3].Text = (quantity * menuValue[0]).ToString();
                     booleanplus[0] = true;
                     tot += menuValue[0];
+                    count[3] = quantity;
                     break;
                 }
 
@@ -1263,10 +1267,10 @@ namespace _24_1kioskteamproj
 
             if (booleanplus[0] == false)
             {
-                count[0] = 1;
+                count[3] = 1;
                 item.SubItems.Add(menulabel4.Text);
-                item.SubItems.Add(count[0].ToString());
-                item.SubItems.Add((menuValue[0] * count[0]).ToString());
+                item.SubItems.Add(count[3].ToString());
+                item.SubItems.Add((menuValue[0] * count[3]).ToString());
                 listView1.Items.Add(item);
                 tot += menuValue[0];
             }
@@ -1331,12 +1335,12 @@ namespace _24_1kioskteamproj
 
         private void minus4_Click(object sender, EventArgs e)
         {
-            if (count[0] <= 0)
+            if (count[3] <= 0)
             {
                 return;
             }
 
-            count[0]--;
+            count[3]--;
 
             foreach (ListViewItem item in listView1.Items)
             {
@@ -1366,7 +1370,7 @@ namespace _24_1kioskteamproj
 
         private void plus5_Click(object sender, EventArgs e)
         {
-            count[0]++;
+            
             booleanplus[0] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
@@ -1379,6 +1383,7 @@ namespace _24_1kioskteamproj
                     itemss.SubItems[3].Text = (quantity * menuValue[4]).ToString();
                     booleanplus[0] = true;
                     tot += menuValue[4];
+                    count[4] = quantity;
                     break;
                 }
 
@@ -1386,10 +1391,10 @@ namespace _24_1kioskteamproj
 
             if (booleanplus[0] == false)
             {
-                count[0] = 1;
+                count[4] = 1;
                 item.SubItems.Add(menulabel5.Text);
-                item.SubItems.Add(count[0].ToString());
-                item.SubItems.Add((menuValue[4] * count[0]).ToString());
+                item.SubItems.Add(count[4].ToString());
+                item.SubItems.Add((menuValue[4] * count[4]).ToString());
                 listView1.Items.Add(item);
                 tot += menuValue[4];
             }
@@ -1454,12 +1459,12 @@ namespace _24_1kioskteamproj
 
         private void minus5_Click(object sender, EventArgs e)
         {
-            if (count[0] <= 0)
+            if (count[4] <= 0)
             {
                 return;
             }
 
-            count[0]--;
+            count[4]--;
 
             foreach (ListViewItem item in listView1.Items)
             {
@@ -1489,7 +1494,7 @@ namespace _24_1kioskteamproj
 
         private void plus6_Click(object sender, EventArgs e)
         {
-            count[0]++;
+            
             booleanplus[0] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
@@ -1502,6 +1507,7 @@ namespace _24_1kioskteamproj
                     itemss.SubItems[3].Text = (quantity * menuValue[0]).ToString();
                     booleanplus[0] = true;
                     tot += menuValue[0];
+                    count[5] = quantity;
                     break;
                 }
 
@@ -1509,10 +1515,10 @@ namespace _24_1kioskteamproj
 
             if (booleanplus[0] == false)
             {
-                count[0] = 1;
+                count[5] = 1;
                 item.SubItems.Add(menulabel6.Text);
-                item.SubItems.Add(count[0].ToString());
-                item.SubItems.Add((menuValue[0] * count[0]).ToString());
+                item.SubItems.Add(count[5].ToString());
+                item.SubItems.Add((menuValue[0] * count[5]).ToString());
                 listView1.Items.Add(item);
                 tot += menuValue[0];
             }
@@ -1577,12 +1583,12 @@ namespace _24_1kioskteamproj
 
         private void minus6_Click(object sender, EventArgs e)
         {
-            if (count[0] <= 0)
+            if (count[5] <= 0)
             {
                 return;
             }
 
-            count[0]--;
+            count[5]--;
 
             foreach (ListViewItem item in listView1.Items)
             {
@@ -1612,7 +1618,7 @@ namespace _24_1kioskteamproj
 
         private void plus7_Click(object sender, EventArgs e)
         {
-            count[0]++;
+            
             booleanplus[0] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
@@ -1625,6 +1631,7 @@ namespace _24_1kioskteamproj
                     itemss.SubItems[3].Text = (quantity * menuValue[0]).ToString();
                     booleanplus[0] = true;
                     tot += menuValue[0];
+                    count[6] = quantity;
                     break;
                 }
 
@@ -1632,10 +1639,10 @@ namespace _24_1kioskteamproj
 
             if (booleanplus[0] == false)
             {
-                count[0] = 1;
+                count[6] = 1;
                 item.SubItems.Add(menulabel7.Text);
-                item.SubItems.Add(count[0].ToString());
-                item.SubItems.Add((menuValue[0] * count[0]).ToString());
+                item.SubItems.Add(count[6].ToString());
+                item.SubItems.Add((menuValue[0] * count[6]).ToString());
                 listView1.Items.Add(item);
                 tot += menuValue[0];
             }
@@ -1700,12 +1707,12 @@ namespace _24_1kioskteamproj
 
         private void minus7_Click(object sender, EventArgs e)
         {
-            if (count[0] <= 0)
+            if (count[6] <= 0)
             {
                 return;
             }
 
-            count[0]--;
+            count[6]--;
 
             foreach (ListViewItem item in listView1.Items)
             {
@@ -1735,7 +1742,7 @@ namespace _24_1kioskteamproj
 
         private void plus8_Click(object sender, EventArgs e)
         {
-            count[0]++;
+            
             booleanplus[0] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
@@ -1748,6 +1755,7 @@ namespace _24_1kioskteamproj
                     itemss.SubItems[3].Text = (quantity * menuValue[0]).ToString();
                     booleanplus[0] = true;
                     tot += menuValue[0];
+                    count[7] = quantity;
                     break;
                 }
 
@@ -1755,10 +1763,10 @@ namespace _24_1kioskteamproj
 
             if (booleanplus[0] == false)
             {
-                count[0] = 1;
+                count[7] = 1;
                 item.SubItems.Add(menulabel8.Text);
-                item.SubItems.Add(count[0].ToString());
-                item.SubItems.Add((menuValue[0] * count[0]).ToString());
+                item.SubItems.Add(count[7].ToString());
+                item.SubItems.Add((menuValue[0] * count[7]).ToString());
                 listView1.Items.Add(item);
                 tot += menuValue[0];
             }
@@ -1823,12 +1831,12 @@ namespace _24_1kioskteamproj
 
         private void minus8_Click(object sender, EventArgs e)
         {
-            if (count[0] <= 0)
+            if (count[7] <= 0)
             {
                 return;
             }
 
-            count[0]--;
+            count[7]--;
 
             foreach (ListViewItem item in listView1.Items)
             {
@@ -1858,7 +1866,7 @@ namespace _24_1kioskteamproj
 
         private void plus9_Click(object sender, EventArgs e)
         {
-            count[0]++;
+            
             booleanplus[0] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
@@ -1871,6 +1879,7 @@ namespace _24_1kioskteamproj
                     itemss.SubItems[3].Text = (quantity * menuValue[0]).ToString();
                     booleanplus[0] = true;
                     tot += menuValue[0];
+                    count[8] = quantity;
                     break;
                 }
 
@@ -1878,10 +1887,10 @@ namespace _24_1kioskteamproj
 
             if (booleanplus[0] == false)
             {
-                count[0] = 1;
+                count[8] = 1;
                 item.SubItems.Add(menulabel9.Text);
-                item.SubItems.Add(count[0].ToString());
-                item.SubItems.Add((menuValue[0] * count[0]).ToString());
+                item.SubItems.Add(count[8].ToString());
+                item.SubItems.Add((menuValue[0] * count[8]).ToString());
                 listView1.Items.Add(item);
                 tot += menuValue[0];
             }
@@ -1946,12 +1955,12 @@ namespace _24_1kioskteamproj
 
         private void minus9_Click(object sender, EventArgs e)
         {
-            if (count[0] <= 0)
+            if (count[8] <= 0)
             {
                 return;
             }
 
-            count[0]--;
+            count[8]--;
 
             foreach (ListViewItem item in listView1.Items)
             {
