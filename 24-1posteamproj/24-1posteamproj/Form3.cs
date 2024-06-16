@@ -15,7 +15,7 @@ namespace _24_1posteamproj
     public partial class StokForm : Form
     {
         MenuForm mn = new MenuForm();
-        string excelFile = @"C:\Users\user\OneDrive\바탕 화면\응소실\2024KWUASP\재고관리.xlsx";
+        string excelFile = @"C:\Users\user\OneDrive\바탕 화면\응소실팀플\2024KWUASP\재고관리.xlsx";
         
 
         public StokForm()
