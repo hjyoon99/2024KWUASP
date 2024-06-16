@@ -991,15 +991,20 @@ namespace _24_1kioskteamproj
                 }
             }
 
-            tot -= menuValue[0];  // 총 가격을 업데이트
-            totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            //tot -= menuValue[0];  // 총 가격을 업데이트
+            //totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            if (tot - menuValue[0] >= 0)
+            {
+                tot -= menuValue[0];  // 총 가격을 업데이트
+                totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            }
         }
 
 
         private void plus2_Click(object sender, EventArgs e)
         {
             
-            booleanplus[0] = false;
+            booleanplus[1] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
             {
@@ -1008,23 +1013,23 @@ namespace _24_1kioskteamproj
                     // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
                     int quantity = int.Parse(itemss.SubItems[2].Text) + 1;
                     itemss.SubItems[2].Text = quantity.ToString();
-                    itemss.SubItems[3].Text = (quantity * menuValue[0]).ToString();
-                    booleanplus[0] = true;
-                    tot += menuValue[0];
+                    itemss.SubItems[3].Text = (quantity * menuValue[1]).ToString();
+                    booleanplus[1] = true;
+                    tot += menuValue[1];
                     count[1] = quantity;
                     break;
                 }
 
             }
 
-            if (booleanplus[0] == false)
+            if (booleanplus[1] == false)
             {
                 count[1] = 1;
                 item.SubItems.Add(menulabel2.Text);
                 item.SubItems.Add(count[1].ToString());
-                item.SubItems.Add((menuValue[0] * count[1]).ToString());
+                item.SubItems.Add((menuValue[1] * count[1]).ToString());
                 listView1.Items.Add(item);
-                tot += menuValue[0];
+                tot += menuValue[1];
             }
 
 
@@ -1116,14 +1121,19 @@ namespace _24_1kioskteamproj
                 }
             }
 
-            tot -= menuValue[1];  // 총 가격을 업데이트
-            totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            //tot -= menuValue[1];  // 총 가격을 업데이트
+            //totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            if (tot - menuValue[1] >= 0)
+            {
+                tot -= menuValue[1];  // 총 가격을 업데이트
+                totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            }
         }
 
         private void plus3_Click(object sender, EventArgs e)
         {
             
-            booleanplus[0] = false;
+            booleanplus[2] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
             {
@@ -1132,23 +1142,23 @@ namespace _24_1kioskteamproj
                     // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
                     int quantity = int.Parse(itemss.SubItems[2].Text) + 1;
                     itemss.SubItems[2].Text = quantity.ToString();
-                    itemss.SubItems[3].Text = (quantity * menuValue[0]).ToString();
-                    booleanplus[0] = true;
-                    tot += menuValue[0];
+                    itemss.SubItems[3].Text = (quantity * menuValue[2]).ToString();
+                    booleanplus[2] = true;
+                    tot += menuValue[2];
                     count[2] = quantity;
                     break;
                 }
 
             }
 
-            if (booleanplus[0] == false)
+            if (booleanplus[2] == false)
             {
                 count[2] = 1;
                 item.SubItems.Add(menulabel3.Text);
                 item.SubItems.Add(count[2].ToString());
-                item.SubItems.Add((menuValue[0] * count[2]).ToString());
+                item.SubItems.Add((menuValue[2] * count[2]).ToString());
                 listView1.Items.Add(item);
-                tot += menuValue[0];
+                tot += menuValue[2];
             }
 
 
@@ -1240,15 +1250,20 @@ namespace _24_1kioskteamproj
                 }
             }
 
-            tot -= menuValue[2];  // 총 가격을 업데이트
-            totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            //tot -= menuValue[2];  // 총 가격을 업데이트
+            //totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            if (tot - menuValue[2] >= 0)
+            {
+                tot -= menuValue[2];  // 총 가격을 업데이트
+                totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            }
 
         }
 
         private void plus4_Click(object sender, EventArgs e)
         {
             
-            booleanplus[0] = false;
+            booleanplus[3] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
             {
@@ -1257,23 +1272,23 @@ namespace _24_1kioskteamproj
                     // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
                     int quantity = int.Parse(itemss.SubItems[2].Text) + 1;
                     itemss.SubItems[2].Text = quantity.ToString();
-                    itemss.SubItems[3].Text = (quantity * menuValue[0]).ToString();
-                    booleanplus[0] = true;
-                    tot += menuValue[0];
+                    itemss.SubItems[3].Text = (quantity * menuValue[3]).ToString();
+                    booleanplus[3] = true;
+                    tot += menuValue[3];
                     count[3] = quantity;
                     break;
                 }
 
             }
 
-            if (booleanplus[0] == false)
+            if (booleanplus[3] == false)
             {
                 count[3] = 1;
                 item.SubItems.Add(menulabel4.Text);
                 item.SubItems.Add(count[3].ToString());
-                item.SubItems.Add((menuValue[0] * count[3]).ToString());
+                item.SubItems.Add((menuValue[3] * count[3]).ToString());
                 listView1.Items.Add(item);
-                tot += menuValue[0];
+                tot += menuValue[3];
             }
 
 
@@ -1365,14 +1380,19 @@ namespace _24_1kioskteamproj
                 }
             }
 
-            tot -= menuValue[3];  // 총 가격을 업데이트
-            totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            //tot -= menuValue[3];  // 총 가격을 업데이트
+            //totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            if (tot - menuValue[3] >= 0)
+            {
+                tot -= menuValue[3];  // 총 가격을 업데이트
+                totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            }
         }
 
         private void plus5_Click(object sender, EventArgs e)
         {
             
-            booleanplus[0] = false;
+            booleanplus[4] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
             {
@@ -1382,7 +1402,7 @@ namespace _24_1kioskteamproj
                     int quantity = int.Parse(itemss.SubItems[2].Text) + 1;
                     itemss.SubItems[2].Text = quantity.ToString();
                     itemss.SubItems[3].Text = (quantity * menuValue[4]).ToString();
-                    booleanplus[0] = true;
+                    booleanplus[4] = true;
                     tot += menuValue[4];
                     count[4] = quantity;
                     break;
@@ -1390,7 +1410,7 @@ namespace _24_1kioskteamproj
 
             }
 
-            if (booleanplus[0] == false)
+            if (booleanplus[4] == false)
             {
                 count[4] = 1;
                 item.SubItems.Add(menulabel5.Text);
@@ -1489,14 +1509,19 @@ namespace _24_1kioskteamproj
                 }
             }
 
-            tot -= menuValue[4];  // 총 가격을 업데이트
-            totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            //tot -= menuValue[4];  // 총 가격을 업데이트
+            //totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            if (tot - menuValue[4] >= 0)
+            {
+                tot -= menuValue[4];  // 총 가격을 업데이트
+                totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            }
         }
 
         private void plus6_Click(object sender, EventArgs e)
         {
             
-            booleanplus[0] = false;
+            booleanplus[5] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
             {
@@ -1505,23 +1530,23 @@ namespace _24_1kioskteamproj
                     // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
                     int quantity = int.Parse(itemss.SubItems[2].Text) + 1;
                     itemss.SubItems[2].Text = quantity.ToString();
-                    itemss.SubItems[3].Text = (quantity * menuValue[0]).ToString();
-                    booleanplus[0] = true;
-                    tot += menuValue[0];
+                    itemss.SubItems[3].Text = (quantity * menuValue[5]).ToString();
+                    booleanplus[5] = true;
+                    tot += menuValue[5];
                     count[5] = quantity;
                     break;
                 }
 
             }
 
-            if (booleanplus[0] == false)
+            if (booleanplus[5] == false)
             {
                 count[5] = 1;
                 item.SubItems.Add(menulabel6.Text);
                 item.SubItems.Add(count[5].ToString());
-                item.SubItems.Add((menuValue[0] * count[5]).ToString());
+                item.SubItems.Add((menuValue[5] * count[5]).ToString());
                 listView1.Items.Add(item);
-                tot += menuValue[0];
+                tot += menuValue[5];
             }
 
 
@@ -1613,14 +1638,19 @@ namespace _24_1kioskteamproj
                 }
             }
 
-            tot -= menuValue[5];  // 총 가격을 업데이트
-            totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            //tot -= menuValue[5];  // 총 가격을 업데이트
+            //totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            if (tot - menuValue[5] >= 0)
+            {
+                tot -= menuValue[5];  // 총 가격을 업데이트
+                totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            }
         }
 
         private void plus7_Click(object sender, EventArgs e)
         {
             
-            booleanplus[0] = false;
+            booleanplus[6] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
             {
@@ -1629,23 +1659,23 @@ namespace _24_1kioskteamproj
                     // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
                     int quantity = int.Parse(itemss.SubItems[2].Text) + 1;
                     itemss.SubItems[2].Text = quantity.ToString();
-                    itemss.SubItems[3].Text = (quantity * menuValue[0]).ToString();
-                    booleanplus[0] = true;
-                    tot += menuValue[0];
+                    itemss.SubItems[3].Text = (quantity * menuValue[6]).ToString();
+                    booleanplus[6] = true;
+                    tot += menuValue[6];
                     count[6] = quantity;
                     break;
                 }
 
             }
 
-            if (booleanplus[0] == false)
+            if (booleanplus[6] == false)
             {
                 count[6] = 1;
                 item.SubItems.Add(menulabel7.Text);
                 item.SubItems.Add(count[6].ToString());
-                item.SubItems.Add((menuValue[0] * count[6]).ToString());
+                item.SubItems.Add((menuValue[6] * count[6]).ToString());
                 listView1.Items.Add(item);
-                tot += menuValue[0];
+                tot += menuValue[6];
             }
 
 
@@ -1737,14 +1767,19 @@ namespace _24_1kioskteamproj
                 }
             }
 
-            tot -= menuValue[6];  // 총 가격을 업데이트
-            totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            //tot -= menuValue[6];  // 총 가격을 업데이트
+            //totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            if (tot - menuValue[6] >= 0)
+            {
+                tot -= menuValue[6];  // 총 가격을 업데이트
+                totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            }
         }
 
         private void plus8_Click(object sender, EventArgs e)
         {
             
-            booleanplus[0] = false;
+            booleanplus[7] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
             {
@@ -1753,23 +1788,23 @@ namespace _24_1kioskteamproj
                     // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
                     int quantity = int.Parse(itemss.SubItems[2].Text) + 1;
                     itemss.SubItems[2].Text = quantity.ToString();
-                    itemss.SubItems[3].Text = (quantity * menuValue[0]).ToString();
-                    booleanplus[0] = true;
-                    tot += menuValue[0];
+                    itemss.SubItems[3].Text = (quantity * menuValue[7]).ToString();
+                    booleanplus[7] = true;
+                    tot += menuValue[7];
                     count[7] = quantity;
                     break;
                 }
 
             }
 
-            if (booleanplus[0] == false)
+            if (booleanplus[7] == false)
             {
                 count[7] = 1;
                 item.SubItems.Add(menulabel8.Text);
                 item.SubItems.Add(count[7].ToString());
-                item.SubItems.Add((menuValue[0] * count[7]).ToString());
+                item.SubItems.Add((menuValue[7] * count[7]).ToString());
                 listView1.Items.Add(item);
-                tot += menuValue[0];
+                tot += menuValue[7];
             }
 
 
@@ -1861,14 +1896,19 @@ namespace _24_1kioskteamproj
                 }
             }
 
-            tot -= menuValue[7];  // 총 가격을 업데이트
-            totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            //tot -= menuValue[7];  // 총 가격을 업데이트
+            //totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            if (tot - menuValue[7] >= 0)
+            {
+                tot -= menuValue[7];  // 총 가격을 업데이트
+                totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            }
         }
 
         private void plus9_Click(object sender, EventArgs e)
         {
             
-            booleanplus[0] = false;
+            booleanplus[8] = false;
             ListViewItem item = new ListViewItem();
             foreach (ListViewItem itemss in listView1.Items)
             {
@@ -1877,23 +1917,23 @@ namespace _24_1kioskteamproj
                     // 동일한 메뉴를 찾으면 해당 항목의 수량과 가격을 업데이트
                     int quantity = int.Parse(itemss.SubItems[2].Text) + 1;
                     itemss.SubItems[2].Text = quantity.ToString();
-                    itemss.SubItems[3].Text = (quantity * menuValue[0]).ToString();
-                    booleanplus[0] = true;
-                    tot += menuValue[0];
+                    itemss.SubItems[3].Text = (quantity * menuValue[8]).ToString();
+                    booleanplus[8] = true;
+                    tot += menuValue[8];
                     count[8] = quantity;
                     break;
                 }
 
             }
 
-            if (booleanplus[0] == false)
+            if (booleanplus[8] == false)
             {
                 count[8] = 1;
                 item.SubItems.Add(menulabel9.Text);
                 item.SubItems.Add(count[8].ToString());
-                item.SubItems.Add((menuValue[0] * count[8]).ToString());
+                item.SubItems.Add((menuValue[8] * count[8]).ToString());
                 listView1.Items.Add(item);
-                tot += menuValue[0];
+                tot += menuValue[8];
             }
 
 
@@ -1985,8 +2025,13 @@ namespace _24_1kioskteamproj
                 }
             }
 
-            tot -= menuValue[8];  // 총 가격을 업데이트
-            totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            //tot -= menuValue[8];  // 총 가격을 업데이트
+            //totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            if (tot - menuValue[8] >= 0)
+            {
+                tot -= menuValue[8];  // 총 가격을 업데이트
+                totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -2043,6 +2088,8 @@ namespace _24_1kioskteamproj
         private void button8_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
+            tot = 0;
+            totallabel.Text = "총 금액 : " + tot + "원";  // 총 금액을 다시 표시
         }
         
         //토핑 추가 버튼
