@@ -1,0 +1,23 @@
+D:\Workspace\WinForm\2024KWUASP\24-1posteamproj\24-1posteamproj\bin\Debug\24-1posteamproj.exe.config
+D:\Workspace\WinForm\2024KWUASP\24-1posteamproj\24-1posteamproj\bin\Debug\24-1posteamproj.exe
+D:\Workspace\WinForm\2024KWUASP\24-1posteamproj\24-1posteamproj\bin\Debug\24-1posteamproj.pdb
+D:\Workspace\WinForm\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\24-1posteamproj.csproj.AssemblyReference.cache
+D:\Workspace\WinForm\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\_24_1posteamproj.Form1.resources
+D:\Workspace\WinForm\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\_24_1posteamproj.Properties.Resources.resources
+D:\Workspace\WinForm\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\24-1posteamproj.csproj.GenerateResource.cache
+D:\Workspace\WinForm\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\24-1posteamproj.csproj.CoreCompileInputs.cache
+D:\Workspace\WinForm\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\24-1posteamproj.exe
+D:\Workspace\WinForm\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\24-1posteamproj.pdb
+C:\Users\user\OneDrive\바탕 화면\응소실\2024KWUASP\24-1posteamproj\24-1posteamproj\bin\Debug\24-1posteamproj.exe.config
+C:\Users\user\OneDrive\바탕 화면\응소실\2024KWUASP\24-1posteamproj\24-1posteamproj\bin\Debug\24-1posteamproj.exe
+C:\Users\user\OneDrive\바탕 화면\응소실\2024KWUASP\24-1posteamproj\24-1posteamproj\bin\Debug\24-1posteamproj.pdb
+C:\Users\user\OneDrive\바탕 화면\응소실\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\24-1posteamproj.csproj.AssemblyReference.cache
+C:\Users\user\OneDrive\바탕 화면\응소실\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\24-1posteamproj.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\OneDrive\바탕 화면\응소실\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\_24_1posteamproj.Properties.Resources.resources
+C:\Users\user\OneDrive\바탕 화면\응소실\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\24-1posteamproj.csproj.GenerateResource.cache
+C:\Users\user\OneDrive\바탕 화면\응소실\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\24-1posteamproj.csproj.CoreCompileInputs.cache
+C:\Users\user\OneDrive\바탕 화면\응소실\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\24-1posteamproj.exe
+C:\Users\user\OneDrive\바탕 화면\응소실\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\24-1posteamproj.pdb
+C:\Users\user\OneDrive\바탕 화면\응소실\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\_24_1posteamproj.mainForm.resources
+C:\Users\user\OneDrive\바탕 화면\응소실\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\_24_1posteamproj.MenuForm.resources
+C:\Users\user\OneDrive\바탕 화면\응소실\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\_24_1posteamproj.StokForm.resources
