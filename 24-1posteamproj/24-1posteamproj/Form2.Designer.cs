@@ -635,6 +635,7 @@
             this.Controls.Add(this.label3);
             this.Name = "MenuForm";
             this.Text = "메뉴관리";
+            this.Load += new System.EventHandler(this.MenuForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.menuTab.ResumeLayout(false);

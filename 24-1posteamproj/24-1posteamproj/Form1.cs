@@ -14,13 +14,13 @@ namespace _24_1posteamproj
     {
         MenuForm mf=new MenuForm();
         StokForm stk=new StokForm();
-        
+
         public mainForm()
         {
             InitializeComponent();
-        }
+    }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
         {
             timer_curTime.Start();
         }
@@ -29,8 +29,9 @@ namespace _24_1posteamproj
         {
 
         }
-        private void timer_curTime_Tick(object sender, EventArgs e)
-        {
+        public void timer_curTime_Tick(object sender, EventArgs e)
+        { 
+
             txtDate.Text = DateTime.Now.ToLongDateString();
             txtTime.Text = DateTime.Now.ToLongTimeString();
         }

@@ -12,13 +12,16 @@ namespace _24_1posteamproj
 {
     public partial class StokForm : Form
     {
-
+        MenuForm mn = new MenuForm();   
         public StokForm()
         {
             InitializeComponent();
-            ItemEdit.Enabled = false;
+        }
 
-            if(NameTxt.Text!=null) ItemEdit.Enabled = true;
+        private void StokForm_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -41,30 +44,45 @@ namespace _24_1posteamproj
             {
                 for(int i = 0; i < ItemList.Items.Count; i++)
                 {
-                    if (NameTxt.Text == ItemList.Items[i].Text)
+                    if (NameTxt.Text == ItemList.Items[i].SubItems[0].Text)
                     {
                         ItemList.Items[i].SubItems[1].Text=CountTxt.Text;
                         ItemList.Items[i].SubItems[2].Text=OtherTxt.Text;
+                        return;
+                    }
+                    else if (i == ItemList.Items.Count - 1)
+                    {
+                        ListViewItem item = new ListViewItem(NameTxt.Text);
+                        item.SubItems.Add(CountTxt.Text);
+                        item.SubItems.Add(OtherTxt.Text);
+                        ItemList.Items.Add(item);
                     }
                 }
+                NameTxt.Text = null;
+                CountTxt.Text = null;
+                OtherTxt.Text = null;
             }
-            else
-            {
-                /*add 수정할 예정*/
-            }
-
-            NameTxt.Text = null;
-            CountTxt.Text = null;
-            OtherTxt.Text = null;
         }
 
         private void SearchBtn_Click(object sender, EventArgs e)
         {
-            for(int i=0;i<ItemList.Items.Count; i++)
+            if(SearchTxt.Text != null)
             {
-             
+                for(int i = 0; i < ItemList.Items.Count; i++)
+                {
+                    if (SearchTxt.Text == ItemList.Items[i].SubItems[0].Text)
+                    {
+                        NameTxt.Text=ItemList.Items[i].SubItems[0].Text;
+                        CountTxt.Text=ItemList.Items[i].SubItems[1].Text;
+                        OtherTxt.Text=ItemList.Items[i].SubItems[2].Text;
+
+                        SearchTxt.Text = null;
+                    }
+                }
             }
         }
+
+        
     }
 
     

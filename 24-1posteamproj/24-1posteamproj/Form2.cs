@@ -13,9 +13,15 @@ namespace _24_1posteamproj
     public partial class MenuForm : Form
     {
         
+
         public MenuForm()
         {
             InitializeComponent();
+            
+        }
+        private void MenuForm_Load(object sender, EventArgs e)
+        {
+            timer.Start();
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -277,8 +283,8 @@ namespace _24_1posteamproj
         private void EndBtn_Click(object sender, EventArgs e)
         {
             this.Close();
-            mainForm mainForm = new mainForm();
-            mainForm.ShowDialog();
+            mainForm mainForm1 = new mainForm();
+            mainForm1.ShowDialog();
         }
     }
 }
