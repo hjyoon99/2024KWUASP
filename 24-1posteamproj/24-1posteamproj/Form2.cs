@@ -283,8 +283,6 @@ namespace _24_1posteamproj
         private void EndBtn_Click(object sender, EventArgs e)
         {
             this.Close();
-            mainForm mainForm1 = new mainForm();
-            mainForm1.ShowDialog();
         }
     }
 }

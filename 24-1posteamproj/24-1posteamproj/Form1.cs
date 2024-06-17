@@ -40,14 +40,17 @@ namespace _24_1posteamproj
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            mf.Show();
-            this.Visible=false;
+            this.Hide();
+            mf.ShowDialog();
+            this.Show();
+            
         }
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
-            stk.Show();
-            this.Visible = false;
+            this.Hide();
+            stk.ShowDialog();
+            this.Show();
         }
         private void btnMember_Click(object sender, EventArgs e)
         {

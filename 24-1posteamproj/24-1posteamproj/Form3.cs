@@ -13,9 +13,9 @@ using Excel = Microsoft.Office.Interop.Excel;
 namespace _24_1posteamproj
 {
     public partial class StokForm : Form
+
     {
-        string excelFile = @"C:\Users\user\OneDrive\바탕 화면\응소실팀플\2024KWUASP\재고관리.xlsx";
-        
+        string filePath = Directory.GetCurrentDirectory() + @"\재고관리.xlsx";
 
         public StokForm()
         {
@@ -59,6 +59,7 @@ namespace _24_1posteamproj
             Excel.Application excelApp = new Excel.Application();
             Excel.Workbook workbook = excelApp.Workbooks.Open(filePath, ReadOnly: false, Editable: true);
             Excel._Worksheet worksheet = workbook.Sheets[1];
+            excelApp.DisplayAlerts = false;
 
 
             for(int i = 0; i < listview.Items.Count; i++)
@@ -80,8 +81,9 @@ namespace _24_1posteamproj
 
         private void StokForm_Load(object sender, EventArgs e)
         {
+                        
             timer1.Start();
-            LoadExcelData(excelFile, ItemList);
+            LoadExcelData(filePath, ItemList);
 
         }
 
@@ -93,10 +95,8 @@ namespace _24_1posteamproj
 
         private void EndBtn_Click(object sender, EventArgs e)
         {
-            SaveData(excelFile, ItemList);
-            this.Hide();
-            mainForm mainForm = new mainForm();
-            mainForm.ShowDialog(); 
+            SaveData(filePath, ItemList);
+            this.Close(); 
 
         }
 
