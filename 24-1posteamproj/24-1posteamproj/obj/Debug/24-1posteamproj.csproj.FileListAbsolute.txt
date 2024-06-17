@@ -41,3 +41,5 @@ D:\Workspace\WinForm\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\_24_1p
 D:\Workspace\WinForm\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\_24_1posteamproj.StokForm.resources
 D:\Workspace\WinForm\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\_24_1posteamproj.MemberForm.resources
 D:\Workspace\WinForm\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\_24_1posteamproj.salesForm.resources
+C:\Users\user\OneDrive\바탕 화면\응소실팀플\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\_24_1posteamproj.MemberForm.resources
+C:\Users\user\OneDrive\바탕 화면\응소실팀플\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\_24_1posteamproj.salesForm.resources
