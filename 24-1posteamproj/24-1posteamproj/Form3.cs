@@ -14,7 +14,6 @@ namespace _24_1posteamproj
 {
     public partial class StokForm : Form
     {
-        MenuForm mn = new MenuForm();
         string excelFile = @"C:\Users\user\OneDrive\바탕 화면\응소실팀플\2024KWUASP\재고관리.xlsx";
         
 
@@ -61,12 +60,6 @@ namespace _24_1posteamproj
             Excel.Workbook workbook = excelApp.Workbooks.Open(filePath, ReadOnly: false, Editable: true);
             Excel._Worksheet worksheet = workbook.Sheets[1];
 
-            
-
-            //for (int i = 0; i < listview.Columns.Count; i++)
-            //{
-             //   worksheet.Cells[1,i+1]=listview.Columns[i].Text;
-            //}
 
             for(int i = 0; i < listview.Items.Count; i++)
             {
@@ -117,7 +110,8 @@ namespace _24_1posteamproj
                     {
                         ItemList.Items[i].SubItems[1].Text = CountTxt.Text;
                         ItemList.Items[i].SubItems[2].Text = OtherTxt.Text;
-                        return;
+
+                        break;
                     }
                     else if (i == ItemList.Items.Count - 1)
                     {
@@ -125,13 +119,17 @@ namespace _24_1posteamproj
                         item.SubItems.Add(CountTxt.Text);
                         item.SubItems.Add(OtherTxt.Text);
                         ItemList.Items.Add(item);
+
+
                     }
                 }
 
+                MessageBox.Show("상품 수정이 완료되었습니다.", "수정 완료");
                 NameTxt.Text = null;
                 CountTxt.Text = null;
                 OtherTxt.Text = null;
             }
+
         }
 
         private void SearchBtn_Click(object sender, EventArgs e)
@@ -142,13 +140,27 @@ namespace _24_1posteamproj
                 {
                     if (SearchTxt.Text == ItemList.Items[i].SubItems[0].Text)
                     {
-                        NameTxt.Text=ItemList.Items[i].SubItems[0].Text;
-                        CountTxt.Text=ItemList.Items[i].SubItems[1].Text;
-                        OtherTxt.Text=ItemList.Items[i].SubItems[2].Text;
+                        NameTxt.Text = ItemList.Items[i].SubItems[0].Text;
+                        CountTxt.Text = ItemList.Items[i].SubItems[1].Text;
+                        OtherTxt.Text = ItemList.Items[i].SubItems[2].Text;
 
                         SearchTxt.Text = null;
+
+                        return;
                     }
                 }
+
+                if (MessageBox.Show("찾으시는 상품명이 없습니다.\n상품을 추가하시겠습니까?", "검색 확인", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    MessageBox.Show("추가할 상품의 정보 작성 후\n'재고수정' 버튼을 눌러주세요.","상품 추가");
+                    NameTxt.Text = SearchTxt.Text;
+                    SearchTxt.Text = null;
+                }
+                else
+                {
+                    SearchTxt.Text = null;
+                }
+
             }
         }
 
