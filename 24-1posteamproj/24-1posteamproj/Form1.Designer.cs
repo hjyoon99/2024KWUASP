@@ -82,6 +82,7 @@
             this.btnSales.TabIndex = 3;
             this.btnSales.Text = "매출 관리";
             this.btnSales.UseVisualStyleBackColor = true;
+            this.btnSales.Click += new System.EventHandler(this.btnSales_Click);
             // 
             // btnMember
             // 
@@ -91,6 +92,7 @@
             this.btnMember.TabIndex = 4;
             this.btnMember.Text = "회원 관리";
             this.btnMember.UseVisualStyleBackColor = true;
+            this.btnMember.Click += new System.EventHandler(this.btnMember_Click);
             // 
             // btnOnOff
             // 
@@ -174,7 +176,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(791, 450);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtDate);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);

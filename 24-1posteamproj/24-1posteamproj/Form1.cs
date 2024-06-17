@@ -14,6 +14,8 @@ namespace _24_1posteamproj
     {
         MenuForm mf=new MenuForm();
         StokForm stk=new StokForm();
+        MemberForm mForm = new MemberForm();
+        salesForm sForm = new salesForm();
 
         public mainForm()
         {
@@ -46,6 +48,18 @@ namespace _24_1posteamproj
         {
             stk.Show();
             this.Visible = false;
+        }
+        private void btnMember_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            mForm.ShowDialog();
+            this.Show();
+        }
+        private void btnSales_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            sForm.ShowDialog();
+            this.Show();
         }
     }
 }
