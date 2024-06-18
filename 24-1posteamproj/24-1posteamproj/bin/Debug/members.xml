@@ -46,6 +46,12 @@
     <NUMBER>8</NUMBER>
     <NAME>한지우</NAME>
     <PHONE>010-7777-8888</PHONE>
-    <POINT>1000</POINT>
+    <POINT>2100</POINT>
+  </MEMBER>
+  <MEMBER>
+    <NUMBER>9</NUMBER>
+    <NAME>임시 사용자</NAME>
+    <PHONE>010-0123-4567</PHONE>
+    <POINT>2700</POINT>
   </MEMBER>
 </DocumentElement>

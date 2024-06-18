@@ -12,6 +12,14 @@
     <NUMBER>3</NUMBER>
     <TIME>2024-06-19 04:15</TIME>
   </ORDER>
+  <ORDER>
+    <NUMBER>4</NUMBER>
+    <TIME>2024-06-19 04:28</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>5</NUMBER>
+    <TIME>2024-06-19 05:08</TIME>
+  </ORDER>
   <DETAIL>
     <NUMBER>1</NUMBER>
     <ITEM>오므라이스</ITEM>
@@ -65,5 +73,53 @@
     <ITEM>만두 </ITEM>
     <COUNT>1</COUNT>
     <PRICE>4000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>4</NUMBER>
+    <ITEM>참치 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>4000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>4</NUMBER>
+    <ITEM>돈가스 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>5000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>4</NUMBER>
+    <ITEM>환타  </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>2000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>5</NUMBER>
+    <ITEM>만두 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>4000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>5</NUMBER>
+    <ITEM>떡볶이 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>5000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>5</NUMBER>
+    <ITEM>라면 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>4500</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>5</NUMBER>
+    <ITEM>비빔국수 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>6500</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>5</NUMBER>
+    <ITEM>쫄면 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>7000</PRICE>
   </DETAIL>
 </NewDataSet>

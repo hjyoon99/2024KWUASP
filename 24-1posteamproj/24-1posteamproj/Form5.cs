@@ -21,9 +21,9 @@ namespace _24_1posteamproj
         DataSet ds = new DataSet();
         string path = Directory.GetCurrentDirectory() + @"\sales.xml";
         DateTime targetTime = DateTime.Now;
-        bool salesPerDateMod = false;
-        bool salesPerTimeMod = false;
-        bool salesPerMenuMod = false;
+        bool salesPerDateMod = false; // 날짜별 매출 모드
+        bool salesPerTimeMod = false; // 시간대별 매출 모드
+        bool salesPerMenuMod = false; // 품목별 매출 모드
 
         private void HandleRefundBtn(object sender, EventArgs e)
         {
@@ -69,7 +69,7 @@ namespace _24_1posteamproj
         }
         private void ShowSalesPerTime()
         {
-            DataRow[] drs1 = ds.Tables["ORDER"].Select("[TIME] LIKE '%" + targetTime.ToShortDateString() + "%'");
+            DataRow[] drs1 = ds.Tables["ORDER"].Select("[TIME] LIKE '%" + targetTime.ToShortDateString() + "%'"); // 타겟 날짜의 모든 시간 포함
             if (drs1.Length == 0)
             {
                 MessageBox.Show("해당 날짜에 매출이 존재하지 않습니다.");
@@ -80,7 +80,7 @@ namespace _24_1posteamproj
             DataTable orderTable = ds.Tables["ORDER"];
             DataTable detailTable = ds.Tables["DETAIL"];
             int DateSales = 0;
-            DataRelation rel = new DataRelation("OrderDetail", orderTable.Columns["NUMBER"], detailTable.Columns["NUMBER"]);
+            DataRelation rel = new DataRelation("OrderDetail", orderTable.Columns["NUMBER"], detailTable.Columns["NUMBER"]); // 두 테이블 간 관계 생성
             ds.Relations.Add(rel);
             Dictionary<int, decimal> hourlySales = new Dictionary<int, decimal>();
             for(int i = 0; i < 24; i++)
