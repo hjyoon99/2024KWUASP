@@ -114,6 +114,7 @@ public class TcpServer
     private void AddOrderToSales(string msg) // 데이터베이스에 주문 기록 저장
     {
         bool pointAddRequired = false;
+        bool needToCreateMember = false;
         DataTable dt = new DataTable();
         string targetPhone = "";
         if (memberPhone != "none" && memberPhone.Length == 11)
@@ -128,13 +129,10 @@ public class TcpServer
             DataRow[] drs = dt.Select("[PHONE] = '" + targetPhone + "'");
             if(drs.Length == 0)
             {
-                pointAddRequired = false;
+                needToCreateMember=true;
                 memberPhone = "none";
             }
-            else
-            {
-                pointAddRequired= true;
-            }
+            pointAddRequired = true;
         }
         DataSet ds = new DataSet();
         ds.ReadXml(Directory.GetCurrentDirectory() + @"\sales.xml");
@@ -166,16 +164,30 @@ public class TcpServer
             ds.Tables["DETAIL"].AcceptChanges();
         }
         ds.WriteXml(Directory.GetCurrentDirectory() + @"\sales.xml");
-        if (pointAddRequired)
+        if (pointAddRequired) // 포인트 적립 핸들링
         {
-            foreach(DataRow dr in dt.Rows)
+            if (needToCreateMember)
             {
-                if (dr["PHONE"].ToString() == targetPhone)
+                DataRow dr = dt.NewRow();
+                dr["NUMBER"] = dt.Rows.Count + 1;
+                dr["NAME"] = "임시 사용자";
+                dr["PHONE"] = targetPhone;
+                dr["POINT"] = (totalPrice / 10).ToString();
+                dt.Rows.Add(dr);
+                dt.AcceptChanges();
+                dt.WriteXml(Directory.GetCurrentDirectory() + @"\members.xml");
+            }
+            else
+            {
+                foreach (DataRow dr in dt.Rows)
                 {
-                    int prev = int.Parse(dr["POINT"].ToString());
-                    prev += (totalPrice / 10);
-                    dr["POINT"] = prev.ToString();
-                    dt.WriteXml(Directory.GetCurrentDirectory() + @"\members.xml");
+                    if (dr["PHONE"].ToString() == targetPhone)
+                    {
+                        int prev = int.Parse(dr["POINT"].ToString());
+                        prev += (totalPrice / 10);
+                        dr["POINT"] = prev.ToString();
+                        dt.WriteXml(Directory.GetCurrentDirectory() + @"\members.xml");
+                    }
                 }
             }
             
