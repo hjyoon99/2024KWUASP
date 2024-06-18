@@ -33,7 +33,7 @@
             this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.checkMemberButton = new System.Windows.Forms.Button();
-            this.resultLabel = new System.Windows.Forms.Label();
+            this.pointLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // InitialPoint
@@ -43,68 +43,75 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.InitialPoint.AutoSize = true;
             this.InitialPoint.Font = new System.Drawing.Font("맑은 고딕", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.InitialPoint.Location = new System.Drawing.Point(296, 57);
+            this.InitialPoint.Location = new System.Drawing.Point(159, 28);
+            this.InitialPoint.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.InitialPoint.Name = "InitialPoint";
-            this.InitialPoint.Size = new System.Drawing.Size(349, 78);
+            this.InitialPoint.Size = new System.Drawing.Size(179, 41);
             this.InitialPoint.TabIndex = 0;
             this.InitialPoint.Text = "포인트 적립";
             this.InitialPoint.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(51, 16);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(27, 8);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 8);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(4, 4);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // phoneNumberTextBox
             // 
-            this.phoneNumberTextBox.Location = new System.Drawing.Point(170, 249);
+            this.phoneNumberTextBox.Location = new System.Drawing.Point(92, 124);
+            this.phoneNumberTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
-            this.phoneNumberTextBox.Size = new System.Drawing.Size(517, 35);
+            this.phoneNumberTextBox.Size = new System.Drawing.Size(280, 21);
             this.phoneNumberTextBox.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("맑은 고딕", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(15, 244);
+            this.label1.Location = new System.Drawing.Point(8, 122);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 40);
+            this.label1.Size = new System.Drawing.Size(77, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "전화번호 :";
             // 
             // checkMemberButton
             // 
-            this.checkMemberButton.Location = new System.Drawing.Point(737, 243);
+            this.checkMemberButton.Location = new System.Drawing.Point(397, 122);
+            this.checkMemberButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkMemberButton.Name = "checkMemberButton";
-            this.checkMemberButton.Size = new System.Drawing.Size(141, 43);
+            this.checkMemberButton.Size = new System.Drawing.Size(76, 22);
             this.checkMemberButton.TabIndex = 4;
             this.checkMemberButton.Text = "조회하기";
             this.checkMemberButton.UseVisualStyleBackColor = true;
             this.checkMemberButton.Click += new System.EventHandler(this.checkMemberButton_Click);
             // 
-            // resultLabel
+            // pointLabel
             // 
-            this.resultLabel.AutoSize = true;
-            this.resultLabel.Font = new System.Drawing.Font("굴림", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.resultLabel.Location = new System.Drawing.Point(220, 472);
-            this.resultLabel.Name = "resultLabel";
-            this.resultLabel.Size = new System.Drawing.Size(467, 29);
-            this.resultLabel.TabIndex = 5;
-            this.resultLabel.Text = "이름 :            포인트 :            점";
+            this.pointLabel.AutoSize = true;
+            this.pointLabel.Font = new System.Drawing.Font("굴림", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.pointLabel.Location = new System.Drawing.Point(118, 236);
+            this.pointLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.pointLabel.Name = "pointLabel";
+            this.pointLabel.Size = new System.Drawing.Size(237, 15);
+            this.pointLabel.TabIndex = 5;
+            this.pointLabel.Text = "이름 :            포인트 :            점";
             // 
             // Form5
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 713);
-            this.Controls.Add(this.resultLabel);
+            this.ClientSize = new System.Drawing.Size(513, 356);
+            this.Controls.Add(this.pointLabel);
             this.Controls.Add(this.checkMemberButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.phoneNumberTextBox);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.InitialPoint);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form5";
             this.Text = "Form5";
             this.ResumeLayout(false);
@@ -119,6 +126,6 @@
         private System.Windows.Forms.TextBox phoneNumberTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button checkMemberButton;
-        private System.Windows.Forms.Label resultLabel;
+        private System.Windows.Forms.Label pointLabel;
     }
 }
