@@ -1,10 +1,6 @@
 <?xml version="1.0" standalone="yes"?>
 <NewDataSet>
   <ORDER>
-    <NUMBER>1</NUMBER>
-    <TIME>2024-06-18 18:07</TIME>
-  </ORDER>
-  <ORDER>
     <NUMBER>2</NUMBER>
     <TIME>2024-06-17 18:07</TIME>
   </ORDER>
@@ -13,27 +9,33 @@
     <TIME>2024-06-18 18:07</TIME>
   </ORDER>
   <ORDER>
-    <NUMBER>4</NUMBER>
-    <TIME>2024-06-19 18:07</TIME>
+    <NUMBER>5</NUMBER>
+    <TIME>2024-06-18 23:16</TIME>
   </ORDER>
-  <DETAIL>
-    <NUMBER>1</NUMBER>
-    <ITEM>제육덮밥</ITEM>
-    <COUNT>1</COUNT>
-    <PRICE>8000</PRICE>
-  </DETAIL>
-  <DETAIL>
-    <NUMBER>1</NUMBER>
-    <ITEM>라면</ITEM>
-    <COUNT>2</COUNT>
-    <PRICE>10000</PRICE>
-  </DETAIL>
-  <DETAIL>
-    <NUMBER>1</NUMBER>
-    <ITEM>떡라면</ITEM>
-    <COUNT>1</COUNT>
-    <PRICE>5500</PRICE>
-  </DETAIL>
+  <ORDER>
+    <NUMBER>6</NUMBER>
+    <TIME>2024-06-19 01:11</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>7</NUMBER>
+    <TIME>2024-06-19 02:20</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>8</NUMBER>
+    <TIME>2024-06-19 02:22</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>9</NUMBER>
+    <TIME>2024-06-19 02:24</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>10</NUMBER>
+    <TIME>2024-06-19 02:26</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>11</NUMBER>
+    <TIME>2024-06-19 02:27</TIME>
+  </ORDER>
   <DETAIL>
     <NUMBER>2</NUMBER>
     <ITEM>라면</ITEM>
@@ -47,9 +49,135 @@
     <PRICE>9000</PRICE>
   </DETAIL>
   <DETAIL>
-    <NUMBER>4</NUMBER>
-    <ITEM>라면</ITEM>
+    <NUMBER>5</NUMBER>
+    <ITEM>참치 김밥 </ITEM>
+    <COUNT>2</COUNT>
+    <PRICE>8000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>5</NUMBER>
+    <ITEM>치즈 김밥 </ITEM>
+    <COUNT>2</COUNT>
+    <PRICE>8000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>5</NUMBER>
+    <ITEM>일반 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>3000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>6</NUMBER>
+    <ITEM>오므라이스 </ITEM>
+    <COUNT>2</COUNT>
+    <PRICE>16000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>6</NUMBER>
+    <ITEM>고구마 치즈 돈까스 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>9000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>6</NUMBER>
+    <ITEM>돈까스 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>8000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>6</NUMBER>
+    <ITEM>생선까스 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>7000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>7</NUMBER>
+    <ITEM>,참치 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>4000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>7</NUMBER>
+    <ITEM>,돈가스 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>5000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>7</NUMBER>
+    <ITEM>,날치알 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>4500</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>8</NUMBER>
+    <ITEM>,치즈 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>4000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>8</NUMBER>
+    <ITEM>,일반 김밥 </ITEM>
+    <COUNT>2</COUNT>
+    <PRICE>6000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>8</NUMBER>
+    <ITEM>,날치알 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>4500</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>8</NUMBER>
+    <ITEM>,김치 찌개 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>7000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>9</NUMBER>
+    <ITEM>,치즈 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>4000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>9</NUMBER>
+    <ITEM>,돈가스 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>5000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>9</NUMBER>
+    <ITEM>,날치알 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>4500</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>9</NUMBER>
+    <ITEM>,제육 덮밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>8000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>10</NUMBER>
+    <ITEM>,치즈 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>4000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>10</NUMBER>
+    <ITEM>,돈가스 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>5000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>10</NUMBER>
+    <ITEM>,날치알 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>4500</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>11</NUMBER>
+    <ITEM>,참치 김밥 </ITEM>
     <COUNT>3</COUNT>
-    <PRICE>15000</PRICE>
+    <PRICE>12000</PRICE>
   </DETAIL>
 </NewDataSet>

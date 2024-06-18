@@ -1055,7 +1055,7 @@
         private System.Windows.Forms.PictureBox menu8;
         private System.Windows.Forms.Label menulabel7;
         private System.Windows.Forms.PictureBox menu7;
-        private System.Windows.Forms.ListView listView1;
+        public System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label totallabel;
         private System.Windows.Forms.Button plus1;
         private System.Windows.Forms.Button minus1;

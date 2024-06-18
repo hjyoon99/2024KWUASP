@@ -24,4 +24,28 @@
     <PHONE>010-9876-5432</PHONE>
     <POINT>0</POINT>
   </MEMBER>
+  <MEMBER>
+    <NUMBER>5</NUMBER>
+    <NAME>윤혜정</NAME>
+    <PHONE>010-1111-2222</PHONE>
+    <POINT>0</POINT>
+  </MEMBER>
+  <MEMBER>
+    <NUMBER>6</NUMBER>
+    <NAME>이종훈</NAME>
+    <PHONE>010-3333-4444</PHONE>
+    <POINT>0</POINT>
+  </MEMBER>
+  <MEMBER>
+    <NUMBER>7</NUMBER>
+    <NAME>하지명</NAME>
+    <PHONE>010-5555-6666</PHONE>
+    <POINT>0</POINT>
+  </MEMBER>
+  <MEMBER>
+    <NUMBER>8</NUMBER>
+    <NAME>한지우</NAME>
+    <PHONE>010-7777-8888</PHONE>
+    <POINT>0</POINT>
+  </MEMBER>
 </DocumentElement>
