@@ -10,7 +10,7 @@
     <NUMBER>2</NUMBER>
     <NAME>가나다</NAME>
     <PHONE>010-0000-0000</PHONE>
-    <POINT>0</POINT>
+    <POINT>3100</POINT>
   </MEMBER>
   <MEMBER>
     <NUMBER>3</NUMBER>
@@ -40,12 +40,12 @@
     <NUMBER>7</NUMBER>
     <NAME>하지명</NAME>
     <PHONE>010-5555-6666</PHONE>
-    <POINT>0</POINT>
+    <POINT>3250</POINT>
   </MEMBER>
   <MEMBER>
     <NUMBER>8</NUMBER>
     <NAME>한지우</NAME>
     <PHONE>010-7777-8888</PHONE>
-    <POINT>0</POINT>
+    <POINT>1000</POINT>
   </MEMBER>
 </DocumentElement>

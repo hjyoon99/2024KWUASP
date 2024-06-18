@@ -19,11 +19,6 @@ namespace _24_1kioskteamproj
 
         public event EventHandler<int> InformationSent;
 
-        private void Form3_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void b1_Click(object sender, EventArgs e)
         {
             int information = 1;
