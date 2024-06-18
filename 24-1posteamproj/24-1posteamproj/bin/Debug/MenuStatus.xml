@@ -2,7 +2,7 @@
 <NewDataSet>
   <MenuStatus>
     <상품명>일반김밥</상품명>
-    <상품상태>false</상품상태>
+    <상품상태>true</상품상태>
   </MenuStatus>
   <MenuStatus>
     <상품명>치즈김밥</상품명>

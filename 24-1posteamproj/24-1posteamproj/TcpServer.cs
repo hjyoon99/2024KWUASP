@@ -4,9 +4,6 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-using System.IO;
-using Excel = Microsoft.Office.Interop.Excel;
-using System.Runtime.InteropServices;
 
 public class TcpServer
 {
@@ -93,48 +90,5 @@ public class TcpServer
         {
             orderLogTextBox.AppendText(message + Environment.NewLine);
         }
-    }
-
-    private void StokChangebyOrder(string msg)
-    {
-        string filePath = Directory.GetCurrentDirectory() + @"\재고관리.xlsx";
-        string Ordermenu;
-        string OrderCount;
-
-        Excel.Application excelApp = new Excel.Application();
-        Excel.Workbook workbook = excelApp.Workbooks.Open(filePath, ReadOnly: false, Editable: true);
-        Excel.Worksheet worksheet = workbook.Worksheets[1];
-        Excel.Range range = worksheet.UsedRange;
-
-
-        int rowCount = range.Rows.Count;
-        int colCount = range.Columns.Count;
-
-        string[] Ordermsg = msg.Split('\n');
-        for (int i = 0; i < Ordermsg.Length - 1; i++)
-        {
-            string line = Ordermsg[i];
-            string[] Name = line.Split(':');
-            Ordermenu = Name[0];
-            string[] MenuAmount = Name[1].Split(',');
-            OrderCount = MenuAmount[1];
-
-            for (int j = 2; j <= rowCount; j++)
-            {
-                if (Ordermenu == worksheet.Cells[j, 0].Value)
-                {
-                    int NowCount = int.Parse(worksheet.Cells[j, 1]);
-                    int Ordercount = int.Parse(OrderCount);
-                    int result = NowCount - Ordercount;
-                    worksheet.Cells[j, 1].Value = Convert.ToString(result);
-                }
-            }
-
-        }
-        workbook.Save();
-        workbook.Close(false);
-        excelApp.Quit();
-        GC.Collect();
-        GC.WaitForPendingFinalizers();
     }
 }
