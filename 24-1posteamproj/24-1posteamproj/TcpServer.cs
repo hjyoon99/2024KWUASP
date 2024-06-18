@@ -4,6 +4,8 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using System.Data;
+using System.IO;
 
 public class TcpServer
 {
@@ -90,5 +92,13 @@ public class TcpServer
         {
             orderLogTextBox.AppendText(message + Environment.NewLine);
         }
+    }
+    private void AddOrderToSales(string msg) // 데이터베이스에 주문 기록 저장
+    {
+        /*
+        DataSet ds = new DataSet();
+        ds.ReadXml(Directory.GetCurrentDirectory() + @"\sales.xml");
+        */
+        string[] spl = msg.Split(':');
     }
 }
