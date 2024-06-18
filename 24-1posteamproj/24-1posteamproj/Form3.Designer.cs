@@ -29,79 +29,79 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem20 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "김밥",
             "100",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem21 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "치즈",
             "500",
             "매주 월요일 발주"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem22 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "캔참치",
             "100",
             "매월 둘째주 월요일에 발주"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem23 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "날치알",
             "2",
             "매월 둘째주 월요일에 5개 발주 "}, -1);
-            System.Windows.Forms.ListViewItem listViewItem24 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "제육",
             "200",
             "매월 둘째주, 넷째주 발주"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem25 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "불고기",
             "97",
             "59인분 이하 시 발주"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem26 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
             "낙지",
             "39",
             "재고 10인분 이하, 발주 넣기"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem27 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
             "돈까스",
             "512",
             "50장 미만일 경우 발주 넣기"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem28 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
             "생선까스",
             "25",
             "재고 10인분 이하시 발주"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem29 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
             "고치돈",
             "152",
             "매주 월요일 발주"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem30 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
             "라면",
             "55",
             "매주 월요일 발주"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem31 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
             "떡볶이",
             "67",
             "6/12 발주 신청 완료"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem32 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
             "쫄면",
             "29",
             "-"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem33 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
             "만두",
             "280",
             "6/15 추가 발주 도착"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem34 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem(new string[] {
             "소면",
             "80",
             "매월에 1번 발주 신청"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem35 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem(new string[] {
             "어묵",
             "9",
             "발주 신청 필요"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem36 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem(new string[] {
             "사이다",
             "12",
             "재고 10개 이하 발주"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem37 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem(new string[] {
             "콜라",
             "120",
             "80미만일 시 발주 신청"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem38 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem19 = new System.Windows.Forms.ListViewItem(new string[] {
             "환타",
             "180",
             "80개 미만일 시 발주 신청"}, -1);
@@ -116,16 +116,18 @@
             this.SearchTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.OtherTxt = new System.Windows.Forms.TextBox();
-            this.CountTxt = new System.Windows.Forms.TextBox();
-            this.NameTxt = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.ItemList = new System.Windows.Forms.ListView();
             this.ItemName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ItemCount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ItemOthers = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CountTxt = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.NameTxt = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.EndBtn = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.ItemGroup.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -235,29 +237,65 @@
             this.OtherTxt.Size = new System.Drawing.Size(225, 21);
             this.OtherTxt.TabIndex = 27;
             // 
+            // ItemList
+            // 
+            this.ItemList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ItemName,
+            this.ItemCount,
+            this.ItemOthers});
+            this.ItemList.Font = new System.Drawing.Font("굴림", 10F);
+            this.ItemList.FullRowSelect = true;
+            this.ItemList.GridLines = true;
+            this.ItemList.HideSelection = false;
+            listViewItem3.StateImageIndex = 0;
+            this.ItemList.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5,
+            listViewItem6,
+            listViewItem7,
+            listViewItem8,
+            listViewItem9,
+            listViewItem10,
+            listViewItem11,
+            listViewItem12,
+            listViewItem13,
+            listViewItem14,
+            listViewItem15,
+            listViewItem16,
+            listViewItem17,
+            listViewItem18,
+            listViewItem19});
+            this.ItemList.Location = new System.Drawing.Point(8, 79);
+            this.ItemList.Name = "ItemList";
+            this.ItemList.Size = new System.Drawing.Size(743, 231);
+            this.ItemList.TabIndex = 21;
+            this.ItemList.UseCompatibleStateImageBehavior = false;
+            this.ItemList.View = System.Windows.Forms.View.Details;
+            // 
+            // ItemName
+            // 
+            this.ItemName.Text = "재고 이름";
+            this.ItemName.Width = 194;
+            // 
+            // ItemCount
+            // 
+            this.ItemCount.Text = "재고 수량";
+            this.ItemCount.Width = 143;
+            // 
+            // ItemOthers
+            // 
+            this.ItemOthers.Text = "비고";
+            this.ItemOthers.Width = 368;
+            // 
             // CountTxt
             // 
             this.CountTxt.Location = new System.Drawing.Point(258, 52);
             this.CountTxt.Name = "CountTxt";
             this.CountTxt.Size = new System.Drawing.Size(84, 21);
             this.CountTxt.TabIndex = 26;
-            // 
-            // NameTxt
-            // 
-            this.NameTxt.Location = new System.Drawing.Point(74, 52);
-            this.NameTxt.Name = "NameTxt";
-            this.NameTxt.Size = new System.Drawing.Size(130, 21);
-            this.NameTxt.TabIndex = 25;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("굴림", 10F);
-            this.label5.Location = new System.Drawing.Point(350, 55);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 14);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "비고";
             // 
             // label4
             // 
@@ -279,57 +317,22 @@
             this.label2.TabIndex = 22;
             this.label2.Text = "재고명:";
             // 
-            // ItemList
+            // NameTxt
             // 
-            this.ItemList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ItemName,
-            this.ItemCount,
-            this.ItemOthers});
-            this.ItemList.Font = new System.Drawing.Font("굴림", 10F);
-            this.ItemList.GridLines = true;
-            this.ItemList.HideSelection = false;
-            listViewItem22.StateImageIndex = 0;
-            this.ItemList.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem20,
-            listViewItem21,
-            listViewItem22,
-            listViewItem23,
-            listViewItem24,
-            listViewItem25,
-            listViewItem26,
-            listViewItem27,
-            listViewItem28,
-            listViewItem29,
-            listViewItem30,
-            listViewItem31,
-            listViewItem32,
-            listViewItem33,
-            listViewItem34,
-            listViewItem35,
-            listViewItem36,
-            listViewItem37,
-            listViewItem38});
-            this.ItemList.Location = new System.Drawing.Point(8, 79);
-            this.ItemList.Name = "ItemList";
-            this.ItemList.Size = new System.Drawing.Size(743, 225);
-            this.ItemList.TabIndex = 21;
-            this.ItemList.UseCompatibleStateImageBehavior = false;
-            this.ItemList.View = System.Windows.Forms.View.Details;
+            this.NameTxt.Location = new System.Drawing.Point(74, 52);
+            this.NameTxt.Name = "NameTxt";
+            this.NameTxt.Size = new System.Drawing.Size(130, 21);
+            this.NameTxt.TabIndex = 25;
             // 
-            // ItemName
+            // label5
             // 
-            this.ItemName.Text = "재고 이름";
-            this.ItemName.Width = 194;
-            // 
-            // ItemCount
-            // 
-            this.ItemCount.Text = "재고 수량";
-            this.ItemCount.Width = 143;
-            // 
-            // ItemOthers
-            // 
-            this.ItemOthers.Text = "비고";
-            this.ItemOthers.Width = 368;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("굴림", 10F);
+            this.label5.Location = new System.Drawing.Point(350, 55);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 14);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "비고";
             // 
             // EndBtn
             // 
@@ -340,6 +343,12 @@
             this.EndBtn.Text = "완료";
             this.EndBtn.UseVisualStyleBackColor = true;
             this.EndBtn.Click += new System.EventHandler(this.EndBtn_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "(*.*)|*.*";
+            this.openFileDialog1.Multiselect = true;
             // 
             // StokForm
             // 
@@ -385,5 +394,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
