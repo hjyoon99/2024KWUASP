@@ -126,8 +126,6 @@
             this.NameTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.EndBtn = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.ItemGroup.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -336,19 +334,13 @@
             // 
             // EndBtn
             // 
-            this.EndBtn.Location = new System.Drawing.Point(680, 409);
+            this.EndBtn.Location = new System.Drawing.Point(681, 409);
             this.EndBtn.Name = "EndBtn";
             this.EndBtn.Size = new System.Drawing.Size(108, 29);
             this.EndBtn.TabIndex = 1;
             this.EndBtn.Text = "완료";
             this.EndBtn.UseVisualStyleBackColor = true;
             this.EndBtn.Click += new System.EventHandler(this.EndBtn_Click);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "(*.*)|*.*";
-            this.openFileDialog1.Multiselect = true;
             // 
             // StokForm
             // 
@@ -394,7 +386,5 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
