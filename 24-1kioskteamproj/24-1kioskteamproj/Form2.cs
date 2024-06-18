@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Sockets;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -2051,12 +2052,15 @@ namespace _24_1kioskteamproj
             // 리스트를 문자열 배열로 변환하여 반환
             return items.ToArray();
         }
-       
+
         private void button7_Click(object sender, EventArgs e)
         {
-            if(packing == false)
-            {
+            // 서버 정보 설정
+            string serverIp = "127.0.0.1"; // 서버 IP 주소
+            int serverPort = 12345; // 서버 포트 번호
 
+            if (packing == false)
+            {
                 form3.Owner = this;
                 DialogResult dREsult = form3.ShowDialog();
 
@@ -2064,9 +2068,15 @@ namespace _24_1kioskteamproj
                 form5 = new Form5(totalAmount);
                 form5.ShowDialog();
 
-                form4 = new Form4(listView1,whereTable,tot);
+                form4 = new Form4(listView1, whereTable, tot);
                 form4.Owner = this;
                 DialogResult dResult = form4.ShowDialog();
+
+                // 리스트뷰 데이터를 문자열로 변환
+                string orderData = ListViewToString(listView1);
+
+                // 서버로 데이터 전송
+                SendOrderToServer(serverIp, serverPort, orderData);
 
                 this.Close();
             }
@@ -2075,15 +2085,57 @@ namespace _24_1kioskteamproj
                 int totalAmount = tot;
                 form5 = new Form5(totalAmount);
                 form5.ShowDialog();
-                form4 = new Form4(listView1,whereTable,tot);
+                form4 = new Form4(listView1, whereTable, tot);
                 form4.Owner = this;
                 DialogResult dResult = form4.ShowDialog();
+
+                // 리스트뷰 데이터를 문자열로 변환
+                string orderData = ListViewToString(listView1);
+
+                // 서버로 데이터 전송
+                SendOrderToServer(serverIp, serverPort, orderData);
+
                 this.Close();
             }
-
-            
-
         }
+
+        // 리스트뷰 데이터를 문자열로 변환하는 메서드
+        private string ListViewToString(System.Windows.Forms.ListView listView)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            foreach (ListViewItem item in listView.Items)
+            {
+                for (int i = 1; i < item.SubItems.Count; i++) // 첫 번째 SubItem을 건너뜁니다.
+                {
+                    sb.Append(item.SubItems[i].Text).Append(",");
+                }
+                sb.Length--; // 마지막 쉼표 제거
+                sb.AppendLine();
+            }
+
+            return sb.ToString();
+        }
+
+        // 서버로 데이터를 전송하는 메서드
+        private void SendOrderToServer(string serverIp, int serverPort, string orderData)
+        {
+            try
+            {
+                using (TcpClient client = new TcpClient(serverIp, serverPort))
+                using (NetworkStream stream = client.GetStream())
+                {
+                    byte[] data = Encoding.UTF8.GetBytes(orderData);
+                    stream.Write(data, 0, data.Length);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("서버와 통신 중 오류가 발생했습니다: " + ex.Message);
+            }
+        }
+
+
 
         private void button8_Click(object sender, EventArgs e)
         {

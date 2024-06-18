@@ -12,6 +12,10 @@ namespace _24_1posteamproj
 {
     public partial class mainForm : Form
     {
+        private TcpServer server;
+        private int serverPort = 12345; // 서버 포트 번호
+        private bool isServerRunning = false;
+
         MenuForm mf=new MenuForm();
         StokForm stk=new StokForm();
 
@@ -46,6 +50,32 @@ namespace _24_1posteamproj
         {
             stk.Show();
             this.Visible = false;
+        }
+
+        private void btnOnOff_Click(object sender, EventArgs e)
+        {
+            if (!isServerRunning)
+            {
+                if (server == null)
+                {
+                    server = new TcpServer(serverLog, orderLog, serverPort);
+                    server.Start();
+                    serverLog.AppendText("서버가 시작되었습니다." + Environment.NewLine);
+                    btnOnOff.Text = "서버 중지";
+                    isServerRunning = true;
+                }
+            }
+            else
+            {
+                if (server != null)
+                {
+                    server.Stop();
+                    serverLog.AppendText("서버가 중지되었습니다." + Environment.NewLine);
+                    btnOnOff.Text = "서버 시작";
+                    server = null;
+                    isServerRunning = false;
+                }
+            }
         }
     }
 }
