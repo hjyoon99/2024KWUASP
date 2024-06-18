@@ -47,20 +47,18 @@
             // 
             // orderLog
             // 
-            this.orderLog.Location = new System.Drawing.Point(22, 322);
-            this.orderLog.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.orderLog.Location = new System.Drawing.Point(12, 161);
             this.orderLog.Multiline = true;
             this.orderLog.Name = "orderLog";
             this.orderLog.ReadOnly = true;
-            this.orderLog.Size = new System.Drawing.Size(964, 550);
+            this.orderLog.Size = new System.Drawing.Size(521, 277);
             this.orderLog.TabIndex = 0;
             // 
             // btnMenu
             // 
-            this.btnMenu.Location = new System.Drawing.Point(22, 122);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnMenu.Location = new System.Drawing.Point(12, 61);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(217, 120);
+            this.btnMenu.Size = new System.Drawing.Size(117, 60);
             this.btnMenu.TabIndex = 1;
             this.btnMenu.Text = "메뉴 관리";
             this.btnMenu.UseVisualStyleBackColor = true;
@@ -68,10 +66,9 @@
             // 
             // btnInventory
             // 
-            this.btnInventory.Location = new System.Drawing.Point(271, 120);
-            this.btnInventory.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnInventory.Location = new System.Drawing.Point(146, 60);
             this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Size = new System.Drawing.Size(217, 120);
+            this.btnInventory.Size = new System.Drawing.Size(117, 60);
             this.btnInventory.TabIndex = 2;
             this.btnInventory.Text = "재고 관리";
             this.btnInventory.UseVisualStyleBackColor = true;
@@ -79,30 +76,29 @@
             // 
             // btnSales
             // 
-            this.btnSales.Location = new System.Drawing.Point(518, 120);
-            this.btnSales.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSales.Location = new System.Drawing.Point(279, 60);
             this.btnSales.Name = "btnSales";
-            this.btnSales.Size = new System.Drawing.Size(217, 120);
+            this.btnSales.Size = new System.Drawing.Size(117, 60);
             this.btnSales.TabIndex = 3;
             this.btnSales.Text = "매출 관리";
             this.btnSales.UseVisualStyleBackColor = true;
+            this.btnSales.Click += new System.EventHandler(this.btnSales_Click);
             // 
             // btnMember
             // 
-            this.btnMember.Location = new System.Drawing.Point(771, 120);
-            this.btnMember.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnMember.Location = new System.Drawing.Point(415, 60);
             this.btnMember.Name = "btnMember";
-            this.btnMember.Size = new System.Drawing.Size(217, 120);
+            this.btnMember.Size = new System.Drawing.Size(117, 60);
             this.btnMember.TabIndex = 4;
             this.btnMember.Text = "회원 관리";
             this.btnMember.UseVisualStyleBackColor = true;
+            this.btnMember.Click += new System.EventHandler(this.btnMember_Click);
             // 
             // btnOnOff
             // 
-            this.btnOnOff.Location = new System.Drawing.Point(1075, 182);
-            this.btnOnOff.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnOnOff.Location = new System.Drawing.Point(579, 91);
             this.btnOnOff.Name = "btnOnOff";
-            this.btnOnOff.Size = new System.Drawing.Size(364, 58);
+            this.btnOnOff.Size = new System.Drawing.Size(196, 29);
             this.btnOnOff.TabIndex = 5;
             this.btnOnOff.Text = "서버 열기";
             this.btnOnOff.UseVisualStyleBackColor = true;
@@ -111,42 +107,37 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1072, 118);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(577, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 24);
+            this.label2.Size = new System.Drawing.Size(61, 12);
             this.label2.TabIndex = 9;
             this.label2.Text = "현재 시간:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtTime
             // 
             this.txtTime.AutoSize = true;
-            this.txtTime.Location = new System.Drawing.Point(1296, 118);
-            this.txtTime.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.txtTime.Location = new System.Drawing.Point(698, 59);
             this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(160, 24);
+            this.txtTime.Size = new System.Drawing.Size(77, 12);
             this.txtTime.TabIndex = 10;
             this.txtTime.Text = "오후 11:07:02";
             // 
             // serverLog
             // 
-            this.serverLog.Location = new System.Drawing.Point(1075, 322);
-            this.serverLog.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.serverLog.Location = new System.Drawing.Point(579, 161);
             this.serverLog.Multiline = true;
             this.serverLog.Name = "serverLog";
             this.serverLog.ReadOnly = true;
-            this.serverLog.Size = new System.Drawing.Size(361, 550);
+            this.serverLog.Size = new System.Drawing.Size(196, 277);
             this.serverLog.TabIndex = 11;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(22, 48);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Location = new System.Drawing.Point(12, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(228, 38);
+            this.label3.Size = new System.Drawing.Size(114, 19);
             this.label3.TabIndex = 12;
             this.label3.Text = "응소실 POS";
             // 
@@ -157,38 +148,35 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1072, 292);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label4.Location = new System.Drawing.Point(577, 146);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 24);
+            this.label4.Size = new System.Drawing.Size(61, 12);
             this.label4.TabIndex = 13;
             this.label4.Text = "server log";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 292);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label5.Location = new System.Drawing.Point(14, 146);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 24);
+            this.label5.Size = new System.Drawing.Size(55, 12);
             this.label5.TabIndex = 14;
             this.label5.Text = "order log";
             // 
             // txtDate
             // 
             this.txtDate.AutoSize = true;
-            this.txtDate.Location = new System.Drawing.Point(1196, 62);
-            this.txtDate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.txtDate.Location = new System.Drawing.Point(644, 31);
             this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(269, 24);
+            this.txtDate.Size = new System.Drawing.Size(131, 12);
             this.txtDate.TabIndex = 16;
             this.txtDate.Text = "2024년 6월 12일 수요일";
             // 
             // mainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1469, 900);
+            this.ClientSize = new System.Drawing.Size(791, 450);
             this.Controls.Add(this.txtDate);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -202,7 +190,6 @@
             this.Controls.Add(this.btnInventory);
             this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.orderLog);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "mainForm";
             this.Text = "메인";
             this.Load += new System.EventHandler(this.Form1_Load);

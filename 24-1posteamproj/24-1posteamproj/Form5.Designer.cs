@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "17",
             "2024-06-17 15:32",
             "김밥 1, 라면 1, 우동 1",
@@ -50,7 +50,7 @@
             this.btnSalesOfItem = new System.Windows.Forms.Button();
             this.btnSalesOfTime = new System.Windows.Forms.Button();
             this.btnSalesOfDate = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbTargetDate = new System.Windows.Forms.Label();
             this.lbTotalSales = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnRefund = new System.Windows.Forms.Button();
@@ -114,7 +114,7 @@
             this.lvSales.FullRowSelect = true;
             this.lvSales.HideSelection = false;
             this.lvSales.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem5});
+            listViewItem1});
             this.lvSales.Location = new System.Drawing.Point(250, 118);
             this.lvSales.Name = "lvSales";
             this.lvSales.Size = new System.Drawing.Size(525, 275);
@@ -166,6 +166,7 @@
             this.btnAllSales.TabIndex = 30;
             this.btnAllSales.Text = "전체 매출 세부내역";
             this.btnAllSales.UseVisualStyleBackColor = true;
+            this.btnAllSales.Click += new System.EventHandler(this.DefaultSales);
             // 
             // btnSalesOfItem
             // 
@@ -191,18 +192,19 @@
             this.btnSalesOfDate.Name = "btnSalesOfDate";
             this.btnSalesOfDate.Size = new System.Drawing.Size(220, 36);
             this.btnSalesOfDate.TabIndex = 33;
-            this.btnSalesOfDate.Text = "날짜별 매출 총액";
+            this.btnSalesOfDate.Text = "날짜별 매출";
             this.btnSalesOfDate.UseVisualStyleBackColor = true;
+            this.btnSalesOfDate.Click += new System.EventHandler(this.SalesPerDate);
             // 
-            // label2
+            // lbTargetDate
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(271, 403);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(196, 15);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "2024년 6월 17일 총 매출:";
+            this.lbTargetDate.AutoSize = true;
+            this.lbTargetDate.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbTargetDate.Location = new System.Drawing.Point(271, 403);
+            this.lbTargetDate.Name = "lbTargetDate";
+            this.lbTargetDate.Size = new System.Drawing.Size(196, 15);
+            this.lbTargetDate.TabIndex = 34;
+            this.lbTargetDate.Text = "2024년 6월 17일 총 매출:";
             // 
             // lbTotalSales
             // 
@@ -232,6 +234,7 @@
             this.btnRefund.TabIndex = 37;
             this.btnRefund.Text = "환불처리";
             this.btnRefund.UseVisualStyleBackColor = true;
+            this.btnRefund.Click += new System.EventHandler(this.HandleRefundBtn);
             // 
             // timer1
             // 
@@ -266,7 +269,7 @@
             this.Controls.Add(this.btnRefund);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lbTotalSales);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbTargetDate);
             this.Controls.Add(this.btnSalesOfDate);
             this.Controls.Add(this.btnSalesOfTime);
             this.Controls.Add(this.btnSalesOfItem);
@@ -305,7 +308,7 @@
         private System.Windows.Forms.Button btnSalesOfItem;
         private System.Windows.Forms.Button btnSalesOfTime;
         private System.Windows.Forms.Button btnSalesOfDate;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbTargetDate;
         private System.Windows.Forms.Label lbTotalSales;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnRefund;
