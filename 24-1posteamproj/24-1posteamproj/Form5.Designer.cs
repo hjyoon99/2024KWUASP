@@ -130,17 +130,17 @@
             // salesDate
             // 
             this.salesDate.Text = "일시";
-            this.salesDate.Width = 133;
+            this.salesDate.Width = 118;
             // 
             // salesItem
             // 
             this.salesItem.Text = "품목 및 수량";
-            this.salesItem.Width = 258;
+            this.salesItem.Width = 277;
             // 
             // salesPrice
             // 
             this.salesPrice.Text = "매출";
-            this.salesPrice.Width = 195;
+            this.salesPrice.Width = 71;
             // 
             // textBox1
             // 
@@ -185,6 +185,7 @@
             this.btnSalesOfTime.TabIndex = 32;
             this.btnSalesOfTime.Text = "시간대별 매출 통계";
             this.btnSalesOfTime.UseVisualStyleBackColor = true;
+            this.btnSalesOfTime.Click += new System.EventHandler(this.SalesPerTime);
             // 
             // btnSalesOfDate
             // 
