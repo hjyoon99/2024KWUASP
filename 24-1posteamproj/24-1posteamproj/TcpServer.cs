@@ -14,6 +14,7 @@ public class TcpServer
     private TextBox serverLogTextBox;
     private TextBox orderLogTextBox;
     private int port;
+    public string memberPhone = "none";
 
     public TcpServer(TextBox serverLogTextBox, TextBox orderLogTextBox, int port)
     {
@@ -76,6 +77,7 @@ public class TcpServer
         {
             string phoneNumber = data.Replace("PHONE_NUMBER:", "");
             UpdateOrderLog("수신된 전화번호: \n" + phoneNumber);
+            memberPhone = phoneNumber;
         }
         else if (data.StartsWith("ORDER_DATA:"))
         {
@@ -111,6 +113,27 @@ public class TcpServer
 
     private void AddOrderToSales(string msg) // 데이터베이스에 주문 기록 저장
     {
+        bool pointAddRequired = false;
+        bool needToCreateMember = false;
+        DataTable dt = new DataTable();
+        string targetPhone = "";
+        if (memberPhone != "none" && memberPhone.Length == 11)
+        {
+            DataSet pds = new DataSet();
+            pds.ReadXml(Directory.GetCurrentDirectory() + @"\members.xml");
+            dt = pds.Tables["MEMBER"];
+            string tel1 = memberPhone.Substring(0, 3);
+            string tel2 = memberPhone.Substring(3, 4);
+            string tel3 = memberPhone.Substring(7, 4);
+            targetPhone = tel1+"-"+tel2+"-"+tel3;
+            DataRow[] drs = dt.Select("[PHONE] = '" + targetPhone + "'");
+            if(drs.Length == 0)
+            {
+                needToCreateMember=true;
+                memberPhone = "none";
+            }
+            pointAddRequired = true;
+        }
         DataSet ds = new DataSet();
         ds.ReadXml(Directory.GetCurrentDirectory() + @"\sales.xml");
         DataRow dr1 = ds.Tables["ORDER"].NewRow();
@@ -122,9 +145,10 @@ public class TcpServer
         dr1["TIME"] = strTime;
         ds.Tables["ORDER"].Rows.Add(dr1);
         ds.Tables["ORDER"].AcceptChanges();
+        int totalPrice = 0;
         for (int i = 0; i < msgLine.Length - 1; i++)
         {
-            string line = msgLine[i];
+            string line = msgLine[i].TrimStart(',');
             DataRow dr2 = ds.Tables["DETAIL"].NewRow();
             dr2["NUMBER"] = orderNum.ToString();
             string[] temp1 = line.Split(':');
@@ -132,6 +156,7 @@ public class TcpServer
             string[] temp2 = temp1[1].Split(',');
             string amount = temp2[1];
             string price = temp2[2];
+            totalPrice += int.Parse(price);
             dr2["ITEM"] = menu;
             dr2["COUNT"] = amount;
             dr2["PRICE"] = price;
@@ -139,5 +164,34 @@ public class TcpServer
             ds.Tables["DETAIL"].AcceptChanges();
         }
         ds.WriteXml(Directory.GetCurrentDirectory() + @"\sales.xml");
+        if (pointAddRequired) // 포인트 적립 핸들링
+        {
+            if (needToCreateMember)
+            {
+                DataRow dr = dt.NewRow();
+                dr["NUMBER"] = dt.Rows.Count + 1;
+                dr["NAME"] = "임시 사용자";
+                dr["PHONE"] = targetPhone;
+                dr["POINT"] = (totalPrice / 10).ToString();
+                dt.Rows.Add(dr);
+                dt.AcceptChanges();
+                dt.WriteXml(Directory.GetCurrentDirectory() + @"\members.xml");
+            }
+            else
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    if (dr["PHONE"].ToString() == targetPhone)
+                    {
+                        int prev = int.Parse(dr["POINT"].ToString());
+                        prev += (totalPrice / 10);
+                        dr["POINT"] = prev.ToString();
+                        dt.WriteXml(Directory.GetCurrentDirectory() + @"\members.xml");
+                    }
+                }
+            }
+            
+        }
+        memberPhone = "none";
     }
 }

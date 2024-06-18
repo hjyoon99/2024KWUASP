@@ -45,17 +45,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("맑은 고딕", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(208, 9);
+            this.label1.Location = new System.Drawing.Point(182, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 60);
+            this.label1.Size = new System.Drawing.Size(172, 47);
             this.label1.TabIndex = 0;
             this.label1.Text = "자리 선택";
             // 
             // b1
             // 
-            this.b1.Location = new System.Drawing.Point(44, 89);
+            this.b1.Location = new System.Drawing.Point(38, 71);
+            this.b1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.b1.Name = "b1";
-            this.b1.Size = new System.Drawing.Size(97, 125);
+            this.b1.Size = new System.Drawing.Size(85, 100);
             this.b1.TabIndex = 1;
             this.b1.Text = "1";
             this.b1.UseVisualStyleBackColor = true;
@@ -63,9 +64,10 @@
             // 
             // b2
             // 
-            this.b2.Location = new System.Drawing.Point(195, 89);
+            this.b2.Location = new System.Drawing.Point(171, 71);
+            this.b2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.b2.Name = "b2";
-            this.b2.Size = new System.Drawing.Size(97, 125);
+            this.b2.Size = new System.Drawing.Size(85, 100);
             this.b2.TabIndex = 2;
             this.b2.Text = "2";
             this.b2.UseVisualStyleBackColor = true;
@@ -73,9 +75,10 @@
             // 
             // b3
             // 
-            this.b3.Location = new System.Drawing.Point(346, 89);
+            this.b3.Location = new System.Drawing.Point(303, 71);
+            this.b3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.b3.Name = "b3";
-            this.b3.Size = new System.Drawing.Size(97, 125);
+            this.b3.Size = new System.Drawing.Size(85, 100);
             this.b3.TabIndex = 3;
             this.b3.Text = "3";
             this.b3.UseVisualStyleBackColor = true;
@@ -83,9 +86,10 @@
             // 
             // b4
             // 
-            this.b4.Location = new System.Drawing.Point(503, 89);
+            this.b4.Location = new System.Drawing.Point(440, 71);
+            this.b4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.b4.Name = "b4";
-            this.b4.Size = new System.Drawing.Size(97, 125);
+            this.b4.Size = new System.Drawing.Size(85, 100);
             this.b4.TabIndex = 4;
             this.b4.Text = "4";
             this.b4.UseVisualStyleBackColor = true;
@@ -93,9 +97,10 @@
             // 
             // b9
             // 
-            this.b9.Location = new System.Drawing.Point(44, 422);
+            this.b9.Location = new System.Drawing.Point(38, 338);
+            this.b9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.b9.Name = "b9";
-            this.b9.Size = new System.Drawing.Size(248, 230);
+            this.b9.Size = new System.Drawing.Size(217, 184);
             this.b9.TabIndex = 5;
             this.b9.Text = "9";
             this.b9.UseVisualStyleBackColor = true;
@@ -103,9 +108,10 @@
             // 
             // b10
             // 
-            this.b10.Location = new System.Drawing.Point(352, 422);
+            this.b10.Location = new System.Drawing.Point(308, 338);
+            this.b10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.b10.Name = "b10";
-            this.b10.Size = new System.Drawing.Size(248, 230);
+            this.b10.Size = new System.Drawing.Size(217, 184);
             this.b10.TabIndex = 6;
             this.b10.Text = "10";
             this.b10.UseVisualStyleBackColor = true;
@@ -113,9 +119,10 @@
             // 
             // b8
             // 
-            this.b8.Location = new System.Drawing.Point(503, 249);
+            this.b8.Location = new System.Drawing.Point(440, 199);
+            this.b8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.b8.Name = "b8";
-            this.b8.Size = new System.Drawing.Size(97, 125);
+            this.b8.Size = new System.Drawing.Size(85, 100);
             this.b8.TabIndex = 10;
             this.b8.Text = "8";
             this.b8.UseVisualStyleBackColor = true;
@@ -123,9 +130,10 @@
             // 
             // b7
             // 
-            this.b7.Location = new System.Drawing.Point(346, 249);
+            this.b7.Location = new System.Drawing.Point(303, 199);
+            this.b7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.b7.Name = "b7";
-            this.b7.Size = new System.Drawing.Size(97, 125);
+            this.b7.Size = new System.Drawing.Size(85, 100);
             this.b7.TabIndex = 9;
             this.b7.Text = "7";
             this.b7.UseVisualStyleBackColor = true;
@@ -133,9 +141,10 @@
             // 
             // b6
             // 
-            this.b6.Location = new System.Drawing.Point(195, 249);
+            this.b6.Location = new System.Drawing.Point(171, 199);
+            this.b6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.b6.Name = "b6";
-            this.b6.Size = new System.Drawing.Size(97, 125);
+            this.b6.Size = new System.Drawing.Size(85, 100);
             this.b6.TabIndex = 8;
             this.b6.Text = "6";
             this.b6.UseVisualStyleBackColor = true;
@@ -143,9 +152,10 @@
             // 
             // b5
             // 
-            this.b5.Location = new System.Drawing.Point(44, 249);
+            this.b5.Location = new System.Drawing.Point(38, 199);
+            this.b5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.b5.Name = "b5";
-            this.b5.Size = new System.Drawing.Size(97, 125);
+            this.b5.Size = new System.Drawing.Size(85, 100);
             this.b5.TabIndex = 7;
             this.b5.Text = "5";
             this.b5.UseVisualStyleBackColor = true;
@@ -153,9 +163,9 @@
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 717);
+            this.ClientSize = new System.Drawing.Size(564, 574);
             this.Controls.Add(this.b8);
             this.Controls.Add(this.b7);
             this.Controls.Add(this.b6);
@@ -167,9 +177,9 @@
             this.Controls.Add(this.b2);
             this.Controls.Add(this.b1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form3";
             this.Text = "키오스크 자리선택";
-            this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
