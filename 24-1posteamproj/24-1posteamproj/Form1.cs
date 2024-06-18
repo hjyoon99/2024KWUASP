@@ -30,11 +30,6 @@ namespace _24_1posteamproj
         {
             timer_curTime.Start();
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
         public void timer_curTime_Tick(object sender, EventArgs e)
         { 
 
