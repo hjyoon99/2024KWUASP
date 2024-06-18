@@ -2076,7 +2076,7 @@ namespace _24_1kioskteamproj
                 string orderData = ListViewToString(listView1);
 
                 // 서버로 데이터 전송
-                SendOrderToServer(serverIp, serverPort, orderData);
+                SendOrderToServer(serverIp, serverPort, "ORDER_DATA:" + orderData);
 
                 this.Close();
             }
@@ -2093,24 +2093,27 @@ namespace _24_1kioskteamproj
                 string orderData = ListViewToString(listView1);
 
                 // 서버로 데이터 전송
-                SendOrderToServer(serverIp, serverPort, orderData);
+                SendOrderToServer(serverIp, serverPort, "ORDER_DATA:" + orderData);
 
                 this.Close();
             }
         }
 
         // 리스트뷰 데이터를 문자열로 변환하는 메서드
-        private string ListViewToString(System.Windows.Forms.ListView listView)
+        public string ListViewToString(System.Windows.Forms.ListView listView)
         {
             StringBuilder sb = new StringBuilder();
 
             foreach (ListViewItem item in listView.Items)
             {
-                for (int i = 1; i < item.SubItems.Count; i++) // 첫 번째 SubItem을 건너뜁니다.
+                for (int i = 0; i < item.SubItems.Count; i++)
                 {
-                    sb.Append(item.SubItems[i].Text).Append(",");
+                    if (i > 0)
+                    {
+                        sb.Append(",");
+                    }
+                    sb.Append(item.SubItems[i].Text);
                 }
-                sb.Length--; // 마지막 쉼표 제거
                 sb.AppendLine();
             }
 
