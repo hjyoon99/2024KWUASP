@@ -16,6 +16,10 @@
     <NUMBER>4</NUMBER>
     <TIME>2024-06-19 18:07</TIME>
   </ORDER>
+  <ORDER>
+    <NUMBER>5</NUMBER>
+    <TIME>2024-06-18 23:16</TIME>
+  </ORDER>
   <DETAIL>
     <NUMBER>1</NUMBER>
     <ITEM>제육덮밥</ITEM>
@@ -51,5 +55,23 @@
     <ITEM>라면</ITEM>
     <COUNT>3</COUNT>
     <PRICE>15000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>5</NUMBER>
+    <ITEM>참치 김밥 </ITEM>
+    <COUNT>2</COUNT>
+    <PRICE>8000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>5</NUMBER>
+    <ITEM>치즈 김밥 </ITEM>
+    <COUNT>2</COUNT>
+    <PRICE>8000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>5</NUMBER>
+    <ITEM>일반 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>3000</PRICE>
   </DETAIL>
 </NewDataSet>
