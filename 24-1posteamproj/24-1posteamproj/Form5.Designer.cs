@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "17",
             "2024-06-17 15:32",
             "김밥 1, 라면 1, 우동 1",
@@ -44,8 +44,6 @@
             this.salesDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.salesItem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.salesPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.btnAllSales = new System.Windows.Forms.Button();
             this.btnSalesOfItem = new System.Windows.Forms.Button();
             this.btnSalesOfTime = new System.Windows.Forms.Button();
@@ -114,10 +112,10 @@
             this.lvSales.FullRowSelect = true;
             this.lvSales.HideSelection = false;
             this.lvSales.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.lvSales.Location = new System.Drawing.Point(250, 118);
             this.lvSales.Name = "lvSales";
-            this.lvSales.Size = new System.Drawing.Size(525, 275);
+            this.lvSales.Size = new System.Drawing.Size(525, 296);
             this.lvSales.TabIndex = 27;
             this.lvSales.UseCompatibleStateImageBehavior = false;
             this.lvSales.View = System.Windows.Forms.View.Details;
@@ -141,22 +139,6 @@
             // 
             this.salesPrice.Text = "매출";
             this.salesPrice.Width = 71;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(250, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(208, 21);
-            this.textBox1.TabIndex = 28;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(473, 54);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(56, 23);
-            this.btnSearch.TabIndex = 29;
-            this.btnSearch.Text = "검색";
-            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // btnAllSales
             // 
@@ -202,7 +184,7 @@
             // 
             this.lbTargetDate.AutoSize = true;
             this.lbTargetDate.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbTargetDate.Location = new System.Drawing.Point(271, 403);
+            this.lbTargetDate.Location = new System.Drawing.Point(250, 89);
             this.lbTargetDate.Name = "lbTargetDate";
             this.lbTargetDate.Size = new System.Drawing.Size(196, 15);
             this.lbTargetDate.TabIndex = 34;
@@ -212,7 +194,7 @@
             // 
             this.lbTotalSales.AutoSize = true;
             this.lbTotalSales.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbTotalSales.Location = new System.Drawing.Point(473, 403);
+            this.lbTotalSales.Location = new System.Drawing.Point(452, 89);
             this.lbTotalSales.Name = "lbTotalSales";
             this.lbTotalSales.Size = new System.Drawing.Size(58, 15);
             this.lbTotalSales.TabIndex = 35;
@@ -220,7 +202,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(682, 415);
+            this.btnBack.Location = new System.Drawing.Point(682, 420);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(93, 23);
             this.btnBack.TabIndex = 36;
@@ -276,8 +258,6 @@
             this.Controls.Add(this.btnSalesOfTime);
             this.Controls.Add(this.btnSalesOfItem);
             this.Controls.Add(this.btnAllSales);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lvSales);
             this.Controls.Add(this.txtTime);
             this.Controls.Add(this.label1);
@@ -304,8 +284,6 @@
         private System.Windows.Forms.ColumnHeader salesDate;
         private System.Windows.Forms.ColumnHeader salesItem;
         private System.Windows.Forms.ColumnHeader salesPrice;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnAllSales;
         private System.Windows.Forms.Button btnSalesOfItem;
         private System.Windows.Forms.Button btnSalesOfTime;
