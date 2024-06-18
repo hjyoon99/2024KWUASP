@@ -57,10 +57,9 @@ public class TcpServer
                 NetworkStream stream = client.GetStream();
                 byte[] buffer = new byte[1024];
                 int bytesRead = stream.Read(buffer, 0, buffer.Length);
-                string orderData = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+                string receivedData = Encoding.UTF8.GetString(buffer, 0, bytesRead);
 
-                UpdateOrderLog("수신된 데이터: \r\n" + orderData);
-                AddOrderToSales(orderData);
+                ProcessReceivedData(receivedData);
 
                 client.Close();
             }
@@ -68,6 +67,21 @@ public class TcpServer
             {
                 UpdateServerLog(ex.Message);
             }
+        }
+    }
+
+    private void ProcessReceivedData(string data)
+    {
+        if (data.StartsWith("PHONE_NUMBER:"))
+        {
+            string phoneNumber = data.Replace("PHONE_NUMBER:", "");
+            UpdateOrderLog("수신된 전화번호: \n" + phoneNumber);
+        }
+        else if (data.StartsWith("ORDER_DATA:"))
+        {
+            string orderData = data.Replace("ORDER_DATA:", "");
+            UpdateOrderLog("수신된 주문 데이터:\r\n" + orderData.TrimStart(','));
+            AddOrderToSales(orderData);
         }
     }
 
@@ -94,6 +108,7 @@ public class TcpServer
             orderLogTextBox.AppendText(message + Environment.NewLine);
         }
     }
+
     private void AddOrderToSales(string msg) // 데이터베이스에 주문 기록 저장
     {
         DataSet ds = new DataSet();
@@ -107,7 +122,7 @@ public class TcpServer
         dr1["TIME"] = strTime;
         ds.Tables["ORDER"].Rows.Add(dr1);
         ds.Tables["ORDER"].AcceptChanges();
-        for (int i= 0;i<msgLine.Length-1;i++)
+        for (int i = 0; i < msgLine.Length - 1; i++)
         {
             string line = msgLine[i];
             DataRow dr2 = ds.Tables["DETAIL"].NewRow();
@@ -120,10 +135,9 @@ public class TcpServer
             dr2["ITEM"] = menu;
             dr2["COUNT"] = amount;
             dr2["PRICE"] = price;
-           ds.Tables["DETAIL"].Rows.Add(dr2);
+            ds.Tables["DETAIL"].Rows.Add(dr2);
             ds.Tables["DETAIL"].AcceptChanges();
         }
         ds.WriteXml(Directory.GetCurrentDirectory() + @"\sales.xml");
-        return;
     }
 }

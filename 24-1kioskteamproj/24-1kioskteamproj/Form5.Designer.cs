@@ -82,6 +82,7 @@
             this.checkMemberButton.TabIndex = 4;
             this.checkMemberButton.Text = "조회하기";
             this.checkMemberButton.UseVisualStyleBackColor = true;
+            this.checkMemberButton.Click += new System.EventHandler(this.checkMemberButton_Click);
             // 
             // resultLabel
             // 
