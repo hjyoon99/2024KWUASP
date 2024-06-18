@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "17",
             "2024-06-17 15:32",
             "김밥 1, 라면 1, 우동 1",
@@ -114,7 +114,7 @@
             this.lvSales.FullRowSelect = true;
             this.lvSales.HideSelection = false;
             this.lvSales.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.lvSales.Location = new System.Drawing.Point(250, 118);
             this.lvSales.Name = "lvSales";
             this.lvSales.Size = new System.Drawing.Size(525, 275);
@@ -176,6 +176,7 @@
             this.btnSalesOfItem.TabIndex = 31;
             this.btnSalesOfItem.Text = "품목별 매출 통계";
             this.btnSalesOfItem.UseVisualStyleBackColor = true;
+            this.btnSalesOfItem.Click += new System.EventHandler(this.SalesPerMenu);
             // 
             // btnSalesOfTime
             // 
