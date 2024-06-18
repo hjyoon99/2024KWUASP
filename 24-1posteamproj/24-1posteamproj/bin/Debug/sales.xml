@@ -12,6 +12,126 @@
     <NUMBER>3</NUMBER>
     <TIME>2024-06-19 04:15</TIME>
   </ORDER>
+  <ORDER>
+    <NUMBER>4</NUMBER>
+    <TIME>2024-06-19 04:33</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>5</NUMBER>
+    <TIME>2024-06-19 04:41</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>6</NUMBER>
+    <TIME>2024-06-19 04:52</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>7</NUMBER>
+    <TIME>2024-06-19 04:53</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>8</NUMBER>
+    <TIME>2024-06-19 04:54</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>9</NUMBER>
+    <TIME>2024-06-19 05:01</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>10</NUMBER>
+    <TIME>2024-06-19 05:01</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>11</NUMBER>
+    <TIME>2024-06-19 05:12</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>12</NUMBER>
+    <TIME>2024-06-19 05:14</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>13</NUMBER>
+    <TIME>2024-06-19 05:14</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>14</NUMBER>
+    <TIME>2024-06-19 05:15</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>15</NUMBER>
+    <TIME>2024-06-19 05:18</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>16</NUMBER>
+    <TIME>2024-06-19 05:18</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>17</NUMBER>
+    <TIME>2024-06-19 05:19</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>18</NUMBER>
+    <TIME>2024-06-19 05:22</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>19</NUMBER>
+    <TIME>2024-06-19 05:22</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>20</NUMBER>
+    <TIME>2024-06-19 05:31</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>21</NUMBER>
+    <TIME>2024-06-19 05:34</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>22</NUMBER>
+    <TIME>2024-06-19 05:38</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>23</NUMBER>
+    <TIME>2024-06-19 05:41</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>24</NUMBER>
+    <TIME>2024-06-19 05:43</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>25</NUMBER>
+    <TIME>2024-06-19 05:47</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>26</NUMBER>
+    <TIME>2024-06-19 05:49</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>27</NUMBER>
+    <TIME>2024-06-19 05:50</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>28</NUMBER>
+    <TIME>2024-06-19 05:53</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>29</NUMBER>
+    <TIME>2024-06-19 05:53</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>30</NUMBER>
+    <TIME>2024-06-19 05:54</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>31</NUMBER>
+    <TIME>2024-06-19 05:57</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>32</NUMBER>
+    <TIME>2024-06-19 05:58</TIME>
+  </ORDER>
+  <ORDER>
+    <NUMBER>33</NUMBER>
+    <TIME>2024-06-19 06:02</TIME>
+  </ORDER>
   <DETAIL>
     <NUMBER>1</NUMBER>
     <ITEM>오므라이스</ITEM>
@@ -65,5 +185,233 @@
     <ITEM>만두 </ITEM>
     <COUNT>1</COUNT>
     <PRICE>4000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>4</NUMBER>
+    <ITEM>일반 김밥 </ITEM>
+    <COUNT>3</COUNT>
+    <PRICE>9000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>4</NUMBER>
+    <ITEM>날치알 김밥 </ITEM>
+    <COUNT>2</COUNT>
+    <PRICE>9000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>5</NUMBER>
+    <ITEM>치즈 김밥 </ITEM>
+    <COUNT>3</COUNT>
+    <PRICE>12000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>6</NUMBER>
+    <ITEM>참치 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>4000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>6</NUMBER>
+    <ITEM>돈가스 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>5000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>6</NUMBER>
+    <ITEM>날치알 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>4500</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>7</NUMBER>
+    <ITEM>참치 김밥 </ITEM>
+    <COUNT>3</COUNT>
+    <PRICE>12000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>7</NUMBER>
+    <ITEM>돈가스 김밥 </ITEM>
+    <COUNT>2</COUNT>
+    <PRICE>10000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>8</NUMBER>
+    <ITEM>치즈 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>4000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>8</NUMBER>
+    <ITEM>날치알 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>4500</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>8</NUMBER>
+    <ITEM>돈가스 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>5000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>9</NUMBER>
+    <ITEM>참치 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>4000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>9</NUMBER>
+    <ITEM>돈가스 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>5000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>10</NUMBER>
+    <ITEM>참치 김밥 </ITEM>
+    <COUNT>5</COUNT>
+    <PRICE>20000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>11</NUMBER>
+    <ITEM>치즈 김밥 </ITEM>
+    <COUNT>2</COUNT>
+    <PRICE>8000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>12</NUMBER>
+    <ITEM>참치 김밥 </ITEM>
+    <COUNT>4</COUNT>
+    <PRICE>16000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>13</NUMBER>
+    <ITEM>돈가스 김밥 </ITEM>
+    <COUNT>4</COUNT>
+    <PRICE>20000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>14</NUMBER>
+    <ITEM>치즈 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>4000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>15</NUMBER>
+    <ITEM>돈가스 김밥 </ITEM>
+    <COUNT>3</COUNT>
+    <PRICE>15000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>16</NUMBER>
+    <ITEM>돈가스 김밥 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>5000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>17</NUMBER>
+    <ITEM>돈가스 김밥 </ITEM>
+    <COUNT>5</COUNT>
+    <PRICE>25000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>18</NUMBER>
+    <ITEM>치즈 김밥 </ITEM>
+    <COUNT>8</COUNT>
+    <PRICE>32000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>19</NUMBER>
+    <ITEM>돈가스 김밥 </ITEM>
+    <COUNT>5</COUNT>
+    <PRICE>25000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>20</NUMBER>
+    <ITEM>치즈 김밥 </ITEM>
+    <COUNT>3</COUNT>
+    <PRICE>12000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>21</NUMBER>
+    <ITEM>참치 김밥 </ITEM>
+    <COUNT>4</COUNT>
+    <PRICE>16000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>22</NUMBER>
+    <ITEM>치즈 김밥 </ITEM>
+    <COUNT>5</COUNT>
+    <PRICE>20000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>23</NUMBER>
+    <ITEM>치즈 김밥 </ITEM>
+    <COUNT>3</COUNT>
+    <PRICE>12000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>24</NUMBER>
+    <ITEM>돈가스 김밥 </ITEM>
+    <COUNT>5</COUNT>
+    <PRICE>25000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>25</NUMBER>
+    <ITEM>치즈 김밥 </ITEM>
+    <COUNT>3</COUNT>
+    <PRICE>12000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>26</NUMBER>
+    <ITEM>참치 김밥 </ITEM>
+    <COUNT>5</COUNT>
+    <PRICE>20000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>27</NUMBER>
+    <ITEM>돈가스 김밥 </ITEM>
+    <COUNT>3</COUNT>
+    <PRICE>15000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>28</NUMBER>
+    <ITEM>치즈 김밥 </ITEM>
+    <COUNT>5</COUNT>
+    <PRICE>20000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>29</NUMBER>
+    <ITEM>돈가스 김밥 </ITEM>
+    <COUNT>4</COUNT>
+    <PRICE>20000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>30</NUMBER>
+    <ITEM>참치 김밥 </ITEM>
+    <COUNT>5</COUNT>
+    <PRICE>20000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>31</NUMBER>
+    <ITEM>참치 김밥 </ITEM>
+    <COUNT>3</COUNT>
+    <PRICE>12000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>32</NUMBER>
+    <ITEM>치즈 김밥 </ITEM>
+    <COUNT>3</COUNT>
+    <PRICE>12000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>33</NUMBER>
+    <ITEM>치즈 김밥 </ITEM>
+    <COUNT>6</COUNT>
+    <PRICE>24000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>33</NUMBER>
+    <ITEM>돈가스 김밥 </ITEM>
+    <COUNT>3</COUNT>
+    <PRICE>15000</PRICE>
   </DETAIL>
 </NewDataSet>

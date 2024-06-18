@@ -135,9 +135,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(12, 20);
+            this.label3.Location = new System.Drawing.Point(22, 40);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(208, 19);
+            this.label3.Size = new System.Drawing.Size(412, 38);
             this.label3.TabIndex = 13;
             this.label3.Text = "응소실 POS 재고 관리";
             // 
@@ -148,27 +149,30 @@
             // Timer1Time
             // 
             this.Timer1Time.AutoSize = true;
-            this.Timer1Time.Location = new System.Drawing.Point(698, 59);
+            this.Timer1Time.Location = new System.Drawing.Point(1296, 118);
+            this.Timer1Time.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Timer1Time.Name = "Timer1Time";
-            this.Timer1Time.Size = new System.Drawing.Size(75, 12);
+            this.Timer1Time.Size = new System.Drawing.Size(155, 24);
             this.Timer1Time.TabIndex = 19;
             this.Timer1Time.Text = "오후 2:00::00";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(577, 59);
+            this.label1.Location = new System.Drawing.Point(1072, 118);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 12);
+            this.label1.Size = new System.Drawing.Size(122, 24);
             this.label1.TabIndex = 17;
             this.label1.Text = "현재 시간:";
             // 
             // Timer1Date
             // 
             this.Timer1Date.AutoSize = true;
-            this.Timer1Date.Location = new System.Drawing.Point(644, 31);
+            this.Timer1Date.Location = new System.Drawing.Point(1196, 62);
+            this.Timer1Date.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Timer1Date.Name = "Timer1Date";
-            this.Timer1Date.Size = new System.Drawing.Size(131, 12);
+            this.Timer1Date.Size = new System.Drawing.Size(269, 24);
             this.Timer1Date.TabIndex = 18;
             this.Timer1Date.Text = "2024년 6월 12일 수요일";
             // 
@@ -185,18 +189,21 @@
             this.ItemGroup.Controls.Add(this.label2);
             this.ItemGroup.Controls.Add(this.NameTxt);
             this.ItemGroup.Controls.Add(this.label5);
-            this.ItemGroup.Location = new System.Drawing.Point(16, 84);
+            this.ItemGroup.Location = new System.Drawing.Point(30, 168);
+            this.ItemGroup.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.ItemGroup.Name = "ItemGroup";
-            this.ItemGroup.Size = new System.Drawing.Size(759, 316);
+            this.ItemGroup.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ItemGroup.Size = new System.Drawing.Size(1410, 632);
             this.ItemGroup.TabIndex = 20;
             this.ItemGroup.TabStop = false;
             this.ItemGroup.Text = "재고 관리";
             // 
             // ItemEdit
             // 
-            this.ItemEdit.Location = new System.Drawing.Point(640, 50);
+            this.ItemEdit.Location = new System.Drawing.Point(1189, 100);
+            this.ItemEdit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.ItemEdit.Name = "ItemEdit";
-            this.ItemEdit.Size = new System.Drawing.Size(95, 23);
+            this.ItemEdit.Size = new System.Drawing.Size(176, 46);
             this.ItemEdit.TabIndex = 31;
             this.ItemEdit.Text = "재고 수정";
             this.ItemEdit.UseVisualStyleBackColor = true;
@@ -204,10 +211,10 @@
             // 
             // SearchBtn
             // 
-            this.SearchBtn.Location = new System.Drawing.Point(640, 19);
-            this.SearchBtn.Margin = new System.Windows.Forms.Padding(5, 9, 5, 9);
+            this.SearchBtn.Location = new System.Drawing.Point(1189, 38);
+            this.SearchBtn.Margin = new System.Windows.Forms.Padding(9, 18, 9, 18);
             this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(95, 23);
+            this.SearchBtn.Size = new System.Drawing.Size(176, 46);
             this.SearchBtn.TabIndex = 30;
             this.SearchBtn.Text = "재고 검색";
             this.SearchBtn.UseVisualStyleBackColor = true;
@@ -215,26 +222,29 @@
             // 
             // SearchTxt
             // 
-            this.SearchTxt.Location = new System.Drawing.Point(74, 21);
+            this.SearchTxt.Location = new System.Drawing.Point(137, 42);
+            this.SearchTxt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.SearchTxt.Name = "SearchTxt";
-            this.SearchTxt.Size = new System.Drawing.Size(548, 21);
+            this.SearchTxt.Size = new System.Drawing.Size(1014, 35);
             this.SearchTxt.TabIndex = 29;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("굴림", 10F);
-            this.label6.Location = new System.Drawing.Point(26, 26);
+            this.label6.Location = new System.Drawing.Point(48, 52);
+            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 14);
+            this.label6.Size = new System.Drawing.Size(84, 27);
             this.label6.TabIndex = 28;
             this.label6.Text = "검색: ";
             // 
             // OtherTxt
             // 
-            this.OtherTxt.Location = new System.Drawing.Point(397, 52);
+            this.OtherTxt.Location = new System.Drawing.Point(737, 104);
+            this.OtherTxt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.OtherTxt.Name = "OtherTxt";
-            this.OtherTxt.Size = new System.Drawing.Size(225, 21);
+            this.OtherTxt.Size = new System.Drawing.Size(414, 35);
             this.OtherTxt.TabIndex = 27;
             // 
             // ItemList
@@ -268,9 +278,10 @@
             listViewItem17,
             listViewItem18,
             listViewItem19});
-            this.ItemList.Location = new System.Drawing.Point(8, 79);
+            this.ItemList.Location = new System.Drawing.Point(12, 162);
+            this.ItemList.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.ItemList.Name = "ItemList";
-            this.ItemList.Size = new System.Drawing.Size(743, 231);
+            this.ItemList.Size = new System.Drawing.Size(1376, 458);
             this.ItemList.TabIndex = 21;
             this.ItemList.UseCompatibleStateImageBehavior = false;
             this.ItemList.View = System.Windows.Forms.View.Details;
@@ -292,18 +303,20 @@
             // 
             // CountTxt
             // 
-            this.CountTxt.Location = new System.Drawing.Point(258, 52);
+            this.CountTxt.Location = new System.Drawing.Point(479, 104);
+            this.CountTxt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.CountTxt.Name = "CountTxt";
-            this.CountTxt.Size = new System.Drawing.Size(84, 21);
+            this.CountTxt.Size = new System.Drawing.Size(153, 35);
             this.CountTxt.TabIndex = 26;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("굴림", 10F);
-            this.label4.Location = new System.Drawing.Point(211, 56);
+            this.label4.Location = new System.Drawing.Point(392, 112);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 14);
+            this.label4.Size = new System.Drawing.Size(75, 27);
             this.label4.TabIndex = 23;
             this.label4.Text = "수량:";
             // 
@@ -311,34 +324,38 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("굴림", 10F);
-            this.label2.Location = new System.Drawing.Point(14, 56);
+            this.label2.Location = new System.Drawing.Point(26, 112);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 14);
+            this.label2.Size = new System.Drawing.Size(102, 27);
             this.label2.TabIndex = 22;
             this.label2.Text = "재고명:";
             // 
             // NameTxt
             // 
-            this.NameTxt.Location = new System.Drawing.Point(74, 52);
+            this.NameTxt.Location = new System.Drawing.Point(137, 104);
+            this.NameTxt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.NameTxt.Name = "NameTxt";
-            this.NameTxt.Size = new System.Drawing.Size(130, 21);
+            this.NameTxt.Size = new System.Drawing.Size(238, 35);
             this.NameTxt.TabIndex = 25;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("굴림", 10F);
-            this.label5.Location = new System.Drawing.Point(350, 55);
+            this.label5.Location = new System.Drawing.Point(650, 110);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 14);
+            this.label5.Size = new System.Drawing.Size(66, 27);
             this.label5.TabIndex = 24;
             this.label5.Text = "비고";
             // 
             // EndBtn
             // 
-            this.EndBtn.Location = new System.Drawing.Point(680, 409);
+            this.EndBtn.Location = new System.Drawing.Point(1263, 818);
+            this.EndBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.EndBtn.Name = "EndBtn";
-            this.EndBtn.Size = new System.Drawing.Size(108, 29);
+            this.EndBtn.Size = new System.Drawing.Size(201, 58);
             this.EndBtn.TabIndex = 1;
             this.EndBtn.Text = "완료";
             this.EndBtn.UseVisualStyleBackColor = true;
@@ -352,15 +369,16 @@
             // 
             // StokForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1486, 900);
             this.Controls.Add(this.EndBtn);
             this.Controls.Add(this.ItemGroup);
             this.Controls.Add(this.Timer1Time);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Timer1Date);
             this.Controls.Add(this.label3);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "StokForm";
             this.Text = "재고관리";
             this.Load += new System.EventHandler(this.StokForm_Load);

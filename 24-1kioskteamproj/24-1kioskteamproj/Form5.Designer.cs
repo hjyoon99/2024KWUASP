@@ -33,7 +33,8 @@
             this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.checkMemberButton = new System.Windows.Forms.Button();
-            this.resultLabel = new System.Windows.Forms.Label();
+            this.PointLabel = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // InitialPoint
@@ -84,22 +85,22 @@
             this.checkMemberButton.UseVisualStyleBackColor = true;
             this.checkMemberButton.Click += new System.EventHandler(this.checkMemberButton_Click);
             // 
-            // resultLabel
+            // PointLabel
             // 
-            this.resultLabel.AutoSize = true;
-            this.resultLabel.Font = new System.Drawing.Font("굴림", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.resultLabel.Location = new System.Drawing.Point(220, 472);
-            this.resultLabel.Name = "resultLabel";
-            this.resultLabel.Size = new System.Drawing.Size(467, 29);
-            this.resultLabel.TabIndex = 5;
-            this.resultLabel.Text = "이름 :            포인트 :            점";
+            this.PointLabel.AutoSize = true;
+            this.PointLabel.Font = new System.Drawing.Font("굴림", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.PointLabel.Location = new System.Drawing.Point(253, 371);
+            this.PointLabel.Name = "PointLabel";
+            this.PointLabel.Size = new System.Drawing.Size(190, 43);
+            this.PointLabel.TabIndex = 5;
+            this.PointLabel.Text = "포인트 : ";
             // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 713);
-            this.Controls.Add(this.resultLabel);
+            this.ClientSize = new System.Drawing.Size(952, 556);
+            this.Controls.Add(this.PointLabel);
             this.Controls.Add(this.checkMemberButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.phoneNumberTextBox);
@@ -119,6 +120,7 @@
         private System.Windows.Forms.TextBox phoneNumberTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button checkMemberButton;
-        private System.Windows.Forms.Label resultLabel;
+        private System.Windows.Forms.Label PointLabel;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

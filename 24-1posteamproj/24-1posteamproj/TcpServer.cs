@@ -60,7 +60,11 @@ public class TcpServer
                 int bytesRead = stream.Read(buffer, 0, buffer.Length);
                 string receivedData = Encoding.UTF8.GetString(buffer, 0, bytesRead);
 
-                ProcessReceivedData(receivedData);
+                string response = ProcessReceivedData(receivedData);
+
+                // 클라이언트로 응답 데이터 전송
+                byte[] responseData = Encoding.UTF8.GetBytes(response);
+                stream.Write(responseData, 0, responseData.Length);
 
                 client.Close();
             }
@@ -71,20 +75,23 @@ public class TcpServer
         }
     }
 
-    private void ProcessReceivedData(string data)
+    private string ProcessReceivedData(string data)
     {
         if (data.StartsWith("PHONE_NUMBER:"))
         {
             string phoneNumber = data.Replace("PHONE_NUMBER:", "");
             UpdateOrderLog("수신된 전화번호: \n" + phoneNumber);
             memberPhone = phoneNumber;
+            return GetMemberPoints(phoneNumber);
         }
         else if (data.StartsWith("ORDER_DATA:"))
         {
             string orderData = data.Replace("ORDER_DATA:", "");
             UpdateOrderLog("수신된 주문 데이터:\r\n" + orderData.TrimStart(','));
             AddOrderToSales(orderData);
+            return "Order data received";
         }
+        return "Invalid data received";
     }
 
     private void UpdateServerLog(string message)
@@ -111,7 +118,24 @@ public class TcpServer
         }
     }
 
-    private void AddOrderToSales(string msg) // 데이터베이스에 주문 기록 저장
+    private string GetMemberPoints(string phoneNumber)
+    {
+        DataSet ds = new DataSet();
+        ds.ReadXml(Directory.GetCurrentDirectory() + @"\members.xml");
+        DataTable dt = ds.Tables["MEMBER"];
+
+        DataRow[] rows = dt.Select($"PHONE = '{phoneNumber}'");
+        if (rows.Length > 0)
+        {
+            return rows[0]["POINT"].ToString();
+        }
+        else
+        {
+            return "Member not found";
+        }
+    }
+
+    private void AddOrderToSales(string msg) 
     {
         bool pointAddRequired = false;
         DataTable dt = new DataTable();
@@ -124,16 +148,16 @@ public class TcpServer
             string tel1 = memberPhone.Substring(0, 3);
             string tel2 = memberPhone.Substring(3, 4);
             string tel3 = memberPhone.Substring(7, 4);
-            targetPhone = tel1+"-"+tel2+"-"+tel3;
+            targetPhone = tel1 + "-" + tel2 + "-" + tel3;
             DataRow[] drs = dt.Select("[PHONE] = '" + targetPhone + "'");
-            if(drs.Length == 0)
+            if (drs.Length == 0)
             {
                 pointAddRequired = false;
                 memberPhone = "none";
             }
             else
             {
-                pointAddRequired= true;
+                pointAddRequired = true;
             }
         }
         DataSet ds = new DataSet();
@@ -168,7 +192,7 @@ public class TcpServer
         ds.WriteXml(Directory.GetCurrentDirectory() + @"\sales.xml");
         if (pointAddRequired)
         {
-            foreach(DataRow dr in dt.Rows)
+            foreach (DataRow dr in dt.Rows)
             {
                 if (dr["PHONE"].ToString() == targetPhone)
                 {
@@ -178,7 +202,7 @@ public class TcpServer
                     dt.WriteXml(Directory.GetCurrentDirectory() + @"\members.xml");
                 }
             }
-            
+
         }
         memberPhone = "none";
     }
