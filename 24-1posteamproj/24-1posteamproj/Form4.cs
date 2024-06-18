@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.IO;
+using System.Collections;
 
 namespace _24_1posteamproj
 {
@@ -16,16 +18,48 @@ namespace _24_1posteamproj
         bool isName = false;
         bool isPhone = false;
         bool isSelected = false;
+        DataTable dt = new DataTable();
         public MemberForm()
         {
             InitializeComponent();
         }
+        private void HandleCreateBtn(object sender, EventArgs e)
+        {
+            if(phoneInput.Text.Length != 13)
+            {
+                MessageBox.Show("전화번호를 정확히 입력해주세요.");
+                return;
+            }
+            DataRow dr = dt.NewRow();
+            dr["NUMBER"] = dt.Rows.Count + 1;
+            dr["NAME"] = nameInput.Text;
+            dr["PHONE"] = phoneInput.Text;
+            dr["POINT"] = "0";
+            dt.Rows.Add(dr);
+            dt.AcceptChanges();
+            writeXml();
+            LoadXml();
+            MessageBox.Show(dt.Rows[dt.Rows.Count - 1][1].ToString()+" 회원의 정보를 생성했습니다.");
+            SyncListView();
+        }
         private void HandleDeletBtn(object sender, EventArgs e)
         {
-            //delete information
+            if (!isSelected)
+            {
+                MessageBox.Show("삭제할 회원 정보를 선택해주세요.");
+                return;
+            }
+            DataRow dr = dt.NewRow();
+            int targetNumber = lvMember.SelectedItems[0].Index;
+            dr = dt.Rows[targetNumber];
+            dt.Rows.Remove(dr);
             MessageBox.Show("삭제가 완료되었습니다.");
             nameInput.Text = "";
             phoneInput.Text = "";
+            dt.AcceptChanges();
+            writeXml();
+            LoadXml();
+            SyncListView();
         }
         private void HandleEditBtn(object sender, EventArgs e)
         {
@@ -34,10 +68,58 @@ namespace _24_1posteamproj
                 MessageBox.Show("수정할 정보를 입력해주세요.");
                 return;
             }
-            // editing information
+            DataRow dr = dt.NewRow();
+            int targetNumber = lvMember.SelectedItems[0].Index;
+            dr = dt.Rows[targetNumber];
+            if (isName)
+            {
+                dr["NAME"] = nameInput.Text;
+            }
+            if (isPhone)
+            {
+                dr["PHONE"] = phoneInput.Text;
+            }
+            dt.AcceptChanges();
+            writeXml();
+            LoadXml();
+            SyncListView();
             MessageBox.Show("수정이 완료되었습니다.");
             nameInput.Text = "";
             phoneInput.Text = "";
+        }
+        private void HandleFindBtn(object sender, EventArgs e)
+        {
+            string query = "";
+            if(isPhone && isName) {
+               query = "[NAME] LIKE '" + nameInput.Text + "' AND [PHONE] LIKE '%" + phoneInput.Text + "%'";
+            }
+            else if(isPhone)
+            {
+                query = "[PHONE] LIKE '%"+phoneInput.Text+"%'";
+            }
+            else if(isName)
+            {
+                query = "[NAME] LIKE '%" + nameInput.Text + "%'";
+            }
+     
+            DataRow[] drs = dt.Select(query);
+            if (drs.Length == 0)
+            {
+                MessageBox.Show("검색 결과가 없습니다.");
+                return;
+            }
+            lvMember.BeginUpdate();
+            lvMember.Items.Clear();
+            foreach(DataRow row in drs)
+            {
+                ListViewItem item = new ListViewItem(row[0].ToString());
+                for (int i = 1; i < 4; i++)
+                {
+                    item.SubItems.Add(row[i].ToString());
+                }
+                lvMember.Items.Add(item);
+            }
+            lvMember.EndUpdate();
         }
         private void Phone_KeyUp(object sender, KeyEventArgs e)
         {
@@ -200,6 +282,7 @@ namespace _24_1posteamproj
             {
                 btnSearch.Enabled=false;
                 btnCreate.Enabled=false;
+                SyncListView();
             }
         }
         private void WhenItemSelected(object sender, EventArgs e)
@@ -221,9 +304,36 @@ namespace _24_1posteamproj
         {
             this.Close();
         }
-
+        private void SyncListView()
+        {
+            lvMember.BeginUpdate();
+            lvMember.Items.Clear();
+            foreach(DataRow row in dt.Rows)
+            {
+                ListViewItem item = new ListViewItem(row[0].ToString());
+                for(int i = 1; i < 4; i++)
+                {
+                    item.SubItems.Add(row[i].ToString());
+                }
+                lvMember.Items.Add(item);
+            }
+            lvMember.EndUpdate();
+        }
+        private void LoadXml()
+        {
+            DataSet ds = new DataSet();
+            ds.ReadXml(Directory.GetCurrentDirectory() + @"\members.xml");
+            dt = ds.Tables["MEMBER"];
+        }
+        private void writeXml()
+        {
+            dt.WriteXml(Directory.GetCurrentDirectory() + @"\members.xml");
+        }
         private void Form4_Load(object sender, EventArgs e)
         {
+            LoadXml();
+            SyncListView();
+            timer1.Start();
         }
         public void timer_curTime_Tick(object sender, EventArgs e)
         {

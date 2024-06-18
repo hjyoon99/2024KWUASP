@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <MEMBER>
+    <NUMBER>1</NUMBER>
+    <NAME>홍길동</NAME>
+    <PHONE>010-1234-1234</PHONE>
+    <POINT>1320</POINT>
+  </MEMBER>
+  <MEMBER>
+    <NUMBER>2</NUMBER>
+    <NAME>가나다</NAME>
+    <PHONE>010-0000-0000</PHONE>
+    <POINT>0</POINT>
+  </MEMBER>
+  <MEMBER>
+    <NUMBER>3</NUMBER>
+    <NAME>김철수</NAME>
+    <PHONE>010-1234-5678</PHONE>
+    <POINT>0</POINT>
+  </MEMBER>
+  <MEMBER>
+    <NUMBER>4</NUMBER>
+    <NAME>김영희</NAME>
+    <PHONE>010-9876-5432</PHONE>
+    <POINT>0</POINT>
+  </MEMBER>
+</DocumentElement>

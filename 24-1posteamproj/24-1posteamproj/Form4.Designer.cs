@@ -29,16 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
-            "01",
-            "홍길동",
-            "010-1234-1234",
-            "1,320"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
-            "02",
-            "가나다",
-            "010-1234-5678",
-            "970"}, -1);
             this.labelTitle = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.lbPhone = new System.Windows.Forms.Label();
@@ -116,6 +106,7 @@
             this.btnSearch.TabIndex = 19;
             this.btnSearch.Text = "검색";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.HandleFindBtn);
             // 
             // btnDelete
             // 
@@ -148,6 +139,7 @@
             this.btnCreate.TabIndex = 22;
             this.btnCreate.Text = "생성";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.HandleCreateBtn);
             // 
             // txtDate
             // 
@@ -185,9 +177,6 @@
             this.memberPoint});
             this.lvMember.FullRowSelect = true;
             this.lvMember.HideSelection = false;
-            this.lvMember.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3,
-            listViewItem4});
             this.lvMember.Location = new System.Drawing.Point(16, 137);
             this.lvMember.Name = "lvMember";
             this.lvMember.Size = new System.Drawing.Size(757, 281);
