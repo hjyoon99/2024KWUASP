@@ -1,25 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Workspace\\WinForm\\2024KWUASP\\24-1kioskteamproj\\",
+  "WorkspaceRootPath": "C:\\Users\\hyeju\\Desktop\\poss\\2024KWUASP\\24-1kioskteamproj\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5B47826F-8089-48BC-955A-10347CC4755B}|24-1kioskteamproj\\24-1kioskteamproj.csproj|D:\\Workspace\\WinForm\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B47826F-8089-48BC-955A-10347CC4755B}|24-1kioskteamproj\\24-1kioskteamproj.csproj|solutionrelative:24-1kioskteamproj\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B47826F-8089-48BC-955A-10347CC4755B}|24-1kioskteamproj\\24-1kioskteamproj.csproj|c:\\users\\hyeju\\desktop\\poss\\2024kwuasp\\24-1kioskteamproj\\24-1kioskteamproj\\form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B47826F-8089-48BC-955A-10347CC4755B}|24-1kioskteamproj\\24-1kioskteamproj.csproj|solutionrelative:24-1kioskteamproj\\form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B47826F-8089-48BC-955A-10347CC4755B}|24-1kioskteamproj\\24-1kioskteamproj.csproj|D:\\Workspace\\WinForm\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B47826F-8089-48BC-955A-10347CC4755B}|24-1kioskteamproj\\24-1kioskteamproj.csproj|solutionrelative:24-1kioskteamproj\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B47826F-8089-48BC-955A-10347CC4755B}|24-1kioskteamproj\\24-1kioskteamproj.csproj|d:\\workspace\\winform\\2024kwuasp\\24-1kioskteamproj\\24-1kioskteamproj\\form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5B47826F-8089-48BC-955A-10347CC4755B}|24-1kioskteamproj\\24-1kioskteamproj.csproj|C:\\Users\\hyeju\\Desktop\\poss\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B47826F-8089-48BC-955A-10347CC4755B}|24-1kioskteamproj\\24-1kioskteamproj.csproj|solutionrelative:24-1kioskteamproj\\form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B47826F-8089-48BC-955A-10347CC4755B}|24-1kioskteamproj\\24-1kioskteamproj.csproj|D:\\Workspace\\WinForm\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5B47826F-8089-48BC-955A-10347CC4755B}|24-1kioskteamproj\\24-1kioskteamproj.csproj|C:\\Users\\hyeju\\Desktop\\poss\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B47826F-8089-48BC-955A-10347CC4755B}|24-1kioskteamproj\\24-1kioskteamproj.csproj|solutionrelative:24-1kioskteamproj\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B47826F-8089-48BC-955A-10347CC4755B}|24-1kioskteamproj\\24-1kioskteamproj.csproj|C:\\Users\\hyeju\\Desktop\\poss\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B47826F-8089-48BC-955A-10347CC4755B}|24-1kioskteamproj\\24-1kioskteamproj.csproj|solutionrelative:24-1kioskteamproj\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B47826F-8089-48BC-955A-10347CC4755B}|24-1kioskteamproj\\24-1kioskteamproj.csproj|C:\\Users\\hyeju\\Desktop\\poss\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B47826F-8089-48BC-955A-10347CC4755B}|24-1kioskteamproj\\24-1kioskteamproj.csproj|solutionrelative:24-1kioskteamproj\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B47826F-8089-48BC-955A-10347CC4755B}|24-1kioskteamproj\\24-1kioskteamproj.csproj|d:\\workspace\\winform\\2024kwuasp\\24-1kioskteamproj\\24-1kioskteamproj\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5B47826F-8089-48BC-955A-10347CC4755B}|24-1kioskteamproj\\24-1kioskteamproj.csproj|C:\\Users\\hyeju\\Desktop\\poss\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B47826F-8089-48BC-955A-10347CC4755B}|24-1kioskteamproj\\24-1kioskteamproj.csproj|solutionrelative:24-1kioskteamproj\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,8 +34,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
@@ -42,76 +50,80 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Form3.cs",
-              "DocumentMoniker": "D:\\Workspace\\WinForm\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\Form3.cs",
-              "RelativeDocumentMoniker": "24-1kioskteamproj\\Form3.cs",
-              "ToolTip": "D:\\Workspace\\WinForm\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\Form3.cs",
-              "RelativeToolTip": "24-1kioskteamproj\\Form3.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "Form5.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\hyeju\\Desktop\\poss\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\Form5.cs",
+              "RelativeDocumentMoniker": "24-1kioskteamproj\\Form5.cs",
+              "ToolTip": "C:\\Users\\hyeju\\Desktop\\poss\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\Form5.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "24-1kioskteamproj\\Form5.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T17:52:03.726Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-18T21:50:46.586Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form2.cs",
-              "DocumentMoniker": "D:\\Workspace\\WinForm\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\Form2.cs",
-              "RelativeDocumentMoniker": "24-1kioskteamproj\\Form2.cs",
-              "ToolTip": "D:\\Workspace\\WinForm\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\Form2.cs",
-              "RelativeToolTip": "24-1kioskteamproj\\Form2.cs",
-              "ViewState": "AQIAABUIAAAAAAAAAAAuwDMIAAAJAAAA",
+              "DocumentIndex": 5,
+              "Title": "Form3.cs",
+              "DocumentMoniker": "C:\\Users\\hyeju\\Desktop\\poss\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\Form3.cs",
+              "RelativeDocumentMoniker": "24-1kioskteamproj\\Form3.cs",
+              "ToolTip": "C:\\Users\\hyeju\\Desktop\\poss\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\Form3.cs",
+              "RelativeToolTip": "24-1kioskteamproj\\Form3.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T17:49:48.049Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-18T17:52:03.726Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\Users\\hyeju\\Desktop\\poss\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\Form2.cs",
+              "RelativeDocumentMoniker": "24-1kioskteamproj\\Form2.cs",
+              "ToolTip": "C:\\Users\\hyeju\\Desktop\\poss\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\Form2.cs",
+              "RelativeToolTip": "24-1kioskteamproj\\Form2.cs",
+              "ViewState": "AQIAABUIAAAAAAAAAAAuwDYIAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T17:49:48.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Form5.cs",
-              "DocumentMoniker": "D:\\Workspace\\WinForm\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\Form5.cs",
+              "DocumentMoniker": "C:\\Users\\hyeju\\Desktop\\poss\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\Form5.cs",
               "RelativeDocumentMoniker": "24-1kioskteamproj\\Form5.cs",
-              "ToolTip": "D:\\Workspace\\WinForm\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\Form5.cs",
+              "ToolTip": "C:\\Users\\hyeju\\Desktop\\poss\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\Form5.cs",
               "RelativeToolTip": "24-1kioskteamproj\\Form5.cs",
-              "ViewState": "AQIAAJIAAAAAAAAAAADwv54AAAAAAAAA",
+              "ViewState": "AQIAABcAAAAAAAAAAAAgwDsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-18T17:49:48.107Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Form4.cs",
-              "DocumentMoniker": "D:\\Workspace\\WinForm\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\Form4.cs",
+              "DocumentMoniker": "C:\\Users\\hyeju\\Desktop\\poss\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\Form4.cs",
               "RelativeDocumentMoniker": "24-1kioskteamproj\\Form4.cs",
-              "ToolTip": "D:\\Workspace\\WinForm\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\Form4.cs",
+              "ToolTip": "C:\\Users\\hyeju\\Desktop\\poss\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\Form4.cs",
               "RelativeToolTip": "24-1kioskteamproj\\Form4.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T17:49:48.151Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-18T17:49:48.151Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\Workspace\\WinForm\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\hyeju\\Desktop\\poss\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\Form1.cs",
               "RelativeDocumentMoniker": "24-1kioskteamproj\\Form1.cs",
-              "ToolTip": "D:\\Workspace\\WinForm\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\Form1.cs",
+              "ToolTip": "C:\\Users\\hyeju\\Desktop\\poss\\2024KWUASP\\24-1kioskteamproj\\24-1kioskteamproj\\Form1.cs",
               "RelativeToolTip": "24-1kioskteamproj\\Form1.cs",
               "ViewState": "AQIAABYAAAAAAAAAAAAAwB8AAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T17:49:48.154Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-18T17:49:48.154Z"
             }
           ]
         }

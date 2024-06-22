@@ -53,3 +53,18 @@ C:\Users\hyeju\Desktop\새 폴더\2024KWUASP\24-1posteamproj\24-1posteamproj\obj
 C:\Users\hyeju\Desktop\새 폴더\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\24-1posteamproj.csproj.CoreCompileInputs.cache
 C:\Users\hyeju\Desktop\새 폴더\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\24-1posteamproj.exe
 C:\Users\hyeju\Desktop\새 폴더\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\24-1posteamproj.pdb
+C:\Users\hyeju\Desktop\poss\2024KWUASP\24-1posteamproj\24-1posteamproj\bin\Debug\24-1posteamproj.exe.config
+C:\Users\hyeju\Desktop\poss\2024KWUASP\24-1posteamproj\24-1posteamproj\bin\Debug\24-1posteamproj.exe
+C:\Users\hyeju\Desktop\poss\2024KWUASP\24-1posteamproj\24-1posteamproj\bin\Debug\24-1posteamproj.pdb
+C:\Users\hyeju\Desktop\poss\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\24-1posteamproj.csproj.AssemblyReference.cache
+C:\Users\hyeju\Desktop\poss\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\24-1posteamproj.csproj.ResolveComReference.cache
+C:\Users\hyeju\Desktop\poss\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\_24_1posteamproj.mainForm.resources
+C:\Users\hyeju\Desktop\poss\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\_24_1posteamproj.MenuForm.resources
+C:\Users\hyeju\Desktop\poss\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\_24_1posteamproj.StokForm.resources
+C:\Users\hyeju\Desktop\poss\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\_24_1posteamproj.MemberForm.resources
+C:\Users\hyeju\Desktop\poss\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\_24_1posteamproj.salesForm.resources
+C:\Users\hyeju\Desktop\poss\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\_24_1posteamproj.Properties.Resources.resources
+C:\Users\hyeju\Desktop\poss\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\24-1posteamproj.csproj.GenerateResource.cache
+C:\Users\hyeju\Desktop\poss\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\24-1posteamproj.csproj.CoreCompileInputs.cache
+C:\Users\hyeju\Desktop\poss\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\24-1posteamproj.exe
+C:\Users\hyeju\Desktop\poss\2024KWUASP\24-1posteamproj\24-1posteamproj\obj\Debug\24-1posteamproj.pdb

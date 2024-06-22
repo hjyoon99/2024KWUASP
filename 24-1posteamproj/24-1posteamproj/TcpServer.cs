@@ -60,7 +60,11 @@ public class TcpServer
                 int bytesRead = stream.Read(buffer, 0, buffer.Length);
                 string receivedData = Encoding.UTF8.GetString(buffer, 0, bytesRead);
 
-                ProcessReceivedData(receivedData);
+                string response = ProcessReceivedData(receivedData);
+
+                // 클라이언트로 응답 데이터 전송
+                byte[] responseData = Encoding.UTF8.GetBytes(response);
+                stream.Write(responseData, 0, responseData.Length);
 
                 client.Close();
             }
@@ -71,20 +75,23 @@ public class TcpServer
         }
     }
 
-    private void ProcessReceivedData(string data)
+    private string ProcessReceivedData(string data)
     {
         if (data.StartsWith("PHONE_NUMBER:"))
         {
-            string phoneNumber = data.Replace("PHONE_NUMBER:", "");
+            string phoneNumber = data.Replace("PHONE_NUMBER:", "").Trim();
             UpdateOrderLog("수신된 전화번호: \n" + phoneNumber);
             memberPhone = phoneNumber;
+            return GetMemberPoints(phoneNumber);
         }
         else if (data.StartsWith("ORDER_DATA:"))
         {
             string orderData = data.Replace("ORDER_DATA:", "");
             UpdateOrderLog("수신된 주문 데이터:\r\n" + orderData.TrimStart(','));
             AddOrderToSales(orderData);
+            return "Order data received";
         }
+        return "Invalid data received";
     }
 
     private void UpdateServerLog(string message)
@@ -111,29 +118,46 @@ public class TcpServer
         }
     }
 
+    private string GetMemberPoints(string phoneNumber)
+    {
+        DataSet ds = new DataSet();
+        ds.ReadXml(Directory.GetCurrentDirectory() + @"\members.xml");
+        DataTable dt = ds.Tables["MEMBER"];
+
+        DataRow[] rows = dt.Select($"PHONE = '{phoneNumber}'");
+        if (rows.Length > 0)
+        {
+            return rows[0]["POINT"].ToString();
+        }
+        else
+        {
+            return "Member not found";
+        }
+    }
+
     private void AddOrderToSales(string msg) // 데이터베이스에 주문 기록 저장
     {
         bool pointAddRequired = false;
-        bool needToCreateMember = false;
         DataTable dt = new DataTable();
         string targetPhone = "";
-        if (memberPhone != "none" && memberPhone.Length == 11)
+        if (memberPhone != "none" && memberPhone.Length == 13) // 전화번호 길이 확인 (하이픈 포함 13자)
         {
             DataSet pds = new DataSet();
             pds.ReadXml(Directory.GetCurrentDirectory() + @"\members.xml");
             dt = pds.Tables["MEMBER"];
-            string tel1 = memberPhone.Substring(0, 3);
-            string tel2 = memberPhone.Substring(3, 4);
-            string tel3 = memberPhone.Substring(7, 4);
-            targetPhone = tel1+"-"+tel2+"-"+tel3;
+            targetPhone = memberPhone;
             DataRow[] drs = dt.Select("[PHONE] = '" + targetPhone + "'");
-            if(drs.Length == 0)
+            if (drs.Length == 0)
             {
-                needToCreateMember=true;
+                pointAddRequired = false;
                 memberPhone = "none";
             }
-            pointAddRequired = true;
+            else
+            {
+                pointAddRequired = true;
+            }
         }
+
         DataSet ds = new DataSet();
         ds.ReadXml(Directory.GetCurrentDirectory() + @"\sales.xml");
         DataRow dr1 = ds.Tables["ORDER"].NewRow();
@@ -164,33 +188,19 @@ public class TcpServer
             ds.Tables["DETAIL"].AcceptChanges();
         }
         ds.WriteXml(Directory.GetCurrentDirectory() + @"\sales.xml");
-        if (pointAddRequired) // 포인트 적립 핸들링
+        if (pointAddRequired)
         {
-            if (needToCreateMember)
+            foreach (DataRow dr in dt.Rows)
             {
-                DataRow dr = dt.NewRow();
-                dr["NUMBER"] = dt.Rows.Count + 1;
-                dr["NAME"] = "임시 사용자";
-                dr["PHONE"] = targetPhone;
-                dr["POINT"] = (totalPrice / 10).ToString();
-                dt.Rows.Add(dr);
-                dt.AcceptChanges();
-                dt.WriteXml(Directory.GetCurrentDirectory() + @"\members.xml");
-            }
-            else
-            {
-                foreach (DataRow dr in dt.Rows)
+                if (dr["PHONE"].ToString() == targetPhone)
                 {
-                    if (dr["PHONE"].ToString() == targetPhone)
-                    {
-                        int prev = int.Parse(dr["POINT"].ToString());
-                        prev += (totalPrice / 10);
-                        dr["POINT"] = prev.ToString();
-                        dt.WriteXml(Directory.GetCurrentDirectory() + @"\members.xml");
-                    }
+                    int prev = int.Parse(dr["POINT"].ToString());
+                    prev += (totalPrice / 10);
+                    dr["POINT"] = prev.ToString();
+                    dt.WriteXml(Directory.GetCurrentDirectory() + @"\members.xml");
                 }
             }
-            
+
         }
         memberPhone = "none";
     }
