@@ -30,6 +30,7 @@ namespace _24_1kioskteamproj
                 int totalPoints = currentPoints + earnedPoints;
 
                 MessageBox.Show($"전화번호 {phoneNumber}의 데이터가 서버로 전송되었습니다.\n총 금액: {totalAmount}원\n포인트 적립: {earnedPoints}원\n총 포인트 : {totalPoints}");
+
                 PointLabel.Text = $"포인트: {totalPoints} 점";
             }
         }

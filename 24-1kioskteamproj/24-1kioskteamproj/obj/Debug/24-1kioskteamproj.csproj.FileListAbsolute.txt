@@ -92,6 +92,7 @@ D:\Workspace\WinForm\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\24
 D:\Workspace\WinForm\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\24-1kioskteamproj.csproj.CoreCompileInputs.cache
 D:\Workspace\WinForm\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\24-1kioskteamproj.exe
 D:\Workspace\WinForm\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\24-1kioskteamproj.pdb
+<<<<<<< HEAD
 C:\Users\hyeju\Desktop\poss\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\bin\Debug\24-1kioskteamproj.exe.config
 C:\Users\hyeju\Desktop\poss\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\bin\Debug\24-1kioskteamproj.exe
 C:\Users\hyeju\Desktop\poss\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\bin\Debug\24-1kioskteamproj.pdb
@@ -106,3 +107,35 @@ C:\Users\hyeju\Desktop\poss\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\obj\D
 C:\Users\hyeju\Desktop\poss\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\24-1kioskteamproj.csproj.CoreCompileInputs.cache
 C:\Users\hyeju\Desktop\poss\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\24-1kioskteamproj.exe
 C:\Users\hyeju\Desktop\poss\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\24-1kioskteamproj.pdb
+=======
+C:\Users\natha\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\bin\Debug\24-1kioskteamproj.exe.config
+C:\Users\natha\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\bin\Debug\24-1kioskteamproj.exe
+C:\Users\natha\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\bin\Debug\24-1kioskteamproj.pdb
+C:\Users\natha\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\24-1kioskteamproj.csproj.AssemblyReference.cache
+C:\Users\natha\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\24-1kioskteamproj.csproj.SuggestedBindingRedirects.cache
+C:\Users\natha\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\_24_1kioskteamproj.Form1.resources
+C:\Users\natha\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\_24_1kioskteamproj.Form2.resources
+C:\Users\natha\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\_24_1kioskteamproj.Form3.resources
+C:\Users\natha\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\_24_1kioskteamproj.Form4.resources
+C:\Users\natha\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\_24_1kioskteamproj.Form5.resources
+C:\Users\natha\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\_24_1kioskteamproj.Properties.Resources.resources
+C:\Users\natha\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\24-1kioskteamproj.csproj.GenerateResource.cache
+C:\Users\natha\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\24-1kioskteamproj.csproj.CoreCompileInputs.cache
+C:\Users\natha\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\24-1kioskteamproj.exe
+C:\Users\natha\2024KWUASP\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\24-1kioskteamproj.pdb
+C:\Users\natha\2024KWUASPnotworking\24-1kioskteamproj\24-1kioskteamproj\bin\Debug\24-1kioskteamproj.exe.config
+C:\Users\natha\2024KWUASPnotworking\24-1kioskteamproj\24-1kioskteamproj\bin\Debug\24-1kioskteamproj.exe
+C:\Users\natha\2024KWUASPnotworking\24-1kioskteamproj\24-1kioskteamproj\bin\Debug\24-1kioskteamproj.pdb
+C:\Users\natha\2024KWUASPnotworking\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\24-1kioskteamproj.csproj.AssemblyReference.cache
+C:\Users\natha\2024KWUASPnotworking\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\24-1kioskteamproj.csproj.SuggestedBindingRedirects.cache
+C:\Users\natha\2024KWUASPnotworking\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\_24_1kioskteamproj.Form1.resources
+C:\Users\natha\2024KWUASPnotworking\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\_24_1kioskteamproj.Form2.resources
+C:\Users\natha\2024KWUASPnotworking\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\_24_1kioskteamproj.Form3.resources
+C:\Users\natha\2024KWUASPnotworking\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\_24_1kioskteamproj.Form4.resources
+C:\Users\natha\2024KWUASPnotworking\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\_24_1kioskteamproj.Form5.resources
+C:\Users\natha\2024KWUASPnotworking\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\_24_1kioskteamproj.Properties.Resources.resources
+C:\Users\natha\2024KWUASPnotworking\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\24-1kioskteamproj.csproj.GenerateResource.cache
+C:\Users\natha\2024KWUASPnotworking\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\24-1kioskteamproj.csproj.CoreCompileInputs.cache
+C:\Users\natha\2024KWUASPnotworking\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\24-1kioskteamproj.exe
+C:\Users\natha\2024KWUASPnotworking\24-1kioskteamproj\24-1kioskteamproj\obj\Debug\24-1kioskteamproj.pdb
+>>>>>>> 289b799dc20cebad027f256bf754386ad0765c06
