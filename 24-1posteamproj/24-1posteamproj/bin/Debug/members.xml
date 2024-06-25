@@ -16,11 +16,7 @@
     <NUMBER>3</NUMBER>
     <NAME>김철수</NAME>
     <PHONE>010-1234-5678</PHONE>
-<<<<<<< HEAD
     <POINT>800</POINT>
-=======
-    <POINT>400</POINT>
->>>>>>> 289b799dc20cebad027f256bf754386ad0765c06
   </MEMBER>
   <MEMBER>
     <NUMBER>4</NUMBER>
@@ -32,11 +28,7 @@
     <NUMBER>5</NUMBER>
     <NAME>윤혜정</NAME>
     <PHONE>010-1111-2222</PHONE>
-<<<<<<< HEAD
-    <POINT>500</POINT>
-=======
-    <POINT>800</POINT>
->>>>>>> 289b799dc20cebad027f256bf754386ad0765c06
+    <POINT>1700</POINT>
   </MEMBER>
   <MEMBER>
     <NUMBER>6</NUMBER>

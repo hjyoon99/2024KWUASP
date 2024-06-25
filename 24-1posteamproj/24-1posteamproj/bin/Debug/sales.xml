@@ -22,27 +22,15 @@
   </ORDER>
   <ORDER>
     <NUMBER>6</NUMBER>
-<<<<<<< HEAD
     <TIME>2024-06-19 06:58</TIME>
   </ORDER>
   <ORDER>
     <NUMBER>7</NUMBER>
     <TIME>2024-06-22 12:57</TIME>
-=======
-    <TIME>2024-06-19 06:53</TIME>
-  </ORDER>
-  <ORDER>
-    <NUMBER>7</NUMBER>
-    <TIME>2024-06-19 06:54</TIME>
   </ORDER>
   <ORDER>
     <NUMBER>8</NUMBER>
-    <TIME>2024-06-19 06:55</TIME>
-  </ORDER>
-  <ORDER>
-    <NUMBER>9</NUMBER>
-    <TIME>2024-06-19 06:57</TIME>
->>>>>>> 289b799dc20cebad027f256bf754386ad0765c06
+    <TIME>2024-06-25 12:22</TIME>
   </ORDER>
   <DETAIL>
     <NUMBER>1</NUMBER>
@@ -66,118 +54,108 @@
     <NUMBER>3</NUMBER>
     <ITEM>돈가스 김밥 </ITEM>
     <COUNT>1</COUNT>
-    <PRICE>5000</PRICE>
+    <PRICE>5000</PRICE>
   </DETAIL>
   <DETAIL>
     <NUMBER>3</NUMBER>
     <ITEM>날치알 김밥 </ITEM>
     <COUNT>1</COUNT>
-    <PRICE>4500</PRICE>
+    <PRICE>4500</PRICE>
   </DETAIL>
   <DETAIL>
     <NUMBER>3</NUMBER>
     <ITEM>일반 김밥 </ITEM>
     <COUNT>1</COUNT>
-    <PRICE>3000</PRICE>
+    <PRICE>3000</PRICE>
   </DETAIL>
   <DETAIL>
     <NUMBER>3</NUMBER>
     <ITEM>김치 찌개 </ITEM>
     <COUNT>1</COUNT>
-    <PRICE>7000</PRICE>
+    <PRICE>7000</PRICE>
   </DETAIL>
   <DETAIL>
     <NUMBER>3</NUMBER>
     <ITEM>낙지돌솥밥 </ITEM>
     <COUNT>1</COUNT>
-    <PRICE>9000</PRICE>
+    <PRICE>9000</PRICE>
   </DETAIL>
   <DETAIL>
     <NUMBER>3</NUMBER>
     <ITEM>만두 </ITEM>
     <COUNT>1</COUNT>
-    <PRICE>4000</PRICE>
+    <PRICE>4000</PRICE>
   </DETAIL>
   <DETAIL>
     <NUMBER>4</NUMBER>
     <ITEM>참치 김밥 </ITEM>
     <COUNT>1</COUNT>
-    <PRICE>4000</PRICE>
+    <PRICE>4000</PRICE>
   </DETAIL>
   <DETAIL>
     <NUMBER>4</NUMBER>
     <ITEM>돈가스 김밥 </ITEM>
     <COUNT>1</COUNT>
-    <PRICE>5000</PRICE>
+    <PRICE>5000</PRICE>
   </DETAIL>
   <DETAIL>
     <NUMBER>4</NUMBER>
     <ITEM>환타  </ITEM>
     <COUNT>1</COUNT>
-    <PRICE>2000</PRICE>
+    <PRICE>2000</PRICE>
   </DETAIL>
   <DETAIL>
     <NUMBER>5</NUMBER>
     <ITEM>만두 </ITEM>
     <COUNT>1</COUNT>
-    <PRICE>4000</PRICE>
+    <PRICE>4000</PRICE>
   </DETAIL>
   <DETAIL>
     <NUMBER>5</NUMBER>
     <ITEM>떡볶이 </ITEM>
     <COUNT>1</COUNT>
-    <PRICE>5000</PRICE>
+    <PRICE>5000</PRICE>
   </DETAIL>
   <DETAIL>
     <NUMBER>5</NUMBER>
     <ITEM>라면 </ITEM>
     <COUNT>1</COUNT>
-    <PRICE>4500</PRICE>
+    <PRICE>4500</PRICE>
   </DETAIL>
   <DETAIL>
     <NUMBER>5</NUMBER>
     <ITEM>비빔국수 </ITEM>
     <COUNT>1</COUNT>
-    <PRICE>6500</PRICE>
+    <PRICE>6500</PRICE>
   </DETAIL>
   <DETAIL>
     <NUMBER>5</NUMBER>
     <ITEM>쫄면 </ITEM>
     <COUNT>1</COUNT>
-    <PRICE>7000</PRICE>
+    <PRICE>7000</PRICE>
   </DETAIL>
   <DETAIL>
     <NUMBER>6</NUMBER>
     <ITEM>치즈 김밥 </ITEM>
-<<<<<<< HEAD
-=======
-    <COUNT>1</COUNT>
-    <PRICE>4000</PRICE>
-  </DETAIL>
-  <DETAIL>
-    <NUMBER>7</NUMBER>
-    <ITEM>참치 김밥 </ITEM>
->>>>>>> 289b799dc20cebad027f256bf754386ad0765c06
     <COUNT>2</COUNT>
-    <PRICE>8000</PRICE>
+    <PRICE>8000</PRICE>
   </DETAIL>
   <DETAIL>
-<<<<<<< HEAD
     <NUMBER>7</NUMBER>
     <ITEM>돈가스 김밥 </ITEM>
     <COUNT>1</COUNT>
-    <PRICE>5000</PRICE>
-=======
-    <NUMBER>8</NUMBER>
-    <ITEM>참치 김밥 </ITEM>
-    <COUNT>1</COUNT>
-    <PRICE>4000</PRICE>
+    <PRICE>5000</PRICE>
   </DETAIL>
   <DETAIL>
-    <NUMBER>9</NUMBER>
-    <ITEM>참치 김밥 </ITEM>
+    <NUMBER>8</NUMBER>
+    <ITEM>돈가스 김밥 </ITEM>
     <COUNT>1</COUNT>
-    <PRICE>4000</PRICE>
->>>>>>> 289b799dc20cebad027f256bf754386ad0765c06
+    <PRICE>5000</PRICE>
+  </DETAIL>
+  <DETAIL>
+    <NUMBER>8</NUMBER>
+    <ITEM>떡만두국 </ITEM>
+    <COUNT>1</COUNT>
+    <PRICE>7000</PRICE>
   </DETAIL>
 </NewDataSet>

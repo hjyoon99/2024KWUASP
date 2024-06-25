@@ -90,7 +90,6 @@
             this.checkMemberButton.UseVisualStyleBackColor = true;
             this.checkMemberButton.Click += new System.EventHandler(this.checkMemberButton_Click);
             // 
-<<<<<<< HEAD
             // PointLabel
             // 
             this.PointLabel.AutoSize = true;
@@ -100,30 +99,14 @@
             this.PointLabel.Size = new System.Drawing.Size(467, 29);
             this.PointLabel.TabIndex = 5;
             this.PointLabel.Text = "이름 :            포인트 :            점";
-=======
-            // pointLabel
-            // 
-            this.pointLabel.AutoSize = true;
-            this.pointLabel.Font = new System.Drawing.Font("굴림", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.pointLabel.Location = new System.Drawing.Point(118, 236);
-            this.pointLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.pointLabel.Name = "pointLabel";
-            this.pointLabel.Size = new System.Drawing.Size(237, 15);
-            this.pointLabel.TabIndex = 5;
-            this.pointLabel.Text = "이름 :            포인트 :            점";
->>>>>>> 289b799dc20cebad027f256bf754386ad0765c06
+
             // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(952, 713);
             this.Controls.Add(this.PointLabel);
-=======
-            this.ClientSize = new System.Drawing.Size(513, 356);
-            this.Controls.Add(this.pointLabel);
->>>>>>> 289b799dc20cebad027f256bf754386ad0765c06
             this.Controls.Add(this.checkMemberButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.phoneNumberTextBox);
@@ -144,10 +127,7 @@
         private System.Windows.Forms.TextBox phoneNumberTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button checkMemberButton;
-<<<<<<< HEAD
         private System.Windows.Forms.Label PointLabel;
-=======
-        private System.Windows.Forms.Label pointLabel;
->>>>>>> 289b799dc20cebad027f256bf754386ad0765c06
+
     }
 }
